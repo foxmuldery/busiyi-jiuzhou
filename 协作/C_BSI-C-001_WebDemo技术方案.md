@@ -169,7 +169,7 @@ ChoiceEffect 建议覆盖：
 
 | 字段 | 说明 |
 |---|---|
-| resources | 改变车轴、粮、神志 |
+| resources | 改变车轴、粮草、神志 |
 | addFlags | 增加状态标记 |
 | removeFlags | 移除状态标记 |
 | unlockRoutes | 解锁隐藏路线 |
@@ -188,7 +188,7 @@ GameState 是当前局的完整状态，也是存档和模拟器的输入。
 | runId | string | 当前局 ID |
 | day | number | 行旅天数或步数 |
 | currentLocation | string | 当前地点 ID |
-| resources | Resources | 当前车轴、粮、神志 |
+| resources | Resources | 当前车轴、粮草、神志 |
 | maxResources | Resources | 资源上限 |
 | knownLocations | string[] | 已知地点 |
 | unlockedRoutes | string[] | 已解锁路线 |
@@ -309,7 +309,7 @@ Location A -> Route AB -> Location B
 
 - 当前所在地点。
 - 可选择的下一段路线。
-- 每条路线消耗多少车轴、粮、神志。
+- 每条路线消耗多少车轴、粮草、神志。
 - 路线风险等级。
 - 路线地貌标签。
 - 隐藏路线解锁后出现。
@@ -336,7 +336,7 @@ Location A -> Route AB -> Location B
 
 - 节点和路线。
 - 事件和选项。
-- 车轴、粮、神志。
+- 车轴、粮草、神志。
 - flag、器物、语言理解、结局条件。
 
 舞台层只负责让“正在远行”的感觉更直观。推荐实现：
@@ -396,7 +396,7 @@ Location A -> Route AB -> Location B
 资源区必须让玩家快速区分三种压力：
 
 - 车轴：还能不能继续走。
-- 粮：还能不能撑过今天。
+- 粮草（UI 短名：粮）：还能不能撑过今天。
 - 神志：看到的世界是否可靠。
 
 显示建议：
@@ -420,7 +420,7 @@ Location A -> Route AB -> Location B
 
 失败时，日志末尾需要能归因，例如：
 
-- 粮尽：连续绕路且未补给。
+- 粮草尽：连续绕路且未补给。
 - 车轴尽：多次强渡或山路损耗过高。
 - 神志崩坏：频繁阅读巫文或夜行。
 
@@ -642,7 +642,7 @@ Location A -> Route AB -> Location B
 
 技术侧完成后，不以“页面好看”为主要验收标准，而以玩法验证为主：
 
-1. 玩家能在 10 分钟内理解车轴、粮、神志的区别。
+1. 玩家能在 10 分钟内理解车轴、粮草、神志的区别。
 2. 玩家能清楚知道当前在哪、能去哪、要付出什么。
 3. 至少一次神志降低后，文本或选项明显变化。
 4. 失败后日志能解释主要失败原因。
