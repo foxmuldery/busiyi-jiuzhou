@@ -1,0 +1,28 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Local/editor state
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Node/Web demo outputs
+node_modules/
+dist/
+build/
+.next/
+.vite/
+coverage/
+
+# Env/secrets
+.env
+.env.*
+!.env.example
+
+# Temporary exports
+tmp/
+temp/
+*.log
+
