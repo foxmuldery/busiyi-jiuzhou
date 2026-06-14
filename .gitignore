@@ -26,3 +26,5 @@ tmp/
 temp/
 *.log
 
+# Local raw asset extraction staging
+GitHub资产区/02_设计资产/原始素材/
