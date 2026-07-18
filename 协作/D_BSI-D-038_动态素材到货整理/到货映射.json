@@ -1,0 +1,104 @@
+[
+  {
+    "source": "/Users/yuanzhe/Documents/game/协作/D_BSI-D-038_动态素材到货整理/原始解压/download_(4)/UI_sprite_sheet_ancient_Chinese_202606211449.jpeg",
+    "dest": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/待复核素材/UI_VI第二批原图_2026-06-21/UI-VI-SHEET-002_古风UI元素拼版候选.jpeg",
+    "type": "ui_sprite_sheet",
+    "note": "UI/VI第二批拼版原图，待切片复核"
+  },
+  {
+    "source": "/Users/yuanzhe/Documents/game/协作/D_BSI-D-038_动态素材到货整理/原始解压/download_(4)/Ink_wash_clouds_mist_overlay_202606211449.mp4",
+    "dest": "/Users/yuanzhe/Documents/game/GitHub资产区/07_视频动态/04_待复核素材/2026-06-21_补充动态素材/01_优先叠层候选/VID-OV-CLOUD-001_水墨云雾叠层候选.mp4",
+    "type": "01_优先叠层候选",
+    "note": "舞台云雾/地图雾散叠层，优先"
+  },
+  {
+    "source": "/Users/yuanzhe/Documents/game/协作/D_BSI-D-038_动态素材到货整理/原始解压/download_(4)/Ancient_parchment_map_background_202606211449.mp4",
+    "dest": "/Users/yuanzhe/Documents/game/GitHub资产区/07_视频动态/04_待复核素材/2026-06-21_补充动态素材/02_转场背景候选/VID-BG-PARCHMENTMAP-001_古帛地图背景候选.mp4",
+    "type": "02_转场背景候选",
+    "note": "地图页/菜单背景候选"
+  },
+  {
+    "source": "/Users/yuanzhe/Documents/game/协作/D_BSI-D-038_动态素材到货整理/原始解压/download_(4)/Ink_dust_falling_on_paper_202606211449.mp4",
+    "dest": "/Users/yuanzhe/Documents/game/GitHub资产区/07_视频动态/04_待复核素材/2026-06-21_补充动态素材/01_优先叠层候选/VID-OV-DUST-001_纸面落尘叠层候选.mp4",
+    "type": "01_优先叠层候选",
+    "note": "地图/弹窗细尘叠层，中优先"
+  },
+  {
+    "source": "/Users/yuanzhe/Documents/game/协作/D_BSI-D-038_动态素材到货整理/原始解压/download_(4)/Old_parchment_with_gray_smoke_202606211449.mp4",
+    "dest": "/Users/yuanzhe/Documents/game/GitHub资产区/07_视频动态/04_待复核素材/2026-06-21_补充动态素材/02_转场背景候选/VID-BG-SMOKE-001_旧帛灰烟背景候选.mp4",
+    "type": "02_转场背景候选",
+    "note": "菜单/事件弹窗背景候选"
+  },
+  {
+    "source": "/Users/yuanzhe/Documents/game/协作/D_BSI-D-038_动态素材到货整理/原始解压/download_(4)/Parchment_fog_revealing_map_traces_202606211449.mp4",
+    "dest": "/Users/yuanzhe/Documents/game/GitHub资产区/07_视频动态/04_待复核素材/2026-06-21_补充动态素材/01_优先叠层候选/VID-OV-MAPREVEAL-001_帛雾显影地图痕迹候选.mp4",
+    "type": "01_优先叠层候选",
+    "note": "地图显影/地点发现叠层，优先"
+  },
+  {
+    "source": "/Users/yuanzhe/Documents/game/协作/D_BSI-D-038_动态素材到货整理/原始解压/download_(4)/Ink_crack_lines_opening_closing_202606211449.mp4",
+    "dest": "/Users/yuanzhe/Documents/game/GitHub资产区/07_视频动态/04_待复核素材/2026-06-21_补充动态素材/01_优先叠层候选/VID-OV-CRACK-001_墨裂线开合叠层候选.mp4",
+    "type": "01_优先叠层候选",
+    "note": "神志污染/裂隙预兆叠层，优先"
+  },
+  {
+    "source": "/Users/yuanzhe/Documents/game/协作/D_BSI-D-038_动态素材到货整理/原始解压/download_(4)/Ancient_Chinese_map_on_silk_202606211449.mp4",
+    "dest": "/Users/yuanzhe/Documents/game/GitHub资产区/07_视频动态/04_待复核素材/2026-06-21_补充动态素材/02_转场背景候选/VID-BG-MAP-001_帛书九州图动态背景候选.mp4",
+    "type": "02_转场背景候选",
+    "note": "地图页背景候选"
+  },
+  {
+    "source": "/Users/yuanzhe/Documents/game/协作/D_BSI-D-038_动态素材到货整理/原始解压/download_(4)/Ancient_China_ink_painting_lands…_202606211449.mp4",
+    "dest": "/Users/yuanzhe/Documents/game/GitHub资产区/07_视频动态/04_待复核素材/2026-06-21_补充动态素材/03_待判断候选/VID-MISC-UNMAPPED_Ancient_China_ink_painting_lands…_202606211449.mp4",
+    "type": "03_待判断候选",
+    "note": "未映射，待判断"
+  },
+  {
+    "source": "/Users/yuanzhe/Documents/game/协作/D_BSI-D-038_动态素材到货整理/原始解压/download_(4)/Sand_dust_moving_on_black_202606211449.mp4",
+    "dest": "/Users/yuanzhe/Documents/game/GitHub资产区/07_视频动态/04_待复核素材/2026-06-21_补充动态素材/01_优先叠层候选/VID-OV-SAND-001_黑底风沙叠层候选.mp4",
+    "type": "01_优先叠层候选",
+    "note": "古道风沙/路线过场叠层，优先"
+  },
+  {
+    "source": "/Users/yuanzhe/Documents/game/协作/D_BSI-D-038_动态素材到货整理/原始解压/download_(4)/Gold_dust_particles_on_black_202606211449.mp4",
+    "dest": "/Users/yuanzhe/Documents/game/GitHub资产区/07_视频动态/04_待复核素材/2026-06-21_补充动态素材/01_优先叠层候选/VID-OV-GOLD-001_暗金尘粒黑底候选.mp4",
+    "type": "01_优先叠层候选",
+    "note": "奖励/地点显影小氛围，低优先"
+  },
+  {
+    "source": "/Users/yuanzhe/Documents/game/协作/D_BSI-D-038_动态素材到货整理/原始解压/download_(4)/Parchment_ashes_faint_ink_traces_202606211449.mp4",
+    "dest": "/Users/yuanzhe/Documents/game/GitHub资产区/07_视频动态/04_待复核素材/2026-06-21_补充动态素材/03_待判断候选/VID-MISC-ASHINK-001_灰烬淡墨痕候选.mp4",
+    "type": "03_待判断候选",
+    "note": "叠层或背景待判断"
+  },
+  {
+    "source": "/Users/yuanzhe/Documents/game/协作/D_BSI-D-038_动态素材到货整理/原始解压/download_(4)/Cinnabar_seal_pulsing_cracks_202606211449.mp4",
+    "dest": "/Users/yuanzhe/Documents/game/GitHub资产区/07_视频动态/04_待复核素材/2026-06-21_补充动态素材/01_优先叠层候选/VID-OV-SEAL-001_朱砂印裂纹脉冲候选.mp4",
+    "type": "01_优先叠层候选",
+    "note": "风险章/神志警告点缀，低优先"
+  },
+  {
+    "source": "/Users/yuanzhe/Documents/game/协作/D_BSI-D-038_动态素材到货整理/原始解压/download_(3)/Old_silk_parchment_unfolds_darkness_202606211449.mp4",
+    "dest": "/Users/yuanzhe/Documents/game/GitHub资产区/07_视频动态/04_待复核素材/2026-06-21_补充动态素材/02_转场背景候选/VID-TR-PARCHMENT-001_旧帛展开暗场候选.mp4",
+    "type": "02_转场背景候选",
+    "note": "开局/地图打开过场候选"
+  },
+  {
+    "source": "/Users/yuanzhe/Documents/game/协作/D_BSI-D-038_动态素材到货整理/原始解压/download_(3)/Ancient_rift_opening_ink_wash_202606211449.mp4",
+    "dest": "/Users/yuanzhe/Documents/game/GitHub资产区/07_视频动态/04_待复核素材/2026-06-21_补充动态素材/02_转场背景候选/VID-TR-RIFT-001_裂隙墨洗过场候选.mp4",
+    "type": "02_转场背景候选",
+    "note": "终局裂隙/神志危机过场候选"
+  },
+  {
+    "source": "/Users/yuanzhe/Documents/game/协作/D_BSI-D-038_动态素材到货整理/原始解压/download_(3)/Dark_silk_parchment_background_i…_202606211449.mp4",
+    "dest": "/Users/yuanzhe/Documents/game/GitHub资产区/07_视频动态/04_待复核素材/2026-06-21_补充动态素材/03_待判断候选/VID-MISC-UNMAPPED_Dark_silk_parchment_background_i…_202606211449.mp4",
+    "type": "03_待判断候选",
+    "note": "未映射，待判断"
+  },
+  {
+    "source": "/Users/yuanzhe/Documents/game/协作/D_BSI-D-038_动态素材到货整理/原始解压/download_(3)/Ancient_road_in_gray_fog_202606211449.mp4",
+    "dest": "/Users/yuanzhe/Documents/game/GitHub资产区/07_视频动态/04_待复核素材/2026-06-21_补充动态素材/02_转场背景候选/VID-TR-ROAD-001_古道灰雾过场候选.mp4",
+    "type": "02_转场背景候选",
+    "note": "旅途/起始过场候选"
+  }
+]

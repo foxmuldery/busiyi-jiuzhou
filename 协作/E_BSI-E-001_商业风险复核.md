@@ -219,7 +219,7 @@
 - Seedship Google Play：随机文本策略游戏、下载量、发行主体等公开信息。  
   https://play.google.com/store/apps/details?id=com.johnayliff.seedship
 - React GitHub：MIT license。  
-  https://github.com/react/react
+  https://github.com/facebook/react
 - TypeScript GitHub：Apache-2.0 license。  
   https://github.com/microsoft/TypeScript
 - Vite GitHub：MIT license。  
@@ -228,6 +228,19 @@
   https://en.wikipedia.org/wiki/Classic_of_Mountains_and_Seas
 - 著作权保护期背景资料：中国大陆通常为作者终生加 50 年，现代翻译/注释需按独立作品处理。  
   https://en.wikipedia.org/wiki/List_of_copyright_duration_by_country
+
+## 8.1 BSI-E-002 衔接更新
+
+补充日期：2026-06-14。
+
+后续同类产品研究已拆入 `E_BSI-E-002_同类产品趋势与商业风险持续研究.md`。E-001 的执行边界保持不变：开源、资料来源、竞品表达和商店表述只做产品侧风险判断，不给法律定论。
+
+对 E-001 的补充结论：
+
+- “横向旅途舞台”可以作为通用表现模式借鉴，但不得复制 FAR 系列的载具横截面、镜头节奏、环境构图、音效和关卡障碍结构。
+- “路线资源生存”可以借鉴 80 Days、Roadwarden、The Pale Beyond、Sunless Sea、DREDGE 的抽象压力结构，但不得复制具体路线、事件写法、资源命名、UI 分栏、商店页话术。
+- “低神志/认知污染”可以借鉴恐怖体验目标，例如不可靠信息、夜间压力、感官错位，但不得使用具体竞品的怪物、图像、音效、音乐、台词、恐怖桥段。
+- Steam/TapTap/试玩节阶段应把 Demo 说清楚：这是“玩法验证 Demo / 开发中版本”，不要暗示完整九州、完整故事、完整商业发行质量。
 
 ## 9. 需要用户决策的问题
 

@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>不思异：九州 P0 试玩版总验收报告</title>
+    <style>
+      :root { color-scheme: dark; --ink: #f4ead0; --muted: #d2bd8c; --line: rgba(234,205,140,.24); --panel: rgba(22,16,12,.82); --accent: #d9aa5b; --green: #8fb76c; --red: #a64032; }
+      * { box-sizing: border-box; }
+      body { margin: 0; min-height: 100svh; color: var(--ink); font-family: "Songti SC", "Noto Serif SC", "STSong", serif; background: linear-gradient(90deg, rgba(12,9,6,.95), rgba(12,9,6,.62)), url("../../02_设计资产/可用素材/背景长图/BG-008_横向山海旅途舞台总场景.png") center / cover no-repeat, #15100c; }
+      main { min-height: 100svh; display: grid; gap: 12px; padding: clamp(14px, 3vw, 28px); }
+      header, section { border: 1px solid var(--line); border-radius: 8px; background: var(--panel); box-shadow: 0 18px 64px rgba(0,0,0,.46); backdrop-filter: blur(8px); }
+      header { padding: 16px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; align-items: center; }
+      .brand { margin: 0 0 5px; color: var(--muted); font: 800 12px/1.1 "PingFang SC", sans-serif; }
+      h1 { margin: 0; font-size: clamp(24px, 4vw, 40px); line-height: 1.05; }
+      .summary { display: flex; flex-wrap: wrap; gap: 8px; }
+      .chip { border: 1px solid rgba(234,205,140,.2); border-radius: 999px; padding: 8px 10px; background: rgba(255,238,189,.07); color: var(--muted); font: 800 12px/1 "PingFang SC", sans-serif; }
+      .chip strong { color: var(--ink); }
+      section { padding: 14px; }
+      table { width: 100%; border-collapse: collapse; overflow: hidden; border-radius: 8px; }
+      th, td { border-bottom: 1px solid rgba(234,205,140,.16); padding: 10px; text-align: left; vertical-align: top; font: 13px/1.45 "PingFang SC", sans-serif; }
+      th { color: var(--accent); background: rgba(255,238,189,.07); }
+      tr[data-status="pass"] td:nth-child(2) { color: var(--green); font-weight: 900; }
+      tr[data-status="manual"] td:nth-child(2) { color: var(--accent); font-weight: 900; }
+      tr[data-status="fail"] td:nth-child(2) { color: var(--red); font-weight: 900; }
+      .note { color: var(--muted); font: 13px/1.55 "PingFang SC", sans-serif; }
+      .steps { margin: 0; padding-left: 1.2em; color: var(--muted); font: 13px/1.65 "PingFang SC", sans-serif; }
+      .steps li { margin: 4px 0; }
+      a { color: var(--ink); }
+      @media (max-width: 760px) { header { grid-template-columns: 1fr; } th, td { font-size: 12px; padding: 8px; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div>
+          <p class="brand">《不思异：九州》内部 P0 验收</p>
+          <h1>P0 机器验收通过，待真人确认</h1>
+        </div>
+        <div class="summary">
+          <span class="chip">机器验收 <strong>9/9</strong></span>
+          <span class="chip">通过 <strong>9</strong></span>
+          <span class="chip">待人工 <strong>2</strong></span>
+          <span class="chip">需处理 <strong>0</strong></span>
+        </div>
+      </header>
+      <section>
+        <table>
+          <thead><tr><th>项目</th><th>状态</th><th>证据</th><th>下一步</th></tr></thead>
+          <tbody>
+          <tr data-status="pass">
+            <td>总 QA 守门</td>
+            <td>通过</td>
+            <td>qa-check.js 全部通过</td>
+            <td>继续保持</td>
+          </tr>
+          <tr data-status="pass">
+            <td>自动试玩链</td>
+            <td>通过</td>
+            <td>入口、第一分钟、补给、选路、半途、终点和复盘链路通过</td>
+            <td>等待真人试玩反馈</td>
+          </tr>
+          <tr data-status="pass">
+            <td>P0/P1 平衡门槛</td>
+            <td>通过</td>
+            <td>P0 平衡通过；门槛 8/8；门槛 8/8；新手告警 77.9%；神志 P10 15，粮草 P10 34；压力路线：dream_to_rift。</td>
+            <td>新增事件、路线或补给后重新跑 1000 局</td>
+          </tr>
+          <tr data-status="pass">
+            <td>全量试玩图</td>
+            <td>通过</td>
+            <td>59/59 ready</td>
+            <td>继续做统一风格精修</td>
+          </tr>
+          <tr data-status="pass">
+            <td>高频事件图替换</td>
+            <td>通过</td>
+            <td>11/11</td>
+            <td>后续按新事件继续补图</td>
+          </tr>
+          <tr data-status="pass">
+            <td>音频技术体检</td>
+            <td>通过</td>
+            <td>资产 20，唯一文件 15，阻断项 0</td>
+            <td>等待主观听音，不把待复核音频标为正式素材</td>
+          </tr>
+          <tr data-status="pass">
+            <td>线上公开站冒烟</td>
+            <td>通过</td>
+            <td>页面 12/12，阻断项 0</td>
+            <td>每次部署后重新跑 online-smoke-check.js --write-report</td>
+          </tr>
+          <tr data-status="pass">
+            <td>线上可视化验收</td>
+            <td>通过</td>
+            <td>截图 2/2，阻断项 0</td>
+            <td>每次部署后重新跑 visual-smoke-check.js --write-report</td>
+          </tr>
+          <tr data-status="manual">
+            <td>声音可试玩状态</td>
+            <td>待人工</td>
+            <td>音乐 6，待复核 6，临时 14</td>
+            <td>用 P0 音频听感验收工作台复制 3 分钟听音任务，并回收音频验收摘要</td>
+          </tr>
+          <tr data-status="pass">
+            <td>测试者交付入口</td>
+            <td>通过</td>
+            <td>公开根入口、发测批次台、反馈填写页、反馈收件台按试玩编号分组、试玩编号回传、听音编号回传、游戏内 5 分钟提醒、5 分钟试玩任务、3 分钟听音任务、完整试玩包、反馈包优先指引和人工回收清单可复制</td>
+            <td>先用发测批次台登记测试者并复制邀请；游戏内到 5 分钟会提醒填写反馈并带入试玩编号；声音反馈用听音工作台回传同一编号；未走到结局时让测试者打开反馈填写页复制统一反馈包；收到多份反馈先贴入反馈收件台，按 JZ 试玩编号分组后再判断缺口</td>
+          </tr>
+          <tr data-status="manual">
+            <td>真人 5 分钟试玩</td>
+            <td>待人工</td>
+            <td>尚需真实玩家反馈；机器检查不能替代手感判断</td>
+            <td>至少回收 1 份结局 P0 试玩反馈包；未走到结局时收试玩记录、复盘文本和听感反馈</td>
+          </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="note">
+        <p>生成时间：2026-07-11T14:15:45.798Z</p>
+        <p>线上公开入口：<a href="https://webdeploy-green.vercel.app/">https://webdeploy-green.vercel.app/</a>；干净新局：<a href="https://webdeploy-green.vercel.app/play">https://webdeploy-green.vercel.app/play</a>；试玩密码：tusun2026</p>
+        <p>机器验收不能替代真人手感。正式扩大测试前，至少回收 1 份结局 P0 试玩反馈包；未走到结局时，再回收试玩记录、复盘文本和音频听感。</p>
+        <ol class="steps" aria-label="人工收口路径">
+          <li>优先分享线上公开入口，先点“复制试玩邀请”发给测试者。</li>
+          <li>发出前先打开 P0 发测批次台，登记批次、测试者、任务类型、目标反馈数、已回收反馈和追收时间；需要群发时复制本批邀请。</li>
+          <li>测试者愿意参与后，再让他点击“复制 5 分钟任务”或直接开始试玩。</li>
+          <li>需要单独判断声音时，同样从线上公开入口点击“复制听音任务”，发给听音人并回收 P0 音频听感验收摘要。</li>
+          <li>测试者没走到结局时，让他打开 P0 反馈填写页，填写卡点、资源压力、音频感受和复盘文本后复制 P0 统一反馈包。</li>
+          <li>收到多份反馈时，先打开 P0 人工反馈收件台，逐条粘贴；收件台会抽取 JZ 试玩编号，按同一局分组，并标出缺试玩编号的反馈，再复制收件汇总给主线程判断缺口。</li>
+          <li>需要完整交接时，再从试玩入口复制完整试玩包，带上发测批次台、真人验收台、反馈收件台、反馈填写页和音频验收台链接。</li>
+          <li>优先让测试者在结局“复盘本局”里复制 P0 试玩反馈包。</li>
+          <li>把完整反馈包贴入 P0 真人试玩验收台任意一栏，点“拆入三栏”，用反馈证据雷达和试玩编号一致性检查下一步、复盘、资源、UI、声音五类证据是否来自同一局。</li>
+          <li>如果材料仍缺，先在发测批次台点击“复制本批追收”，或在反馈收件台/真人验收台点击“复制补收消息”“复制本条补收消息”。</li>
+          <li>如果测试者没走到结局，再按人工回收清单分别收 5 分钟试玩记录、音频听感复核、游戏内“志”的本局复盘或 P0 统一反馈包。</li>
+          <li>需要逐条听音时，打开 P0 音频听感验收工作台并复制音频验收摘要。</li>
+        </ol>
+        <p><a href="./试玩入口.html">返回试玩入口</a></p>
+      </section>
+    </main>
+  </body>
+</html>

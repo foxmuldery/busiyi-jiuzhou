@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>不思异：九州 Web Demo 原型</title>
+    <link rel="icon" type="image/png" href="../../02_设计资产/可用素材/资源图标/RES-003_神志资源图标绿幕_透明抠图.png" />
+    <link rel="stylesheet" href="./styles.css?v=20260625-c168" />
+  </head>
+  <body>
+    <main class="app-shell game-landscape-shell">
+      <header class="game-hud" aria-label="旅途状态">
+        <section class="topbar">
+          <div class="title-stack">
+            <p class="project-label">不思异：九州</p>
+            <h1 id="locationTitle">中原驿</h1>
+          </div>
+          <div class="run-meta">
+            <span id="dayLabel">第 1 日</span>
+            <span id="regionLabel">人间边境</span>
+            <button id="newRunButton" type="button">重开</button>
+          </div>
+        </section>
+
+        <section class="resource-strip" aria-label="资源状态">
+          <div class="resource-card" data-resource="axle">
+            <div class="resource-head">
+              <span>车轴</span>
+              <strong id="axleValue">80</strong>
+            </div>
+            <div class="meter"><span id="axleMeter"></span></div>
+            <small id="axleHint">尚可远行</small>
+          </div>
+          <div class="resource-card" data-resource="grain">
+            <div class="resource-head">
+              <span>粮草</span>
+              <strong id="grainValue">90</strong>
+            </div>
+            <div class="meter"><span id="grainMeter"></span></div>
+            <small id="grainHint">队伍安稳</small>
+          </div>
+          <div class="resource-card" data-resource="sanity">
+            <div class="resource-head">
+              <span>神志</span>
+              <strong id="sanityValue">85</strong>
+            </div>
+            <div class="meter"><span id="sanityMeter"></span></div>
+            <small id="sanityHint">文字可信</small>
+          </div>
+        </section>
+
+        <section class="journey-overview" aria-label="旅程总览">
+          <div class="view-tabs" role="tablist" aria-label="模式切换">
+            <button class="view-tab active" id="townViewButton" type="button" data-view-target="town" role="tab" aria-selected="true">旅途</button>
+            <button class="view-tab" id="mapViewButton" type="button" data-view-target="map" role="tab" aria-selected="false">地图</button>
+          </div>
+          <div class="distance-board">
+            <div class="distance-copy">
+              <span id="progressLabel">西行 1 / 5</span>
+              <strong id="distanceLabel">距九州裂隙约 4 段路</strong>
+              <small id="nextStepLabel" class="next-step-label" data-tone="event" data-action="event-choice" data-short="遇" title="下一步：处理当前遭遇" aria-label="下一步：处理当前遭遇">下一步：处理当前遭遇</small>
+            </div>
+            <div class="journey-track-wrap">
+              <div class="journey-progress" aria-hidden="true"><span id="journeyProgressMeter"></span></div>
+              <div class="journey-step-track" id="journeyStepTrack" role="list" aria-label="章节进度"></div>
+            </div>
+            <small id="nextStopLabel" class="next-stop-label">当前：中原驿</small>
+          </div>
+          <div class="utility-actions" aria-label="辅助入口">
+            <button class="drawer-button audio-hud-button" id="audioHudButton" type="button" aria-pressed="false" aria-label="播放音乐" title="播放音乐"><span aria-hidden="true">音</span></button>
+            <button class="music-now-chip" id="musicNowChip" type="button" data-drawer-target="settings" aria-expanded="false" aria-label="当前音乐" title="当前音乐">
+              <span aria-hidden="true">曲</span>
+              <strong id="musicNowId">MUS</strong>
+              <small id="musicNowScene">旅途</small>
+            </button>
+            <button class="drawer-button" id="inventoryDrawerButton" type="button" data-drawer-target="inventory" aria-expanded="false" aria-label="打开行囊" title="行囊"><span aria-hidden="true">囊</span></button>
+            <button class="drawer-button" id="poetryDrawerButton" type="button" data-drawer-target="poetry" aria-expanded="false" aria-label="打开古辞" title="古辞"><span aria-hidden="true">辞</span></button>
+            <button class="drawer-button" id="logDrawerButton" type="button" data-drawer-target="log" aria-expanded="false" aria-label="打开日志" title="日志"><span aria-hidden="true">志</span></button>
+            <button class="drawer-button" id="settingsDrawerButton" type="button" data-drawer-target="settings" aria-expanded="false" aria-label="打开设置" title="设置"><span aria-hidden="true">设</span></button>
+          </div>
+        </section>
+      </header>
+
+      <section class="game-board" aria-label="横屏游戏画面">
+        <div class="view-switch-toast" id="viewSwitchToast" data-view-tone="town" aria-live="polite" hidden>
+          <span id="viewSwitchIcon" aria-hidden="true">旅</span>
+          <strong id="viewSwitchTitle">回到旅途</strong>
+          <small id="viewSwitchDetail">处理停靠、补给与遭遇。</small>
+        </div>
+        <div class="playtest-reminder" id="playtestReminder" aria-live="polite" hidden>
+          <span aria-hidden="true">测</span>
+          <strong>已试玩 5 分钟</strong>
+          <small id="playtestReminderDetail">可以继续玩，也可以先交反馈。</small>
+          <button id="playtestReminderFeedback" type="button">填写反馈</button>
+          <button id="playtestReminderDismiss" type="button" aria-label="继续试玩">继续</button>
+        </div>
+        <section class="view-panel town-view active" id="townView" data-view="town" aria-label="旅途模式">
+        <section class="journey-stage" id="journeyStage" aria-label="横向山海旅途舞台">
+          <div class="video-layer" id="videoLayer" aria-hidden="true">
+            <video id="ambientVideo" muted playsinline loop preload="none" poster=""></video>
+          </div>
+          <div class="asset-bg asset-bg-road"></div>
+          <div class="asset-bg asset-bg-red"></div>
+          <div class="asset-atmosphere asset-wind"></div>
+          <div class="sky-gradient"></div>
+          <div class="sun-orb" id="sunOrb"></div>
+          <div class="moon-orb" id="moonOrb"></div>
+          <div class="cloud cloud-a"></div>
+          <div class="cloud cloud-b"></div>
+          <div class="back-range" id="backRange"></div>
+          <div class="middle-land" id="middleLand"></div>
+          <div class="road-line"></div>
+          <div class="stage-nodes">
+            <span id="fromNode">中原驿</span>
+            <span id="routeNode">故王道</span>
+            <span id="toNode">废关</span>
+          </div>
+          <div class="stage-route-progress" id="stageRouteProgress" data-progress-state="ready" data-has-mid-event="false" aria-hidden="true">
+            <span class="stage-route-dot route-dot-from"></span>
+            <span class="stage-route-mid" id="stageRouteMidMarker">半途</span>
+            <span class="stage-route-dot route-dot-to"></span>
+          </div>
+          <div class="stage-phase-card" id="stagePhaseCard" data-tone="event" aria-live="polite">
+            <span id="stagePhaseIcon" class="stage-phase-icon" aria-hidden="true">遇</span>
+            <span class="stage-phase-copy">
+              <strong id="stagePhaseTitle">停靠</strong>
+              <small id="stagePhaseDetail">中原驿 · 先处理当前遭遇</small>
+            </span>
+          </div>
+          <div class="caravan" id="caravan" aria-hidden="true">
+            <img
+              class="caravan-art"
+              src="../../02_设计资产/可用素材/车队层/CAR-013_双马辎重车透明抠图.png"
+              alt=""
+            />
+            <span class="flag"></span>
+            <span class="cart"></span>
+            <span class="wheel wheel-a"></span>
+            <span class="wheel wheel-b"></span>
+          </div>
+          <div class="asset-foreground asset-ruts"></div>
+          <div class="foreground foreground-a"></div>
+          <div class="foreground foreground-b"></div>
+          <div class="asset-pollution" id="assetPollution"></div>
+          <div class="sanity-veil" id="sanityVeil"></div>
+          <div class="stage-alert-layer" id="stageAlertLayer" aria-hidden="true"></div>
+          <div class="stage-condition-lights" id="stageConditionLights" aria-hidden="true">
+            <span data-resource-light="axle">轴</span>
+            <span data-resource-light="grain">粮</span>
+            <span data-resource-light="sanity">神</span>
+          </div>
+        </section>
+
+        <section class="control-grid town-grid game-action-area">
+          <section class="panel event-panel">
+            <div class="panel-title">
+              <span id="eventTitle">驿门未闭</span>
+              <small id="eventTag">处理当前地点</small>
+            </div>
+            <div class="location-lore" id="locationLore">
+              <div class="location-lore-head">
+                <strong id="locationLoreTitle">地点志</strong>
+                <div class="copy-actions">
+                  <span id="discoveryCount">采风 1 / 8</span>
+                  <button class="text-fold-button icon-text-button" id="locationLoreToggle" type="button" aria-expanded="false" aria-label="打开地点志">
+                    <span aria-hidden="true">志</span>
+                  </button>
+                </div>
+              </div>
+              <figure class="location-art-frame" id="locationArtFrame" role="button" tabindex="0" aria-label="打开地点图">
+                <img id="locationArt" alt="" />
+              </figure>
+              <p id="locationVerse" class="scene-verse location-verse">客路青山外，行舟绿水前。</p>
+              <p id="locationLoreText">中原驿立在诸路将散之处，车马声到这里会短暂停住。</p>
+            </div>
+            <div class="event-copy-card" id="eventCopyCard">
+              <div class="event-copy-head">
+                <strong>当前遭遇</strong>
+                <button class="text-fold-button icon-text-button" id="eventTextToggle" type="button" aria-expanded="false" aria-label="打开当前遭遇">
+                  <span aria-hidden="true">遇</span>
+                </button>
+              </div>
+              <figure class="event-art-frame" id="eventArtFrame" role="button" tabindex="0" aria-label="打开当前遭遇图" hidden>
+                <img id="eventArt" alt="" />
+              </figure>
+              <p id="eventVerse" class="scene-verse event-verse">劝君更尽一杯酒，西出阳关无故人。</p>
+              <p id="eventText" class="event-text"></p>
+            </div>
+            <div class="action-process" id="actionProcess" aria-live="polite">
+              <span class="action-process-kicker" id="actionProcessKicker">行旅</span>
+              <strong id="actionProcessTitle">等待指令</strong>
+              <span id="actionProcessDetail">选择补给、路线或当前遭遇，队伍会先执行再落账。</span>
+            </div>
+            <div class="supply-section">
+              <div class="supply-head">
+                <strong>补给</strong>
+                <span>地利</span>
+              </div>
+              <div id="supplyList" class="supply-list"></div>
+            </div>
+            <div id="choiceList" class="choice-list"></div>
+            <p class="latest-log-peek" id="latestLogPeek">第 1 日：车队自中原驿整装，西路未明。</p>
+          </section>
+        </section>
+        </section>
+
+        <section class="view-panel map-view" id="mapView" data-view="map" aria-label="九州图战略模式" hidden>
+          <section class="panel map-panel">
+            <div class="panel-title">
+              <span>九州图</span>
+              <small id="mapDistanceLabel">距九州裂隙约 4 段路</small>
+            </div>
+            <div class="map-layout">
+              <div class="kyushu-map" id="kyushuMap" aria-label="九州路线图">
+                <div class="map-grid" aria-hidden="true"></div>
+                <div class="map-routes-layer" id="mapRoutesLayer"></div>
+                <div class="map-node-layer" id="mapNodeLayer"></div>
+              </div>
+              <aside class="map-route-panel">
+                <div class="panel-title">
+                  <span>下一站</span>
+                  <small id="mapRouteHint">从当前地点出发</small>
+                </div>
+                <button class="map-route-preview" id="mapRoutePreview" type="button" data-state="idle" aria-live="polite" aria-disabled="true" tabindex="-1">
+                  <span class="map-route-preview-icon" id="mapRoutePreviewIcon" aria-hidden="true">图</span>
+                  <span class="map-route-preview-copy">
+                    <strong id="mapRoutePreviewTitle">点选路线预览</strong>
+                    <small id="mapRoutePreviewDetail">查看消耗、路遇与目的地补给。</small>
+                  </span>
+                </button>
+                <div id="routeList" class="route-list"></div>
+              </aside>
+            </div>
+          </section>
+        </section>
+      </section>
+
+      <aside class="story-modal" id="storyModal" aria-hidden="true" hidden>
+        <button class="story-modal-backdrop" id="storyModalBackdrop" type="button" aria-label="关闭文本弹窗"></button>
+        <section class="story-modal-panel" id="storyModalPanel" role="dialog" aria-modal="true" aria-labelledby="storyModalTitle">
+          <header class="story-modal-head">
+            <div>
+              <span id="storyModalKicker">地点志</span>
+              <strong id="storyModalTitle">中原驿</strong>
+            </div>
+            <button class="story-modal-close" id="storyModalClose" type="button" aria-label="关闭">关闭</button>
+          </header>
+          <figure class="story-modal-art" id="storyModalArtFrame" hidden>
+            <img id="storyModalArt" alt="" />
+          </figure>
+          <p id="storyModalVerse" class="scene-verse story-modal-verse">客路青山外，行舟绿水前。</p>
+          <p id="storyModalText" class="story-modal-text">中原驿立在诸路将散之处，车马声到这里会短暂停住。</p>
+          <div id="storyModalOutcome" class="story-modal-outcome" aria-live="polite" hidden></div>
+          <div id="storyModalChoices" class="story-modal-choices" hidden></div>
+          <small id="storyModalMeta" class="story-modal-meta">采风 1 / 8</small>
+          <button id="storyModalContinue" class="story-modal-continue" type="button" hidden>轻点继续</button>
+        </section>
+      </aside>
+
+      <aside class="side-drawer" id="sideDrawer" aria-hidden="true">
+        <button class="drawer-backdrop" type="button" data-drawer-close aria-label="关闭辅助面板"></button>
+        <section class="drawer-panel" role="dialog" aria-modal="false" aria-labelledby="drawerTitle">
+          <header class="drawer-head">
+            <strong id="drawerTitle">行囊</strong>
+            <button class="drawer-close" id="drawerCloseButton" type="button" aria-label="关闭">关闭</button>
+          </header>
+
+          <section class="drawer-pane" data-drawer-panel="inventory">
+            <section class="panel status-panel">
+              <div class="panel-title">
+                <span>行囊</span>
+                <small>器物 / 语言 / 困厄</small>
+              </div>
+              <div class="status-block">
+                <strong>器物</strong>
+                <div id="itemList" class="inventory-grid" role="list" aria-label="行囊九宫格"></div>
+              </div>
+              <div class="status-block">
+                <strong>语言</strong>
+                <p id="languageList">羽民语 0 / 巫咸古辞 0</p>
+              </div>
+              <div class="status-block">
+                <strong>困厄</strong>
+                <p id="safetyList">厄运 0 / 求生 0 / 断轴 0 / 饥荒 0 / 失神 0</p>
+              </div>
+            </section>
+          </section>
+
+          <section class="drawer-pane" data-drawer-panel="poetry" hidden>
+            <section class="panel poetry-panel">
+              <div class="panel-title">
+                <span>古辞碎片</span>
+                <small id="poetryStatus">待取诗泉</small>
+              </div>
+              <article class="poetry-card" aria-live="polite">
+                <p class="poetry-location" id="poetryLocation">中原驿</p>
+                <h2 id="poetryTitle">诗泉待启</h2>
+                <p class="poetry-meta" id="poetryMeta">打开后按当前地点取一条古辞。</p>
+                <ol class="poetry-lines" id="poetryLines"></ol>
+                <p class="poetry-hint" id="poetryHint">联网失败时会使用本地兜底，不影响试玩。</p>
+              </article>
+              <div class="poetry-actions">
+                <button class="audio-toggle" id="poetryRefreshButton" type="button">换一条</button>
+                <button class="audio-toggle" id="poetryLogButton" type="button">收入日志</button>
+              </div>
+            </section>
+          </section>
+
+          <section class="drawer-pane" data-drawer-panel="log" hidden>
+            <section class="panel log-panel">
+              <div class="panel-title">
+                <span>行旅日志</span>
+                <small>复盘 / 采风 / 近志</small>
+              </div>
+              <div class="log-drawer-tabs" role="tablist" aria-label="日志页签">
+                <button class="log-tab active" type="button" data-log-tab="recap" role="tab" aria-selected="true" aria-controls="logPanelRecap">复盘</button>
+                <button class="log-tab" type="button" data-log-tab="discovery" role="tab" aria-selected="false" aria-controls="logPanelDiscovery">采风</button>
+                <button class="log-tab" type="button" data-log-tab="encounter" role="tab" aria-selected="false" aria-controls="logPanelEncounter">遭遇</button>
+                <button class="log-tab" type="button" data-log-tab="trail" role="tab" aria-selected="false" aria-controls="logPanelTrail">近志</button>
+              </div>
+              <section class="log-tab-panel active" id="logPanelRecap" data-log-panel="recap" role="tabpanel">
+                <article class="run-recap-card" id="runRecapCard" aria-label="本局复盘">
+                  <div class="run-recap-head">
+                    <strong id="runRecapTitle">本局复盘</strong>
+                    <span class="run-recap-actions">
+                      <button class="run-recap-copy" id="runRecapCopyButton" type="button">复制</button>
+                      <a class="run-recap-copy run-feedback-link" id="runFeedbackLink" href="./P0反馈填写页.html">反馈</a>
+                    </span>
+                  </div>
+                  <div class="run-recap-stats" id="runRecapStats"></div>
+                  <p id="runRecapRoute">路线尚未展开。</p>
+                  <p id="runRecapPressure">资源压力尚未出现。</p>
+                  <small id="runRecapCopyState">可复制给测试记录。</small>
+                </article>
+              </section>
+              <section class="log-tab-panel" id="logPanelDiscovery" data-log-panel="discovery" role="tabpanel" hidden>
+                <section class="discovery-gallery-card" aria-label="采风册">
+                  <div class="discovery-gallery-head">
+                    <strong>采风册</strong>
+                    <small id="discoveryGalleryCount">1 / 14</small>
+                  </div>
+                  <div id="discoveryGallery" class="discovery-gallery" role="list"></div>
+                </section>
+              </section>
+              <section class="log-tab-panel" id="logPanelEncounter" data-log-panel="encounter" role="tabpanel" hidden>
+                <section class="encounter-gallery-card discovery-gallery-card" aria-label="异闻采风">
+                  <div class="discovery-gallery-head">
+                    <strong>异闻采风</strong>
+                    <small id="encounterGalleryCount">0 / 35</small>
+                  </div>
+                  <div id="encounterGallery" class="discovery-gallery encounter-gallery" role="list"></div>
+                </section>
+              </section>
+              <section class="log-tab-panel" id="logPanelTrail" data-log-panel="trail" role="tabpanel" hidden>
+                <ol id="logList"></ol>
+              </section>
+            </section>
+          </section>
+
+          <section class="drawer-pane" data-drawer-panel="settings" hidden>
+            <section class="panel settings-panel">
+              <div class="panel-title">
+                <span>设置</span>
+                <small>音乐 / 动态层</small>
+              </div>
+              <div class="status-block">
+                <strong>音乐</strong>
+                <button class="audio-toggle" id="audioToggleButton" type="button">播放音乐</button>
+                <p id="audioStatus">静音；首次操作会尝试启声，也可手动播放音乐。</p>
+                <div class="audio-health-strip" id="audioHealthStrip" aria-label="音频接入状态"></div>
+                <div class="audio-review-progress" id="audioReviewProgress" aria-label="听感进度"></div>
+                <div class="audio-review-list" id="audioReviewList" aria-label="音乐试听候选"></div>
+                <button class="audio-toggle audio-copy-button" id="audioReviewCopyButton" type="button">复制听感模板</button>
+                <small class="audio-copy-state" id="audioReviewCopyState">听完可点“保留 / 待改 / 弃用”，复制模板会带上标记。</small>
+                <textarea class="audio-copy-fallback" id="audioReviewCopyFallback" readonly hidden aria-label="听感反馈模板"></textarea>
+                <p class="audio-details" id="audioDetails">音乐槽位载入中。</p>
+              </div>
+              <label class="motion-toggle">
+                <input id="motionToggle" type="checkbox" checked />
+                <span>启用轻量动态</span>
+              </label>
+              <p class="video-note" id="videoNote">视频层未加载素材；当前使用 CSS/SVG 假动态。</p>
+            </section>
+          </section>
+        </section>
+      </aside>
+    </main>
+
+    <script src="./data.js?v=20260625-c168"></script>
+    <script src="./generated-art-manifest.js?v=20260624-c159"></script>
+    <script src="./app.js?v=20260625-c168"></script>
+  </body>
+</html>

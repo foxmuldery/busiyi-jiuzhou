@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>不思异：九州 P0 反馈填写页</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --ink: #f4ead0;
+        --muted: #d3bf91;
+        --line: rgba(226, 187, 103, 0.32);
+        --panel: rgba(17, 12, 8, 0.82);
+        --field: rgba(7, 6, 4, 0.68);
+        --accent: #d9aa5b;
+        --good: #9fbd72;
+        --warn: #c17a45;
+        font-family: "Songti SC", "Noto Serif SC", "STSong", serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100svh;
+        margin: 0;
+        background:
+          linear-gradient(90deg, rgba(9, 7, 4, 0.94), rgba(9, 7, 4, 0.52), rgba(9, 7, 4, 0.9)),
+          url("../../02_设计资产/可用素材/背景长图/BG-008_横向山海旅途舞台总场景.png") center / cover fixed no-repeat,
+          #100c08;
+        color: var(--ink);
+      }
+
+      main {
+        min-height: 100svh;
+        display: grid;
+        grid-template-columns: minmax(290px, 420px) minmax(0, 1fr);
+        gap: clamp(16px, 3vw, 28px);
+        padding: clamp(14px, 3vw, 34px);
+      }
+
+      .side,
+      .form-shell {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+        box-shadow: 0 22px 80px rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(8px);
+      }
+
+      .side {
+        align-self: start;
+        padding: 18px;
+      }
+
+      .brand {
+        margin: 0 0 7px;
+        color: var(--muted);
+        font: 700 12px/1.2 "PingFang SC", "Microsoft YaHei", sans-serif;
+      }
+
+      h1 {
+        margin: 0 0 10px;
+        font-size: clamp(30px, 4vw, 44px);
+        line-height: 1.06;
+        letter-spacing: 0;
+      }
+
+      .summary {
+        margin: 0 0 16px;
+        color: rgba(244, 234, 208, 0.78);
+        font-size: 14px;
+        line-height: 1.7;
+      }
+
+      .quick-links,
+      .evidence-list {
+        display: grid;
+        gap: 8px;
+      }
+
+      a,
+      button {
+        min-height: 42px;
+        border: 1px solid rgba(226, 187, 103, 0.35);
+        border-radius: 7px;
+        background: rgba(255, 236, 182, 0.08);
+        color: var(--ink);
+        font: inherit;
+      }
+
+      a {
+        display: grid;
+        align-items: center;
+        padding: 8px 11px;
+        text-decoration: none;
+      }
+
+      a strong,
+      a span {
+        display: block;
+      }
+
+      a strong {
+        font: 800 14px/1.2 "PingFang SC", "Microsoft YaHei", sans-serif;
+      }
+
+      a span {
+        margin-top: 3px;
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.25;
+      }
+
+      .evidence-list {
+        margin-top: 16px;
+        padding-top: 16px;
+        border-top: 1px solid rgba(226, 187, 103, 0.2);
+      }
+
+      .evidence-item {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        gap: 8px;
+        align-items: start;
+        color: rgba(244, 234, 208, 0.78);
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
+      .dot {
+        width: 8px;
+        height: 8px;
+        margin-top: 6px;
+        border-radius: 50%;
+        background: var(--good);
+        box-shadow: 0 0 0 4px rgba(159, 189, 114, 0.12);
+      }
+
+      .form-shell {
+        min-height: calc(100svh - clamp(14px, 3vw, 34px) * 2);
+        overflow: hidden;
+        display: grid;
+        grid-template-rows: auto minmax(0, 1fr) auto;
+      }
+
+      .form-head {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        gap: 14px;
+        padding: 16px 18px;
+        border-bottom: 1px solid rgba(226, 187, 103, 0.2);
+      }
+
+      .form-head h2 {
+        margin: 0;
+        font-size: 22px;
+        line-height: 1.2;
+      }
+
+      .form-head p {
+        margin: 5px 0 0;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
+      .status-pill {
+        min-width: 88px;
+        border: 1px solid rgba(159, 189, 114, 0.42);
+        border-radius: 999px;
+        padding: 6px 10px;
+        color: #cfe7a4;
+        background: rgba(85, 112, 62, 0.18);
+        font: 800 12px/1 "PingFang SC", "Microsoft YaHei", sans-serif;
+        text-align: center;
+      }
+
+      form {
+        overflow: auto;
+        padding: 16px 18px 18px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .field,
+      .wide {
+        display: grid;
+        gap: 6px;
+      }
+
+      .wide {
+        grid-column: 1 / -1;
+      }
+
+      label {
+        color: var(--muted);
+        font: 800 12px/1.2 "PingFang SC", "Microsoft YaHei", sans-serif;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        border: 1px solid rgba(226, 187, 103, 0.24);
+        border-radius: 7px;
+        background: var(--field);
+        color: var(--ink);
+        font: 14px/1.55 "PingFang SC", "Microsoft YaHei", sans-serif;
+      }
+
+      input,
+      select {
+        height: 42px;
+        padding: 0 10px;
+      }
+
+      textarea {
+        min-height: 86px;
+        resize: vertical;
+        padding: 9px 10px;
+      }
+
+      .short textarea {
+        min-height: 64px;
+      }
+
+      .form-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: center;
+        padding: 12px 18px;
+        border-top: 1px solid rgba(226, 187, 103, 0.2);
+        background: rgba(0, 0, 0, 0.18);
+      }
+
+      button {
+        cursor: pointer;
+        padding: 0 14px;
+        font: 800 13px/1 "PingFang SC", "Microsoft YaHei", sans-serif;
+      }
+
+      .primary {
+        border-color: rgba(217, 170, 91, 0.7);
+        background: #bd852d;
+        color: #160f07;
+      }
+
+      .secondary {
+        border-color: rgba(159, 189, 114, 0.45);
+        background: rgba(85, 112, 62, 0.18);
+      }
+
+      .copy-status {
+        min-height: 18px;
+        margin: 0 0 0 auto;
+        color: #cfe7a4;
+        font: 700 12px/1.4 "PingFang SC", "Microsoft YaHei", sans-serif;
+      }
+
+      .result {
+        display: none;
+        grid-column: 1 / -1;
+        margin-top: 12px;
+      }
+
+      .result[data-visible="true"] {
+        display: grid;
+        gap: 6px;
+      }
+
+      .result textarea {
+        min-height: 180px;
+        font: 12px/1.55 ui-monospace, SFMono-Regular, Menlo, monospace;
+      }
+
+      @media (max-width: 920px) {
+        main {
+          grid-template-columns: 1fr;
+        }
+
+        .form-shell {
+          min-height: auto;
+        }
+      }
+
+      @media (orientation: landscape) and (max-height: 620px) {
+        main {
+          grid-template-columns: minmax(260px, 330px) minmax(0, 1fr);
+          gap: 10px;
+          padding: 10px;
+        }
+
+        .side {
+          padding: 12px;
+        }
+
+        h1 {
+          font-size: 28px;
+        }
+
+        .summary,
+        .evidence-list {
+          display: none;
+        }
+
+        .form-shell {
+          min-height: calc(100svh - 20px);
+        }
+
+        .form-head {
+          padding: 10px 12px;
+        }
+
+        .form-head h2 {
+          font-size: 18px;
+        }
+
+        form {
+          padding: 10px 12px;
+        }
+
+        .grid {
+          gap: 8px;
+        }
+
+        input,
+        select {
+          height: 36px;
+        }
+
+        textarea {
+          min-height: 58px;
+        }
+
+        .form-actions {
+          padding: 8px 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <aside class="side" aria-label="反馈说明">
+        <p class="brand">P0 Playtest Feedback</p>
+        <h1>不思异：九州</h1>
+        <p class="summary">
+          这里把 5 分钟试玩、音频听感和本局复盘收成一段统一反馈包。测试者不用理解内部流程，填完后复制发回即可。
+        </p>
+        <nav class="quick-links" aria-label="快速入口">
+          <a href="./index.html?fresh=1">
+            <strong>开始干净新局</strong>
+            <span>从第一站进入正式试玩</span>
+          </a>
+          <a href="./index.html?recap=1">
+            <strong>打开本局复盘</strong>
+            <span>复制游戏内路线与资源记录</span>
+          </a>
+          <a href="./P0音频听感验收工作台.html">
+            <strong>音频听感验收台</strong>
+            <span>逐条试听并复制听音摘要</span>
+          </a>
+          <a href="./P0真人试玩验收工作台.html">
+            <strong>主线程验收台</strong>
+            <span>给主协调拆分证据使用</span>
+          </a>
+        </nav>
+        <div class="evidence-list" aria-label="需要回收的证据">
+          <div class="evidence-item"><span class="dot"></span><span>是否看懂下一步和触屏操作。</span></div>
+          <div class="evidence-item"><span class="dot"></span><span>车轴、粮草、神志是否形成压力。</span></div>
+          <div class="evidence-item"><span class="dot"></span><span>画面、文字、诗句是否有山海九州感。</span></div>
+          <div class="evidence-item"><span class="dot"></span><span>音乐、环境声和短音效是否加分或打扰。</span></div>
+          <div class="evidence-item"><span class="dot"></span><span>游戏内“志”的复盘文本或结局反馈包。</span></div>
+        </div>
+      </aside>
+
+      <section class="form-shell" aria-label="P0 反馈表">
+        <header class="form-head">
+          <div>
+            <h2>试玩反馈包</h2>
+            <p>填最关键的感受即可。没有走到结局也没关系，卡在哪里本身就是证据。</p>
+          </div>
+          <span class="status-pill" id="draftState">草稿就绪</span>
+        </header>
+
+        <form id="feedbackForm">
+          <div class="grid">
+            <div class="field">
+              <label for="testerName">测试者代号</label>
+              <input id="testerName" name="testerName" placeholder="例如 A01 / 朋友甲" />
+            </div>
+            <div class="field">
+              <label for="runCode">试玩编号</label>
+              <input id="runCode" name="runCode" placeholder="游戏自动带入，例如 JZ-XXXX" />
+            </div>
+            <div class="field">
+              <label for="device">设备与浏览器</label>
+              <input id="device" name="device" placeholder="例如 iPhone Safari / Windows Chrome" />
+            </div>
+            <div class="field">
+              <label for="duration">试玩时长</label>
+              <select id="duration" name="duration">
+                <option value="5 分钟以内">5 分钟以内</option>
+                <option value="5-10 分钟">5-10 分钟</option>
+                <option value="10 分钟以上">10 分钟以上</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="progress">抵达进度</label>
+              <select id="progress" name="progress">
+                <option value="只处理了第一场遭遇">只处理了第一场遭遇</option>
+                <option value="完成补给并打开地图">完成补给并打开地图</option>
+                <option value="走到第二站或半途事件">走到第二站或半途事件</option>
+                <option value="走到结局或失败复盘">走到结局或失败复盘</option>
+              </select>
+            </div>
+            <div class="wide short">
+              <label for="nextStep">是否一眼知道下一步点哪里</label>
+              <textarea id="nextStep" name="nextStep" placeholder="例如：开局知道点遭遇；地图页有点犹豫；复盘按钮很明确。"></textarea>
+            </div>
+            <div class="wide short">
+              <label for="resourcePressure">车轴 / 粮草 / 神志是否看得懂、有压力</label>
+              <textarea id="resourcePressure" name="resourcePressure" placeholder="例如：粮草变化清楚；神志低的时候气氛有效；车轴消耗还不够紧。"></textarea>
+            </div>
+            <div class="wide short">
+              <label for="bestMoment">哪一刻最像游戏，最有山海经感觉</label>
+              <textarea id="bestMoment" name="bestMoment" placeholder="地点志、遭遇图、诗句、补给、地图开雾、音乐等都可以写。"></textarea>
+            </div>
+            <div class="wide short">
+              <label for="webFeeling">哪里还像网页，哪里不好点或信息太多</label>
+              <textarea id="webFeeling" name="webFeeling" placeholder="请尽量具体到页面、按钮、弹窗、文字密度或横屏适配。"></textarea>
+            </div>
+            <div class="wide short">
+              <label for="audioFeeling">音乐 / 音效 / 环境声是否加分或打扰</label>
+              <textarea id="audioFeeling" name="audioFeeling" placeholder="例如：默认音乐可以保留；告急音太突兀；环境声很加分。"></textarea>
+            </div>
+            <div class="wide">
+              <label for="recapText">游戏内“志”的本局复盘 / 结局反馈包 / 音频验收摘要</label>
+              <textarea id="recapText" name="recapText" placeholder="走到结局请粘贴《P0 试玩反馈包》；没走到结局请粘贴本局复盘；只听音请粘贴音频验收摘要。"></textarea>
+            </div>
+            <div class="wide short">
+              <label for="oneChange">只改一件事的话，你希望先改什么</label>
+              <textarea id="oneChange" name="oneChange" placeholder="这条最重要，用来决定下一轮优化优先级。"></textarea>
+            </div>
+            <div class="result" id="resultBox">
+              <label for="resultText">已生成的统一反馈包</label>
+              <textarea id="resultText" readonly></textarea>
+            </div>
+          </div>
+        </form>
+
+        <footer class="form-actions">
+          <button class="primary" id="copyResult" type="button">生成并复制反馈包</button>
+          <button class="secondary" id="showResult" type="button">只生成不复制</button>
+          <button id="clearDraft" type="button">清空草稿</button>
+          <p class="copy-status" id="copyStatus">填写内容会自动保存在本浏览器。</p>
+        </footer>
+      </section>
+    </main>
+
+    <script>
+      (() => {
+        const form = document.querySelector("#feedbackForm");
+        const resultBox = document.querySelector("#resultBox");
+        const resultText = document.querySelector("#resultText");
+        const copyStatus = document.querySelector("#copyStatus");
+        const draftState = document.querySelector("#draftState");
+        const storageKey = "BSI_P0_FEEDBACK_DRAFT";
+        const fields = Array.from(form?.elements || []).filter((item) => item.name);
+
+        function getValue(name) {
+          const field = form?.elements.namedItem(name);
+          return field ? String(field.value || "").trim() : "";
+        }
+
+        function collectDraft() {
+          return Object.fromEntries(fields.map((field) => [field.name, field.value || ""]));
+        }
+
+        function saveDraft() {
+          try {
+            localStorage.setItem(storageKey, JSON.stringify(collectDraft()));
+            if (draftState) draftState.textContent = "草稿已存";
+          } catch {
+            if (draftState) draftState.textContent = "本地未存";
+          }
+        }
+
+        function restoreDraft() {
+          try {
+            const raw = localStorage.getItem(storageKey);
+            if (!raw) return;
+            const draft = JSON.parse(raw);
+            fields.forEach((field) => {
+              if (Object.prototype.hasOwnProperty.call(draft, field.name)) field.value = draft[field.name];
+            });
+            if (draftState) draftState.textContent = "草稿已恢复";
+          } catch {}
+        }
+
+        function applyUrlPrefill() {
+          const params = new URLSearchParams(window.location.search);
+          const map = {
+            runCode: params.get("run") || params.get("runCode"),
+            duration: params.get("duration"),
+            progress: params.get("progress")
+          };
+          Object.entries(map).forEach(([name, value]) => {
+            if (!value) return;
+            const field = form?.elements.namedItem(name);
+            if (!field || field.value) return;
+            field.value = value;
+          });
+          if (map.runCode && copyStatus) copyStatus.textContent = "已带入本局试玩编号。";
+        }
+
+        function buildPackageText() {
+          const lines = [
+            "《不思异：九州》P0 统一反馈包",
+            "",
+            "测试者代号：" + (getValue("testerName") || "未填写"),
+            "试玩编号：" + (getValue("runCode") || "未填写"),
+            "设备与浏览器：" + (getValue("device") || "未填写"),
+            "试玩时长：" + (getValue("duration") || "未填写"),
+            "抵达进度：" + (getValue("progress") || "未填写"),
+            "",
+            "## 1. 是否一眼知道下一步点哪里",
+            getValue("nextStep") || "未填写",
+            "",
+            "## 2. 车轴 / 粮草 / 神志是否看得懂、有压力",
+            getValue("resourcePressure") || "未填写",
+            "",
+            "## 3. 哪一刻最像游戏，最有山海经感觉",
+            getValue("bestMoment") || "未填写",
+            "",
+            "## 4. 哪里还像网页，哪里不好点或信息太多",
+            getValue("webFeeling") || "未填写",
+            "",
+            "## 5. 音乐 / 音效 / 环境声是否加分或打扰",
+            getValue("audioFeeling") || "未填写",
+            "",
+            "## 6. 游戏内复盘 / 结局反馈包 / 音频验收摘要",
+            getValue("recapText") || "未填写",
+            "",
+            "## 7. 只改一件事的话，先改什么",
+            getValue("oneChange") || "未填写",
+            "",
+            "收口判断：请主线程把本反馈拆入真人试玩、音频听感、本局复盘三类证据。"
+          ];
+          return lines.join("\n");
+        }
+
+        function showPackage() {
+          const text = buildPackageText();
+          if (resultText) resultText.value = text;
+          if (resultBox) resultBox.dataset.visible = "true";
+          return text;
+        }
+
+        async function copyPackage() {
+          const text = showPackage();
+          try {
+            await navigator.clipboard.writeText(text);
+            if (copyStatus) copyStatus.textContent = "反馈包已复制，可以直接发回。";
+          } catch {
+            resultText?.focus();
+            resultText?.select();
+            if (copyStatus) copyStatus.textContent = "浏览器没有放行复制，已展开文本，请手动复制。";
+          }
+        }
+
+        restoreDraft();
+        applyUrlPrefill();
+        fields.forEach((field) => {
+          field.addEventListener("input", saveDraft);
+          field.addEventListener("change", saveDraft);
+        });
+        document.querySelector("#copyResult")?.addEventListener("click", copyPackage);
+        document.querySelector("#showResult")?.addEventListener("click", () => {
+          showPackage();
+          if (copyStatus) copyStatus.textContent = "反馈包已生成，未复制。";
+        });
+        document.querySelector("#clearDraft")?.addEventListener("click", () => {
+          fields.forEach((field) => {
+            field.value = "";
+          });
+          try {
+            localStorage.removeItem(storageKey);
+          } catch {}
+          if (resultBox) resultBox.dataset.visible = "false";
+          if (copyStatus) copyStatus.textContent = "草稿已清空。";
+          if (draftState) draftState.textContent = "草稿就绪";
+        });
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,977 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>不思异：九州 P0 真人试玩验收工作台</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --ink: #f4ead0;
+        --muted: #d2bd8c;
+        --line: rgba(234, 205, 140, 0.26);
+        --panel: rgba(24, 18, 13, 0.78);
+        --panel-soft: rgba(255, 238, 189, 0.07);
+        --accent: #d9aa5b;
+        --green: #8fb76c;
+        --red: #a64032;
+        font-family: "Songti SC", "Noto Serif SC", "STSong", serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100svh;
+        margin: 0;
+        background:
+          linear-gradient(90deg, rgba(14, 10, 7, 0.94), rgba(14, 10, 7, 0.64)),
+          url("../../02_设计资产/可用素材/背景长图/BG-008_横向山海旅途舞台总场景.png") center / cover no-repeat,
+          #17110d;
+        color: var(--ink);
+      }
+
+      main {
+        min-height: 100svh;
+        display: grid;
+        grid-template-rows: auto 1fr;
+        gap: 14px;
+        padding: clamp(14px, 3vw, 28px);
+      }
+
+      header,
+      section {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+        box-shadow: 0 18px 64px rgba(0, 0, 0, 0.48);
+        backdrop-filter: blur(8px);
+      }
+
+      header {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 14px;
+        padding: 14px;
+      }
+
+      .brand {
+        margin: 0 0 5px;
+        color: var(--muted);
+        font: 700 12px/1.1 "PingFang SC", "Microsoft YaHei", sans-serif;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(24px, 4vw, 40px);
+        line-height: 1.05;
+        letter-spacing: 0;
+      }
+
+      .top-actions {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(96px, 1fr));
+        gap: 8px;
+      }
+
+      a,
+      button {
+        min-height: 38px;
+        border: 1px solid rgba(234, 205, 140, 0.26);
+        border-radius: 8px;
+        padding: 8px 10px;
+        background: rgba(255, 238, 189, 0.08);
+        color: var(--ink);
+        font: 800 12px/1.1 "PingFang SC", "Microsoft YaHei", sans-serif;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      button.primary,
+      a.primary {
+        border-color: rgba(217, 170, 91, 0.58);
+        background: rgba(217, 170, 91, 0.16);
+      }
+
+      .workspace {
+        display: grid;
+        grid-template-columns: minmax(280px, 0.85fr) minmax(320px, 1.15fr);
+        gap: 14px;
+        min-height: 0;
+      }
+
+      .panel {
+        min-height: 0;
+        padding: 14px;
+      }
+
+      .panel h2 {
+        margin: 0 0 10px;
+        color: var(--accent);
+        font-size: 17px;
+        line-height: 1.2;
+      }
+
+      .gate-list {
+        display: grid;
+        gap: 8px;
+      }
+
+      label.gate {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        gap: 8px;
+        align-items: start;
+        border: 1px solid rgba(234, 205, 140, 0.18);
+        border-radius: 8px;
+        padding: 9px;
+        background: var(--panel-soft);
+      }
+
+      input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+        accent-color: var(--accent);
+      }
+
+      .gate strong {
+        display: block;
+        font: 800 13px/1.25 "PingFang SC", "Microsoft YaHei", sans-serif;
+      }
+
+      .gate small {
+        display: block;
+        margin-top: 3px;
+        color: var(--muted);
+        font: 12px/1.35 "PingFang SC", "Microsoft YaHei", sans-serif;
+      }
+
+      .verdict {
+        margin-top: 12px;
+        border: 1px solid rgba(143, 183, 108, 0.38);
+        border-radius: 8px;
+        padding: 12px;
+        background: rgba(111, 140, 98, 0.14);
+      }
+
+      .verdict[data-tone="fix"] {
+        border-color: rgba(217, 170, 91, 0.46);
+        background: rgba(217, 170, 91, 0.12);
+      }
+
+      .verdict[data-tone="block"] {
+        border-color: rgba(166, 64, 50, 0.5);
+        background: rgba(166, 64, 50, 0.14);
+      }
+
+      .verdict span {
+        display: block;
+        color: var(--muted);
+        font: 800 11px/1.1 ui-monospace, SFMono-Regular, Menlo, monospace;
+      }
+
+      .verdict strong {
+        display: block;
+        margin-top: 4px;
+        font-size: 20px;
+      }
+
+      .evidence-radar {
+        margin-top: 12px;
+        display: grid;
+        gap: 8px;
+      }
+
+      .material-checklist {
+        margin-top: 12px;
+        display: grid;
+        gap: 8px;
+      }
+
+      .run-code-check {
+        margin-top: 12px;
+        display: grid;
+        gap: 8px;
+      }
+
+      .evidence-radar h3,
+      .material-checklist h3,
+      .run-code-check h3 {
+        margin: 0;
+        color: var(--accent);
+        font: 800 13px/1.2 "PingFang SC", "Microsoft YaHei", sans-serif;
+      }
+
+      .evidence-list,
+      .material-list,
+      .run-code-list {
+        display: grid;
+        gap: 6px;
+      }
+
+      .evidence-item,
+      .material-item,
+      .run-code-item {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr) auto;
+        gap: 8px;
+        align-items: center;
+        border: 1px solid rgba(234, 205, 140, 0.16);
+        border-radius: 8px;
+        padding: 7px 8px;
+        background: rgba(255, 238, 189, 0.05);
+        color: rgba(244, 234, 208, 0.72);
+        font: 12px/1.25 "PingFang SC", "Microsoft YaHei", sans-serif;
+      }
+
+      .evidence-item[data-hit="true"],
+      .material-item[data-ready="true"],
+      .run-code-item[data-ready="true"] {
+        border-color: rgba(143, 183, 108, 0.36);
+        background: rgba(111, 140, 98, 0.12);
+        color: var(--ink);
+      }
+
+      .run-code-item[data-conflict="true"] {
+        border-color: rgba(166, 64, 50, 0.5);
+        background: rgba(166, 64, 50, 0.14);
+        color: var(--ink);
+      }
+
+      .evidence-dot,
+      .material-dot,
+      .run-code-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 99px;
+        background: rgba(244, 234, 208, 0.32);
+      }
+
+      .evidence-item[data-hit="true"] .evidence-dot,
+      .material-item[data-ready="true"] .material-dot,
+      .run-code-item[data-ready="true"] .run-code-dot {
+        background: var(--green);
+      }
+
+      .run-code-item[data-conflict="true"] .run-code-dot {
+        background: var(--red);
+      }
+
+      .evidence-count,
+      .material-count,
+      .run-code-count {
+        color: var(--muted);
+        font: 800 11px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+      }
+
+      .fields {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        margin-bottom: 10px;
+      }
+
+      .field {
+        display: grid;
+        gap: 5px;
+      }
+
+      .field label {
+        color: var(--muted);
+        font: 800 11px/1.1 "PingFang SC", "Microsoft YaHei", sans-serif;
+      }
+
+      input[type="text"],
+      select,
+      textarea {
+        width: 100%;
+        border: 1px solid rgba(234, 205, 140, 0.22);
+        border-radius: 8px;
+        padding: 9px;
+        background: rgba(10, 8, 6, 0.72);
+        color: var(--ink);
+        font: 13px/1.45 "PingFang SC", "Microsoft YaHei", sans-serif;
+      }
+
+      textarea {
+        min-height: 112px;
+        resize: vertical;
+      }
+
+      .stack {
+        display: grid;
+        gap: 8px;
+      }
+
+      .package-tools {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px;
+        margin: 10px 0 8px;
+      }
+
+      .package-tools .hint {
+        flex: 1 1 260px;
+        margin: 0;
+      }
+
+      .summary-box {
+        min-height: 184px;
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      }
+
+      .button-row {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+        margin-top: 10px;
+      }
+
+      .hint {
+        margin: 9px 0 0;
+        color: rgba(244, 234, 208, 0.72);
+        font: 12px/1.45 "PingFang SC", "Microsoft YaHei", sans-serif;
+      }
+
+      @media (max-width: 860px), (max-height: 520px) {
+        body {
+          overflow: auto;
+        }
+
+        main {
+          padding: 10px;
+        }
+
+        header {
+          grid-template-columns: 1fr;
+          gap: 10px;
+        }
+
+        .top-actions {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .workspace {
+          grid-template-columns: 1fr;
+        }
+
+        .fields {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div>
+          <p class="brand">P0 Playtest Acceptance</p>
+          <h1>真人试玩验收工作台</h1>
+        </div>
+        <nav class="top-actions" aria-label="验收入口">
+          <a class="primary" href="./试玩入口.html">试玩入口</a>
+          <a href="./index.html?fresh=1">干净新局</a>
+          <a href="./index.html?fresh=1&amp;drawer=settings">听感面板</a>
+        </nav>
+      </header>
+
+      <div class="workspace">
+        <section class="panel" aria-label="P0验收门槛">
+          <h2>P0 门槛</h2>
+          <div class="gate-list">
+            <label class="gate">
+              <input type="checkbox" data-gate="flow" />
+              <span><strong>玩家知道下一步</strong><small>能自然完成遭遇、补给、开图、选路、半途、复盘。</small></span>
+            </label>
+            <label class="gate">
+              <input type="checkbox" data-gate="finish" />
+              <span><strong>一局能形成复盘</strong><small>至少抵达第三站；最好走到九州裂隙并复制本局复盘。</small></span>
+            </label>
+            <label class="gate">
+              <input type="checkbox" data-gate="resources" />
+              <span><strong>资源压力可读</strong><small>车轴、粮草、神志变化能看懂，紧张但没有前期死局。</small></span>
+            </label>
+            <label class="gate">
+              <input type="checkbox" data-gate="ui" />
+              <span><strong>横屏 UI 不阻塞</strong><small>关键选择不被滚动条藏住，弹窗、地图、复盘都能操作。</small></span>
+            </label>
+            <label class="gate">
+              <input type="checkbox" data-gate="audio" />
+              <span><strong>声音不打扰</strong><small>音乐和短音效可接受；若不加分，也不能影响试玩判断。</small></span>
+            </label>
+          </div>
+          <div class="verdict" id="verdict" data-tone="fix">
+            <span id="verdictCode">P0-CHECK</span>
+            <strong id="verdictTitle">等待反馈</strong>
+            <p class="hint" id="verdictHint">勾选门槛并粘贴试玩反馈后，生成主线程验收摘要。</p>
+          </div>
+          <div class="evidence-radar" aria-label="反馈证据雷达">
+            <h3>反馈证据雷达</h3>
+            <div class="evidence-list" id="evidenceList"></div>
+            <p class="hint" id="evidenceHint">粘贴试玩记录、音频听感和本局复盘后，这里会提示哪些 P0 证据已经出现。</p>
+          </div>
+          <div class="material-checklist" aria-label="三段材料回收状态">
+            <h3>三段材料回收状态</h3>
+            <div class="material-list" id="materialList"></div>
+            <p class="hint" id="materialHint">P0 人工收口必须同时回收试玩记录、音频听感和游戏内“志”的本局复盘。</p>
+          </div>
+          <div class="run-code-check" aria-label="试玩编号一致性">
+            <h3>试玩编号一致性</h3>
+            <div class="run-code-list" id="runCodeList"></div>
+            <p class="hint" id="runCodeHint">粘贴材料后，这里会判断三段反馈是否来自同一局。</p>
+          </div>
+        </section>
+
+        <section class="panel" aria-label="反馈材料">
+          <h2>反馈材料</h2>
+          <div class="fields">
+            <div class="field">
+              <label for="testerName">试玩者</label>
+              <input id="testerName" type="text" placeholder="姓名或代号" />
+            </div>
+            <div class="field">
+              <label for="deviceInfo">设备/视口</label>
+              <input id="deviceInfo" type="text" placeholder="例如 Mac Chrome / iPhone 横屏" />
+            </div>
+            <div class="field">
+              <label for="resultLevel">人工结论</label>
+              <select id="resultLevel">
+                <option value="待判定">待判定</option>
+                <option value="P0 通过">P0 通过</option>
+                <option value="需小修">需小修</option>
+                <option value="阻断">阻断</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="nextOwner">下一步负责人</label>
+              <input id="nextOwner" type="text" placeholder="主线程 / A / B / C / D / F" />
+            </div>
+          </div>
+
+          <div class="stack">
+            <textarea id="playtestFeedback" placeholder="粘贴《5分钟试玩记录》"></textarea>
+            <textarea id="audioFeedback" placeholder="粘贴《音频听感复核》"></textarea>
+            <textarea id="recapFeedback" placeholder="粘贴《试玩复盘》或游戏内复制出来的本局复盘"></textarea>
+            <textarea class="summary-box" id="summaryOutput" readonly></textarea>
+          </div>
+
+          <div class="package-tools">
+            <button id="splitFeedbackPackage" type="button">拆入三栏</button>
+            <p class="hint" id="packageSplitState">从游戏结局复制的“P0 试玩反馈包”可直接拆成三段材料。</p>
+          </div>
+
+          <div class="button-row">
+            <button class="primary" id="copySummary" type="button">复制验收摘要</button>
+            <button id="copyFollowupRequest" type="button">复制补收消息</button>
+            <button id="saveLocal" type="button">保存本机草稿</button>
+            <button id="clearAll" type="button">清空</button>
+          </div>
+          <p class="hint" id="copyState">这里不替代人工判断，只把反馈收成主线程可评审的摘要。</p>
+        </section>
+      </div>
+    </main>
+
+    <script>
+      const STORAGE_KEY = "bsi.p0.playtest.acceptance.v1";
+      const requiredGates = ["flow", "finish", "resources", "ui", "audio"];
+      const gateLabels = {
+        flow: "玩家知道下一步",
+        finish: "一局能形成复盘",
+        resources: "资源压力可读",
+        ui: "横屏 UI 不阻塞",
+        audio: "声音不打扰"
+      };
+      const evidenceRules = [
+        {
+          id: "nextStep",
+          label: "下一步可理解",
+          keywords: ["下一步", "知道", "点哪里", "遭遇", "补给", "开图", "选路", "半途"]
+        },
+        {
+          id: "recap",
+          label: "复盘可形成",
+          keywords: ["复盘", "路线", "抵达", "第三站", "九州裂隙", "结局", "本局"]
+        },
+        {
+          id: "resource",
+          label: "资源压力可描述",
+          keywords: ["车轴", "粮草", "神志", "资源", "压力", "告急", "紧张", "死局"]
+        },
+        {
+          id: "ui",
+          label: "横屏 UI 可操作",
+          keywords: ["横屏", "按钮", "弹窗", "地图", "滚动", "看不见", "卡住", "界面", "网页"]
+        },
+        {
+          id: "audio",
+          label: "声音听感有结论",
+          keywords: ["音乐", "音效", "声音", "听感", "打扰", "加分", "环境层", "神志层", "默认开"]
+        }
+      ];
+      const materialRules = [
+        {
+          id: "playtestFeedback",
+          label: "5分钟试玩记录",
+          nodeKey: "playtestFeedback",
+          minLength: 30,
+          keywords: ["下一步", "遭遇", "补给", "选路", "地图", "复盘"]
+        },
+        {
+          id: "audioFeedback",
+          label: "音频听感复核",
+          nodeKey: "audioFeedback",
+          minLength: 20,
+          keywords: ["音乐", "音效", "听感", "声音", "环境层", "神志层"]
+        },
+        {
+          id: "recapFeedback",
+          label: "游戏内“志”本局复盘",
+          nodeKey: "recapFeedback",
+          minLength: 20,
+          keywords: ["本局", "复盘", "路线", "资源", "车轴", "粮草", "神志", "抵达"]
+        }
+      ];
+      const fields = {
+        testerName: document.querySelector("#testerName"),
+        deviceInfo: document.querySelector("#deviceInfo"),
+        resultLevel: document.querySelector("#resultLevel"),
+        nextOwner: document.querySelector("#nextOwner"),
+        playtestFeedback: document.querySelector("#playtestFeedback"),
+        audioFeedback: document.querySelector("#audioFeedback"),
+        recapFeedback: document.querySelector("#recapFeedback"),
+        summaryOutput: document.querySelector("#summaryOutput")
+      };
+      const verdict = document.querySelector("#verdict");
+      const verdictCode = document.querySelector("#verdictCode");
+      const verdictTitle = document.querySelector("#verdictTitle");
+      const verdictHint = document.querySelector("#verdictHint");
+      const evidenceList = document.querySelector("#evidenceList");
+      const evidenceHint = document.querySelector("#evidenceHint");
+      const materialList = document.querySelector("#materialList");
+      const materialHint = document.querySelector("#materialHint");
+      const runCodeList = document.querySelector("#runCodeList");
+      const runCodeHint = document.querySelector("#runCodeHint");
+      const copyState = document.querySelector("#copyState");
+      const packageSplitState = document.querySelector("#packageSplitState");
+
+      function getCheckedGates() {
+        return requiredGates.filter((gate) => document.querySelector(`[data-gate="${gate}"]`)?.checked);
+      }
+
+      function getMissingGates() {
+        const checked = new Set(getCheckedGates());
+        return requiredGates.filter((gate) => !checked.has(gate));
+      }
+
+      function snippet(text) {
+        return String(text || "").trim().split("\n").filter(Boolean).slice(0, 4).join(" / ") || "未粘贴";
+      }
+
+      function getFeedbackCorpus() {
+        return [
+          fields.playtestFeedback.value,
+          fields.audioFeedback.value,
+          fields.recapFeedback.value
+        ].join("\n");
+      }
+
+      function findFeedbackPackageText() {
+        return [
+          fields.playtestFeedback.value,
+          fields.audioFeedback.value,
+          fields.recapFeedback.value
+        ].find((text) => String(text || "").includes("《不思异：九州》P0 试玩反馈包")) || "";
+      }
+
+      function extractPackageSection(text, startLabel, stopLabels = []) {
+        const source = String(text || "");
+        const startIndex = source.indexOf(startLabel);
+        if (startIndex < 0) return "";
+        const contentStart = startIndex + startLabel.length;
+        const stopIndex = stopLabels
+          .map((label) => source.indexOf(label, contentStart))
+          .filter((index) => index >= 0)
+          .sort((a, b) => a - b)[0] ?? source.length;
+        return source.slice(contentStart, stopIndex).trim();
+      }
+
+      function splitFeedbackPackageIntoFields() {
+        const packageText = findFeedbackPackageText();
+        if (!packageText) {
+          if (packageSplitState) packageSplitState.textContent = "未找到“P0 试玩反馈包”，请先把整段反馈包粘贴到任意一栏。";
+          return;
+        }
+        const header = packageText.split("【本局复盘】")[0].trim();
+        const recap = extractPackageSection(packageText, "【本局复盘】", ["【主观反馈】", "【机器摘要】"]);
+        const subjective = extractPackageSection(packageText, "【主观反馈】", ["【机器摘要】"]);
+        const machine = extractPackageSection(packageText, "【机器摘要】");
+        fields.playtestFeedback.value = [
+          header,
+          "【主观反馈】",
+          subjective,
+          "【机器摘要】",
+          machine
+        ].filter(Boolean).join("\n\n");
+        fields.audioFeedback.value = [
+          "《不思异：九州》音频听感复核（来自 P0 试玩反馈包）",
+          "",
+          subjective
+        ].filter(Boolean).join("\n");
+        fields.recapFeedback.value = recap;
+        if (packageSplitState) packageSplitState.textContent = "已拆入三栏：试玩记录、音频听感、本局复盘。";
+        render();
+      }
+
+      function analyzeEvidence() {
+        const corpus = getFeedbackCorpus();
+        return evidenceRules.map((rule) => {
+          const hits = rule.keywords.filter((word) => corpus.includes(word));
+          return { ...rule, hits };
+        });
+      }
+
+      function analyzeMaterials() {
+        return materialRules.map((rule) => {
+          const text = fields[rule.nodeKey]?.value || "";
+          const trimmed = text.trim();
+          const hits = rule.keywords.filter((word) => trimmed.includes(word));
+          const ready = trimmed.length >= rule.minLength && hits.length > 0;
+          return { ...rule, ready, length: trimmed.length, hits };
+        });
+      }
+
+      function extractRunCodes(text) {
+        return [...new Set((String(text || "").match(/JZ-[A-Z0-9-]+/gi) || [])
+          .map((code) => code.toUpperCase())
+          .filter((code) => code.length >= 7))];
+      }
+
+      function analyzeRunCodes() {
+        const sections = materialRules.map((rule) => {
+          const codes = extractRunCodes(fields[rule.nodeKey]?.value || "");
+          return { id: rule.id, label: rule.label, codes };
+        });
+        const allCodes = [...new Set(sections.flatMap((section) => section.codes))];
+        const filledSections = sections.filter((section) => (fields[materialRules.find((rule) => rule.id === section.id)?.nodeKey]?.value || "").trim().length > 0);
+        const missingSections = sections.filter((section) => {
+          const rule = materialRules.find((item) => item.id === section.id);
+          const text = fields[rule.nodeKey]?.value || "";
+          return text.trim().length > 0 && section.codes.length === 0;
+        });
+        const sectionsWithCode = sections.filter((section) => section.codes.length > 0);
+        const status = allCodes.length === 1 && sectionsWithCode.length === sections.length && !missingSections.length
+          ? "same"
+          : allCodes.length > 1
+            ? "conflict"
+            : missingSections.length || filledSections.length || sectionsWithCode.length
+              ? "missing"
+              : "empty";
+        return { sections, allCodes, missingSections, status };
+      }
+
+      function renderRunCodeCheck() {
+        if (!runCodeList) return analyzeRunCodes();
+        const result = analyzeRunCodes();
+        runCodeList.replaceChildren();
+        result.sections.forEach((item) => {
+          const row = document.createElement("div");
+          const dot = document.createElement("span");
+          const label = document.createElement("span");
+          const count = document.createElement("span");
+          row.className = "run-code-item";
+          row.dataset.ready = item.codes.length ? "true" : "false";
+          row.dataset.conflict = result.status === "conflict" && item.codes.length ? "true" : "false";
+          dot.className = "run-code-dot";
+          label.textContent = item.label;
+          count.className = "run-code-count";
+          count.textContent = item.codes.join(" / ") || "缺";
+          row.append(dot, label, count);
+          runCodeList.append(row);
+        });
+        if (runCodeHint) {
+          if (result.status === "same") {
+            runCodeHint.textContent = `三段材料可按同一局验收：${result.allCodes[0]}。`;
+          } else if (result.status === "conflict") {
+            runCodeHint.textContent = `编号不一致：${result.allCodes.join("、")}。请先确认是否混入了不同测试者或不同局。`;
+          } else if (result.status === "missing") {
+            runCodeHint.textContent = `仍缺试玩编号：${result.missingSections.map((item) => item.label).join("、") || "已粘贴材料里未找到 JZ 编号"}。`;
+          } else {
+            runCodeHint.textContent = "粘贴材料后，这里会判断三段反馈是否来自同一局。";
+          }
+        }
+        return result;
+      }
+
+      function renderEvidenceRadar() {
+        if (!evidenceList) return [];
+        const evidence = analyzeEvidence();
+        evidenceList.replaceChildren();
+        evidence.forEach((item) => {
+          const row = document.createElement("div");
+          const dot = document.createElement("span");
+          const label = document.createElement("span");
+          const count = document.createElement("span");
+          row.className = "evidence-item";
+          row.dataset.hit = item.hits.length > 0 ? "true" : "false";
+          dot.className = "evidence-dot";
+          label.textContent = item.label;
+          count.className = "evidence-count";
+          count.textContent = item.hits.length ? item.hits.slice(0, 2).join(" / ") : "缺";
+          row.append(dot, label, count);
+          evidenceList.append(row);
+        });
+        const missing = evidence.filter((item) => item.hits.length === 0).map((item) => item.label);
+        if (evidenceHint) {
+          evidenceHint.textContent = missing.length
+            ? `仍缺证据：${missing.join("、")}。`
+            : "五类 P0 反馈证据都已出现，仍需人工确认质量。";
+        }
+        return evidence;
+      }
+
+      function renderMaterialChecklist() {
+        if (!materialList) return [];
+        const materials = analyzeMaterials();
+        materialList.replaceChildren();
+        materials.forEach((item) => {
+          const row = document.createElement("div");
+          const dot = document.createElement("span");
+          const label = document.createElement("span");
+          const count = document.createElement("span");
+          row.className = "material-item";
+          row.dataset.ready = item.ready ? "true" : "false";
+          dot.className = "material-dot";
+          label.textContent = item.label;
+          count.className = "material-count";
+          count.textContent = item.ready ? "已收" : item.length ? "待核" : "缺";
+          row.append(dot, label, count);
+          materialList.append(row);
+        });
+        const missing = materials.filter((item) => !item.ready).map((item) => item.label);
+        if (materialHint) {
+          materialHint.textContent = missing.length
+            ? `仍缺或待核：${missing.join("、")}。`
+            : "三段材料已齐，可以进入主线程人工判断。";
+        }
+        return materials;
+      }
+
+      function buildSummary() {
+        const missing = getMissingGates();
+        const evidence = analyzeEvidence();
+        const materials = analyzeMaterials();
+        const runCodeState = analyzeRunCodes();
+        const missingEvidence = evidence.filter((item) => item.hits.length === 0).map((item) => item.label);
+        const missingMaterials = materials.filter((item) => !item.ready).map((item) => item.label);
+        const runCodeLine = runCodeState.status === "same"
+          ? `同一局：${runCodeState.allCodes[0]}`
+          : runCodeState.status === "conflict"
+            ? `编号不一致：${runCodeState.allCodes.join("、")}`
+            : runCodeState.status === "missing"
+              ? `缺编号：${runCodeState.missingSections.map((item) => item.label).join("、") || "未找到 JZ 编号"}`
+              : "未检测到试玩编号";
+        const selectedLevel = fields.resultLevel.value;
+        const autoLevel = missing.length === 0 ? "P0 通过候选" : missing.length <= 2 ? "需小修" : "阻断风险";
+        const finalLevel = selectedLevel === "待判定" ? autoLevel : selectedLevel;
+        return [
+          "# 《不思异：九州》P0 真人试玩验收摘要",
+          "",
+          `生成时间：${new Date().toLocaleString("zh-CN")}`,
+          `试玩者：${fields.testerName.value || "未填"}`,
+          `设备/视口：${fields.deviceInfo.value || "未填"}`,
+          `人工结论：${finalLevel}`,
+          `下一步负责人：${fields.nextOwner.value || "主线程"}`,
+          "",
+          "## 门槛状态",
+          "",
+          ...requiredGates.map((gate) => `- ${getCheckedGates().includes(gate) ? "[x]" : "[ ]"} ${gateLabels[gate]}`),
+          "",
+          `缺口：${missing.map((gate) => gateLabels[gate]).join("、") || "无"}`,
+          `证据缺口：${missingEvidence.join("、") || "无"}`,
+          `材料缺口：${missingMaterials.join("、") || "无"}`,
+          `试玩编号一致性：${runCodeLine}`,
+          "",
+          "## 三段材料回收状态",
+          "",
+          ...materials.map((item) => `- ${item.ready ? "[x]" : "[ ]"} ${item.label}${item.hits.length ? `：${item.hits.slice(0, 3).join(" / ")}` : ""}`),
+          "",
+          "## 试玩编号一致性",
+          "",
+          ...runCodeState.sections.map((item) => `- ${item.codes.length ? "[x]" : "[ ]"} ${item.label}：${item.codes.join(" / ") || "缺编号"}`),
+          "",
+          "## 自动证据雷达",
+          "",
+          ...evidence.map((item) => `- ${item.hits.length ? "[x]" : "[ ]"} ${item.label}${item.hits.length ? `：${item.hits.slice(0, 4).join(" / ")}` : ""}`),
+          "",
+          "## 试玩反馈摘录",
+          "",
+          snippet(fields.playtestFeedback.value),
+          "",
+          "## 音频反馈摘录",
+          "",
+          snippet(fields.audioFeedback.value),
+          "",
+          "## 本局复盘摘录",
+          "",
+          snippet(fields.recapFeedback.value),
+          "",
+          "## 主线程处理建议",
+          "",
+          missing.length
+            ? `先处理：${missing.map((gate) => gateLabels[gate]).join("、")}。`
+            : "可以进入 P0 外部小范围试玩；音频和素材仍按待复核状态管理。"
+        ].join("\n");
+      }
+
+      function buildFollowupRequest() {
+        const missingGates = getMissingGates().map((gate) => gateLabels[gate]);
+        const evidence = analyzeEvidence();
+        const materials = analyzeMaterials();
+        const runCodeState = analyzeRunCodes();
+        const missingEvidence = evidence.filter((item) => item.hits.length === 0).map((item) => item.label);
+        const missingMaterials = materials.filter((item) => !item.ready).map((item) => item.label);
+        const runCodeNeeds = runCodeState.status === "same"
+          ? []
+          : runCodeState.status === "conflict"
+            ? [`确认三段材料是否来自同一局，目前出现 ${runCodeState.allCodes.join("、")}`]
+            : ["补同一局的 JZ 试玩编号"];
+        const tester = fields.testerName.value || "这位测试者";
+        const needed = [
+          ...missingMaterials.map((item) => `补一段“${item}”`),
+          ...missingEvidence.map((item) => `说明一下“${item}”`),
+          ...missingGates.map((item) => `确认“${item}”`),
+          ...runCodeNeeds
+        ];
+        const uniqueNeeded = [...new Set(needed)];
+        const fallback = [
+          "1. 如果走到结局，请点“复盘本局”里的“复制反馈包”，把整段文字发回。",
+          "2. 如果没走到结局，请打开游戏里的“志”，复制本局复盘，并补一句卡在哪里。",
+          "3. 如果只需要补声音，请打开音频听感验收台，点“复制音频验收摘要”。"
+        ];
+        return [
+          `想再麻烦 ${tester} 补一下《不思异：九州》试玩反馈。`,
+          "",
+          uniqueNeeded.length
+            ? `目前还差：${uniqueNeeded.join("；")}。`
+            : "目前材料基本齐了，只需要你再确认有没有遗漏或误解。",
+          "",
+          "最省事的补法：",
+          ...fallback,
+          "",
+          "不用写长评，按真实感受补几句就行；卡住、看不懂、声音打扰，都算有效反馈。"
+        ].join("\n");
+      }
+
+      function render() {
+        const missing = getMissingGates();
+        const evidence = renderEvidenceRadar();
+        const materials = renderMaterialChecklist();
+        const runCodeState = renderRunCodeCheck();
+        const missingEvidenceCount = evidence.filter((item) => item.hits.length === 0).length;
+        const missingMaterialCount = materials.filter((item) => !item.ready).length;
+        fields.summaryOutput.value = buildSummary();
+        if (!missing.length) {
+          verdict.dataset.tone = "pass";
+          verdictCode.textContent = "P0-PASS-CANDIDATE";
+          verdictTitle.textContent = "P0 通过候选";
+          verdictHint.textContent = missingEvidenceCount
+            ? `五项门槛已勾选，但反馈证据仍缺 ${missingEvidenceCount} 类，请人工复核。`
+            : missingMaterialCount
+              ? `五项门槛和五类证据已出现，但三段材料仍缺 ${missingMaterialCount} 段。`
+              : runCodeState.status !== "same"
+                ? "五项门槛、证据和材料已出现，但试玩编号还需确认是否同一局。"
+                : "五项门槛已勾选，五类反馈证据、三段材料和同局编号都已出现，可以进入主线程最终确认。";
+        } else if (missing.length <= 2) {
+          verdict.dataset.tone = "fix";
+          verdictCode.textContent = "P0-FIX";
+          verdictTitle.textContent = "需小修";
+          verdictHint.textContent = `剩余缺口：${missing.map((gate) => gateLabels[gate]).join("、")}。`;
+        } else {
+          verdict.dataset.tone = "block";
+          verdictCode.textContent = "P0-BLOCK-RISK";
+          verdictTitle.textContent = "阻断风险";
+          verdictHint.textContent = `仍有 ${missing.length} 项门槛未满足，先不要扩大测试。`;
+        }
+      }
+
+      function collectState() {
+        return {
+          fields: Object.fromEntries(Object.entries(fields)
+            .filter(([key]) => key !== "summaryOutput")
+            .map(([key, node]) => [key, node.value])),
+          gates: getCheckedGates()
+        };
+      }
+
+      function restoreState() {
+        try {
+          const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+          Object.entries(saved.fields || {}).forEach(([key, value]) => {
+            if (fields[key]) fields[key].value = value;
+          });
+          (saved.gates || []).forEach((gate) => {
+            const node = document.querySelector(`[data-gate="${gate}"]`);
+            if (node) node.checked = true;
+          });
+        } catch {
+          localStorage.removeItem(STORAGE_KEY);
+        }
+      }
+
+      async function copySummary() {
+        const text = fields.summaryOutput.value;
+        try {
+          await navigator.clipboard.writeText(text);
+          copyState.textContent = "验收摘要已复制，可粘贴回主线程或台账。";
+        } catch {
+          fields.summaryOutput.focus();
+          fields.summaryOutput.select();
+          copyState.textContent = "浏览器未放行复制，摘要已选中，可手动复制。";
+        }
+      }
+
+      async function copyFollowupRequest() {
+        const text = buildFollowupRequest();
+        fields.summaryOutput.value = text;
+        try {
+          await navigator.clipboard.writeText(text);
+          copyState.textContent = "补收消息已复制，可直接发给测试者补材料。";
+        } catch {
+          fields.summaryOutput.focus();
+          fields.summaryOutput.select();
+          copyState.textContent = "浏览器未放行复制，补收消息已选中，可手动复制。";
+        }
+      }
+
+      document.querySelectorAll("input, textarea, select").forEach((node) => {
+        node.addEventListener("input", render);
+        node.addEventListener("change", render);
+      });
+      document.querySelector("#copySummary").addEventListener("click", copySummary);
+      document.querySelector("#copyFollowupRequest").addEventListener("click", copyFollowupRequest);
+      document.querySelector("#splitFeedbackPackage").addEventListener("click", splitFeedbackPackageIntoFields);
+      document.querySelector("#saveLocal").addEventListener("click", () => {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(collectState()));
+        copyState.textContent = "本机草稿已保存。";
+      });
+      document.querySelector("#clearAll").addEventListener("click", () => {
+        localStorage.removeItem(STORAGE_KEY);
+        Object.entries(fields).forEach(([key, node]) => {
+          if (key !== "summaryOutput") node.value = "";
+        });
+        document.querySelectorAll("[data-gate]").forEach((node) => {
+          node.checked = false;
+        });
+        render();
+        copyState.textContent = "已清空。";
+      });
+
+      restoreState();
+      render();
+    </script>
+  </body>
+</html>

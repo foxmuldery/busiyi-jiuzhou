@@ -1,0 +1,1981 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>不思异：九州 试玩入口</title>
+    <link rel="icon" type="image/png" href="../../02_设计资产/可用素材/资源图标/RES-003_神志资源图标绿幕_透明抠图.png" />
+    <style>
+      :root {
+        color-scheme: dark;
+        --ink: #f4ead0;
+        --muted: #d2bd8c;
+        --line: rgba(234, 205, 140, 0.3);
+        --panel: rgba(26, 20, 14, 0.72);
+        --panel-strong: rgba(48, 35, 22, 0.86);
+        --accent: #d9aa5b;
+        --danger: #a64032;
+        --shadow: 0 22px 80px rgba(0, 0, 0, 0.54);
+        font-family: "Songti SC", "Noto Serif SC", "STSong", serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100svh;
+        margin: 0;
+        background:
+          linear-gradient(90deg, rgba(16, 12, 8, 0.9), rgba(16, 12, 8, 0.36) 46%, rgba(16, 12, 8, 0.78)),
+          url("../../02_设计资产/可用素材/背景长图/BG-008_横向山海旅途舞台总场景.png") center / cover no-repeat,
+          #17110d;
+        color: var(--ink);
+        overflow: hidden;
+      }
+
+      main {
+        min-height: 100svh;
+        display: grid;
+        grid-template-columns: minmax(320px, 470px) 1fr;
+        grid-template-rows: 1fr auto;
+        align-items: end;
+        gap: 28px;
+        padding: clamp(18px, 4vw, 44px);
+      }
+
+      .entry-panel {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 20px;
+        background: var(--panel);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(8px);
+      }
+
+      .brand {
+        margin: 0 0 5px;
+        color: var(--muted);
+        font-size: 13px;
+        letter-spacing: 0;
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        font-size: clamp(30px, 4vw, 48px);
+        line-height: 1.05;
+        letter-spacing: 0;
+      }
+
+      .build {
+        display: inline-flex;
+        width: fit-content;
+        margin-bottom: 16px;
+        border: 1px solid rgba(217, 170, 91, 0.34);
+        border-radius: 999px;
+        padding: 4px 9px;
+        color: var(--muted);
+        background: rgba(0, 0, 0, 0.2);
+        font: 700 11px/1.1 ui-monospace, SFMono-Regular, Menlo, monospace;
+      }
+
+      .playtest-brief {
+        display: grid;
+        gap: 9px;
+        margin-bottom: 12px;
+        border: 1px solid rgba(217, 170, 91, 0.28);
+        border-radius: 8px;
+        padding: 10px;
+        background:
+          linear-gradient(90deg, rgba(217, 170, 91, 0.11), transparent 62%),
+          rgba(0, 0, 0, 0.2);
+      }
+
+      .playtest-brief-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .playtest-brief-head strong {
+        color: var(--ink);
+        font-size: 14px;
+      }
+
+      .playtest-brief-head span {
+        color: var(--muted);
+        font: 800 11px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+      }
+
+      .playtest-steps {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 5px;
+      }
+
+      .playtest-step {
+        min-width: 0;
+        border: 1px solid rgba(234, 205, 140, 0.2);
+        border-radius: 7px;
+        padding: 6px 5px;
+        background: rgba(16, 12, 8, 0.48);
+        color: var(--muted);
+        font: 800 11px/1.1 "PingFang SC", "Microsoft YaHei", sans-serif;
+        text-align: center;
+        white-space: nowrap;
+      }
+
+      .playtest-finish {
+        margin: 0;
+        color: rgba(244, 234, 208, 0.76);
+        font-size: 11px;
+        line-height: 1.35;
+      }
+
+      .tester-focus {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 6px;
+        margin: 0 0 12px;
+      }
+
+      .tester-focus span {
+        min-width: 0;
+        border: 1px solid rgba(234, 205, 140, 0.2);
+        border-radius: 7px;
+        padding: 7px 6px;
+        background: rgba(0, 0, 0, 0.22);
+        color: rgba(244, 234, 208, 0.82);
+        font: 800 11px/1.15 "PingFang SC", "Microsoft YaHei", sans-serif;
+        text-align: center;
+        white-space: nowrap;
+      }
+
+      .entry-actions {
+        display: grid;
+        gap: 9px;
+      }
+
+      a {
+        min-height: 48px;
+        display: grid;
+        grid-template-columns: 30px minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 10px;
+        border: 1px solid rgba(234, 205, 140, 0.26);
+        border-radius: 8px;
+        padding: 9px 11px;
+        background: rgba(255, 238, 189, 0.08);
+        color: var(--ink);
+        text-decoration: none;
+        transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+      }
+
+      a.primary-action {
+        border-color: rgba(217, 170, 91, 0.58);
+        background: rgba(217, 170, 91, 0.16);
+      }
+
+      a.primary-action .icon {
+        border-color: rgba(217, 170, 91, 0.54);
+        background: rgba(217, 170, 91, 0.16);
+      }
+
+      a:hover,
+      a:focus-visible {
+        transform: translateY(-1px);
+        border-color: rgba(217, 170, 91, 0.64);
+        background: rgba(255, 238, 189, 0.14);
+        outline: none;
+      }
+
+      .icon {
+        width: 30px;
+        height: 30px;
+        display: grid;
+        place-items: center;
+        border: 1px solid rgba(234, 205, 140, 0.28);
+        border-radius: 50%;
+        background: var(--panel-strong);
+        color: var(--accent);
+        font: 800 14px/1 "PingFang SC", "Microsoft YaHei", sans-serif;
+      }
+
+      strong {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 15px;
+        line-height: 1.2;
+      }
+
+      small {
+        display: block;
+        margin-top: 2px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: var(--muted);
+        font-size: 11px;
+        line-height: 1.2;
+      }
+
+      .tag {
+        color: var(--accent);
+        font: 800 11px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+      }
+
+      .note {
+        margin: 14px 0 0;
+        color: rgba(244, 234, 208, 0.74);
+        font-size: 12px;
+        line-height: 1.55;
+      }
+
+      .template-button {
+        width: 100%;
+        min-height: 46px;
+        display: grid;
+        grid-template-columns: 30px minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 10px;
+        margin-top: 12px;
+        border: 1px solid rgba(111, 140, 98, 0.46);
+        border-radius: 8px;
+        padding: 8px 11px;
+        background: rgba(111, 140, 98, 0.14);
+        color: var(--ink);
+        cursor: pointer;
+        font: inherit;
+        text-align: left;
+      }
+
+      .template-button:hover,
+      .template-button:focus-visible {
+        border-color: rgba(143, 183, 108, 0.72);
+        background: rgba(111, 140, 98, 0.2);
+        outline: none;
+      }
+
+      .template-button[data-copied="true"] {
+        border-color: rgba(217, 170, 91, 0.66);
+        background: rgba(217, 170, 91, 0.14);
+      }
+
+      .copy-actions {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(142px, 1fr));
+        gap: 8px;
+        margin-top: 12px;
+      }
+
+      .copy-actions .template-button {
+        margin-top: 0;
+      }
+
+      .copy-fallback {
+        display: none;
+        margin-top: 8px;
+        border: 1px solid rgba(234, 205, 140, 0.22);
+        border-radius: 8px;
+        padding: 8px;
+        background: rgba(0, 0, 0, 0.28);
+      }
+
+      .copy-fallback[data-visible="true"] {
+        display: block;
+      }
+
+      .copy-fallback label {
+        display: block;
+        margin-bottom: 5px;
+        color: var(--muted);
+        font: 800 11px/1.2 "PingFang SC", "Microsoft YaHei", sans-serif;
+      }
+
+      .copy-fallback textarea {
+        width: 100%;
+        min-height: 76px;
+        resize: vertical;
+        border: 1px solid rgba(234, 205, 140, 0.22);
+        border-radius: 6px;
+        padding: 7px;
+        background: rgba(16, 12, 8, 0.72);
+        color: var(--ink);
+        font: 12px/1.45 ui-monospace, SFMono-Regular, Menlo, monospace;
+      }
+
+      .asset-status-card {
+        width: min(460px, 100%);
+        justify-self: end;
+        align-self: end;
+        border: 1px solid rgba(234, 205, 140, 0.22);
+        border-radius: 8px;
+        padding: 14px;
+        background: rgba(16, 12, 8, 0.56);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(6px);
+      }
+
+      .asset-status-head {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 10px;
+      }
+
+      .asset-status-head span {
+        display: block;
+        color: var(--muted);
+        font-size: 11px;
+        line-height: 1.2;
+      }
+
+      .asset-status-head strong {
+        margin-top: 2px;
+        font-size: 17px;
+      }
+
+      .asset-score {
+        min-width: 58px;
+        border: 1px solid rgba(217, 170, 91, 0.34);
+        border-radius: 999px;
+        padding: 5px 9px;
+        color: var(--accent);
+        background: rgba(217, 170, 91, 0.1);
+        font: 800 13px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+        text-align: center;
+      }
+
+      .asset-meter {
+        height: 7px;
+        overflow: hidden;
+        border: 1px solid rgba(234, 205, 140, 0.18);
+        border-radius: 999px;
+        background: rgba(0, 0, 0, 0.28);
+      }
+
+      .asset-meter span {
+        display: block;
+        height: 100%;
+        width: var(--asset-progress, 0%);
+        border-radius: inherit;
+        background: linear-gradient(90deg, #7f8f5a, #d9aa5b);
+      }
+
+      .asset-groups {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+        gap: 6px;
+        margin: 10px 0;
+      }
+
+      .asset-group-chip {
+        min-width: 0;
+        border: 1px solid rgba(234, 205, 140, 0.18);
+        border-radius: 7px;
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.2);
+      }
+
+      .asset-group-chip span {
+        display: block;
+        overflow: hidden;
+        color: var(--muted);
+        font: 700 11px/1.2 "PingFang SC", "Microsoft YaHei", sans-serif;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .asset-group-chip strong {
+        margin-top: 3px;
+        color: var(--ink);
+        font: 800 13px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+      }
+
+      .asset-next {
+        margin: 0;
+        color: rgba(244, 234, 208, 0.78);
+        font-size: 12px;
+        line-height: 1.45;
+      }
+
+      .asset-links {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        margin-top: 10px;
+      }
+
+      .asset-link {
+        min-height: 38px;
+        grid-template-columns: minmax(0, 1fr) auto;
+        padding: 8px 10px;
+      }
+
+      .asset-link strong {
+        font-size: 13px;
+      }
+
+      .priority-visual {
+        margin-top: 12px;
+        padding-top: 12px;
+        border-top: 1px solid rgba(234, 205, 140, 0.18);
+      }
+
+      .priority-visual-head {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 8px;
+      }
+
+      .priority-visual-head span {
+        display: block;
+        color: var(--muted);
+        font-size: 11px;
+        line-height: 1.2;
+      }
+
+      .priority-visual-head strong {
+        margin-top: 2px;
+        font-size: 15px;
+      }
+
+      .priority-visual-score {
+        min-width: 58px;
+        border: 1px solid rgba(166, 64, 50, 0.42);
+        border-radius: 999px;
+        padding: 5px 9px;
+        color: #e1a069;
+        background: rgba(166, 64, 50, 0.14);
+        font: 800 13px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+        text-align: center;
+      }
+
+      .priority-list {
+        display: grid;
+        gap: 6px;
+      }
+
+      .priority-item {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr) auto;
+        align-items: start;
+        gap: 8px;
+        min-height: 36px;
+        border-left: 2px solid rgba(217, 170, 91, 0.62);
+        padding: 2px 0 2px 8px;
+      }
+
+      .priority-item[data-priority="P1"] {
+        border-left-color: rgba(210, 189, 140, 0.42);
+      }
+
+      .priority-mark {
+        width: 26px;
+        height: 26px;
+        display: grid;
+        place-items: center;
+        border: 1px solid rgba(234, 205, 140, 0.24);
+        border-radius: 50%;
+        color: var(--accent);
+        background: rgba(0, 0, 0, 0.22);
+        font: 800 10px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+      }
+
+      .priority-item-title {
+        display: block;
+        overflow: hidden;
+        color: var(--ink);
+        font-size: 12px;
+        line-height: 1.2;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .priority-item-reason {
+        display: block;
+        margin-top: 2px;
+        overflow: hidden;
+        color: rgba(244, 234, 208, 0.68);
+        font-size: 10px;
+        line-height: 1.2;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .priority-state {
+        color: var(--muted);
+        font: 800 10px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+      }
+
+      .priority-links {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        margin-top: 9px;
+      }
+
+      .balance-health {
+        margin-top: 12px;
+        padding-top: 12px;
+        border-top: 1px solid rgba(234, 205, 140, 0.18);
+      }
+
+      .p0-readiness {
+        margin-top: 12px;
+        padding-top: 12px;
+        border-top: 1px solid rgba(234, 205, 140, 0.18);
+      }
+
+      .audio-readiness {
+        margin-top: 12px;
+        padding-top: 12px;
+        border-top: 1px solid rgba(234, 205, 140, 0.18);
+      }
+
+      .audio-chips {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 6px;
+        margin-bottom: 8px;
+      }
+
+      .audio-chip {
+        min-width: 0;
+        border: 1px solid rgba(234, 205, 140, 0.18);
+        border-radius: 7px;
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.2);
+      }
+
+      .audio-chip span {
+        display: block;
+        overflow: hidden;
+        color: var(--muted);
+        font: 700 11px/1.2 "PingFang SC", "Microsoft YaHei", sans-serif;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .audio-chip strong {
+        margin-top: 3px;
+        color: var(--ink);
+        font: 800 13px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+      }
+
+      .balance-head {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 8px;
+      }
+
+      .balance-head span {
+        display: block;
+        color: var(--muted);
+        font-size: 11px;
+        line-height: 1.2;
+      }
+
+      .balance-head strong {
+        margin-top: 2px;
+        font-size: 15px;
+      }
+
+      .balance-score {
+        min-width: 58px;
+        border: 1px solid rgba(111, 140, 98, 0.44);
+        border-radius: 999px;
+        padding: 5px 9px;
+        color: #b8d18c;
+        background: rgba(111, 140, 98, 0.14);
+        font: 800 13px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+        text-align: center;
+      }
+
+      .balance-health[data-tone="warning"] .balance-score {
+        border-color: rgba(217, 170, 91, 0.5);
+        color: var(--accent);
+        background: rgba(217, 170, 91, 0.12);
+      }
+
+      .balance-health[data-tone="danger"] .balance-score {
+        border-color: rgba(166, 64, 50, 0.5);
+        color: #e1a069;
+        background: rgba(166, 64, 50, 0.14);
+      }
+
+      .p0-readiness[data-tone="warning"] .balance-score {
+        border-color: rgba(217, 170, 91, 0.5);
+        color: var(--accent);
+        background: rgba(217, 170, 91, 0.12);
+      }
+
+      .p0-readiness[data-tone="danger"] .balance-score {
+        border-color: rgba(166, 64, 50, 0.5);
+        color: #e1a069;
+        background: rgba(166, 64, 50, 0.14);
+      }
+
+      .balance-strategies {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 6px;
+        margin-bottom: 8px;
+      }
+
+      .balance-chip {
+        min-width: 0;
+        border: 1px solid rgba(234, 205, 140, 0.18);
+        border-radius: 7px;
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.2);
+      }
+
+      .balance-chip span {
+        display: block;
+        overflow: hidden;
+        color: var(--muted);
+        font: 700 11px/1.2 "PingFang SC", "Microsoft YaHei", sans-serif;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .balance-chip strong {
+        margin-top: 3px;
+        color: var(--ink);
+        font: 800 13px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+      }
+
+      .route-strip {
+        grid-column: 1 / -1;
+        align-self: end;
+        justify-self: stretch;
+        display: grid;
+        grid-template-columns: repeat(5, minmax(56px, 1fr));
+        gap: 8px;
+        max-width: 620px;
+        padding: 10px;
+        border: 1px solid rgba(234, 205, 140, 0.2);
+        border-radius: 8px;
+        background: rgba(16, 12, 8, 0.5);
+        box-shadow: var(--shadow);
+      }
+
+      .step {
+        min-height: 46px;
+        display: grid;
+        place-items: center;
+        border: 1px solid rgba(234, 205, 140, 0.2);
+        border-radius: 7px;
+        color: var(--muted);
+        background: rgba(0, 0, 0, 0.2);
+        font: 700 12px/1.2 "PingFang SC", "Microsoft YaHei", sans-serif;
+        text-align: center;
+      }
+
+      @media (max-width: 760px), (max-height: 460px) {
+        body {
+          overflow: auto;
+        }
+
+        main {
+          min-height: 100svh;
+          grid-template-columns: 1fr;
+          grid-template-rows: auto;
+          align-items: end;
+          padding: 12px;
+        }
+
+        .entry-panel {
+          padding: 14px;
+        }
+
+        h1 {
+          font-size: 30px;
+        }
+
+        a {
+          min-height: 44px;
+          padding: 8px 9px;
+        }
+
+        .route-strip {
+          grid-template-columns: repeat(5, 1fr);
+          gap: 5px;
+          padding: 6px;
+        }
+
+        .step {
+          min-height: 32px;
+          font-size: 10px;
+        }
+
+        .template-button {
+          min-height: 42px;
+          padding: 7px 9px;
+        }
+
+        .copy-actions {
+          gap: 6px;
+        }
+
+        .asset-status-card {
+          justify-self: stretch;
+          width: 100%;
+          padding: 12px;
+        }
+
+        .asset-groups {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-height: 820px) {
+        main {
+          grid-template-rows: 1fr;
+          gap: 18px;
+          padding-block: 16px;
+        }
+
+        .note {
+          display: none;
+        }
+
+        .playtest-brief {
+          margin-bottom: 9px;
+        }
+
+        h1 {
+          margin-bottom: 8px;
+          font-size: clamp(28px, 3vw, 38px);
+        }
+
+        .build {
+          margin-bottom: 10px;
+        }
+
+        .entry-actions {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 7px;
+        }
+
+        a {
+          min-height: 40px;
+          padding: 7px 9px;
+        }
+
+        .template-button {
+          min-height: 40px;
+          padding: 7px 9px;
+        }
+
+        .playtest-finish,
+        .asset-groups,
+        .asset-next,
+        .balance-strategies {
+          display: none;
+        }
+
+        .asset-status-card {
+          padding: 12px;
+        }
+
+        .asset-status-head,
+        .balance-head,
+        .priority-visual-head {
+          margin-bottom: 7px;
+        }
+
+        .asset-links,
+        .priority-links {
+          gap: 6px;
+          margin-top: 7px;
+        }
+
+        .priority-list {
+          display: none;
+        }
+
+        .priority-visual {
+          margin-top: 9px;
+          padding-top: 9px;
+        }
+
+        .route-strip {
+          display: none;
+        }
+      }
+
+      @media (orientation: landscape) and (max-height: 620px) and (max-width: 1100px) {
+        body {
+          overflow: hidden;
+        }
+
+        main {
+          height: 100svh;
+          min-height: 0;
+          grid-template-columns: minmax(480px, 1fr) minmax(300px, 320px);
+          grid-template-rows: 1fr;
+          align-items: end;
+          gap: 12px;
+          padding: 10px;
+        }
+
+        .entry-panel {
+          padding: 10px;
+        }
+
+        .brand {
+          display: none;
+        }
+
+        h1 {
+          margin-bottom: 6px;
+          font-size: 24px;
+        }
+
+        .build {
+          margin-bottom: 7px;
+          padding: 3px 8px;
+        }
+
+        .entry-actions {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 6px;
+        }
+
+        .playtest-brief {
+          grid-template-columns: minmax(150px, 0.72fr) minmax(0, 1fr);
+          align-items: center;
+          gap: 6px 8px;
+          margin-bottom: 8px;
+          padding: 8px;
+        }
+
+        .playtest-brief-head {
+          display: block;
+        }
+
+        .playtest-brief-head strong {
+          font-size: 12px;
+        }
+
+        .playtest-brief-head span {
+          display: block;
+          margin-top: 3px;
+          font-size: 10px;
+        }
+
+        .playtest-steps {
+          grid-template-columns: repeat(5, minmax(0, 1fr));
+          gap: 4px;
+        }
+
+        .playtest-step {
+          padding: 5px 3px;
+          font-size: 10px;
+        }
+
+        .playtest-finish {
+          display: none;
+        }
+
+        a {
+          min-height: 34px;
+          grid-template-columns: 24px minmax(0, 1fr) auto;
+          gap: 7px;
+          padding: 5px 7px;
+        }
+
+        .icon {
+          width: 24px;
+          height: 24px;
+          font-size: 12px;
+        }
+
+        strong {
+          font-size: 12px;
+        }
+
+        small,
+        .note {
+          display: none;
+        }
+
+        .tag {
+          font-size: 10px;
+        }
+
+        .template-button {
+          min-height: 34px;
+          grid-template-columns: 24px minmax(0, 1fr) auto;
+          gap: 7px;
+          margin-top: 6px;
+          padding: 5px 7px;
+        }
+
+        .tester-focus {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 4px;
+          margin-bottom: 7px;
+        }
+
+        .tester-focus span {
+          padding: 5px 3px;
+          font-size: 10px;
+        }
+
+        .copy-actions {
+          margin-top: 6px;
+          gap: 6px;
+        }
+
+        .copy-fallback {
+          margin-top: 6px;
+          padding: 6px;
+        }
+
+        .copy-fallback textarea {
+          min-height: 52px;
+          font-size: 10px;
+        }
+
+        .asset-status-card {
+          width: 100%;
+          justify-self: stretch;
+          padding: 12px;
+        }
+
+        .asset-status-head strong {
+          font-size: 15px;
+        }
+
+        .asset-groups {
+          display: none;
+        }
+
+        .asset-next {
+          display: none;
+        }
+
+        .asset-meter,
+        .asset-links {
+          display: none;
+        }
+
+        .priority-visual {
+          display: none;
+        }
+
+        .priority-links {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 6px;
+          margin-top: 8px;
+        }
+
+        .asset-link {
+          min-height: 34px;
+        }
+
+        .balance-health {
+          margin-top: 8px;
+          padding-top: 8px;
+        }
+
+        .balance-health .priority-links,
+        .audio-readiness .priority-links {
+          display: none;
+        }
+
+        .audio-readiness {
+          margin-top: 8px;
+          padding-top: 8px;
+        }
+
+        .balance-strategies {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+          gap: 5px;
+          margin-bottom: 6px;
+        }
+
+        .balance-chip {
+          padding: 5px;
+        }
+
+        .audio-chips {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+          gap: 5px;
+          margin-bottom: 6px;
+        }
+
+        .audio-chip {
+          padding: 5px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="entry-panel" aria-label="试玩入口">
+        <p class="brand">Web Demo Playtest</p>
+        <h1>不思异：九州</h1>
+        <span class="build">20260624-c159</span>
+        <section class="playtest-brief" aria-label="推荐试玩路径">
+          <div class="playtest-brief-head">
+            <strong>推荐 5 分钟试玩</strong>
+            <span>目标：走完一段旅程</span>
+          </div>
+          <div class="playtest-steps" aria-label="试玩步骤">
+            <span class="playtest-step">遭遇</span>
+            <span class="playtest-step">补给</span>
+            <span class="playtest-step">开图</span>
+            <span class="playtest-step">选路</span>
+            <span class="playtest-step">复盘</span>
+          </div>
+          <p class="playtest-finish">结束后点“志”打开本局复盘，把路线、资源和卡点一起交回来。</p>
+        </section>
+        <section class="tester-focus" aria-label="真人试玩观察点">
+          <span>看懂下一步</span>
+          <span>感到资源紧</span>
+          <span>愿意再走一站</span>
+        </section>
+        <nav class="entry-actions" aria-label="测试入口">
+          <a class="primary-action" href="./index.html?fresh=1">
+            <span class="icon">启</span>
+            <span>
+              <strong>开始干净新局</strong>
+              <small>从中原驿进入第一分钟试玩</small>
+            </span>
+            <span class="tag">P0</span>
+          </a>
+          <a href="./index.html">
+            <span class="icon">续</span>
+            <span>
+              <strong>继续当前存档</strong>
+              <small>保留本浏览器里的进度</small>
+            </span>
+            <span class="tag">SAVE</span>
+          </a>
+          <a href="./index.html?fresh=1&amp;view=map">
+            <span class="icon">图</span>
+            <span>
+              <strong>从地图视图开始</strong>
+              <small>验证路线、风险和补给预览</small>
+            </span>
+            <span class="tag">MAP</span>
+          </a>
+          <a href="./index.html?fresh=1&amp;drawer=settings">
+            <span class="icon">音</span>
+            <span>
+              <strong>音乐试听面板</strong>
+              <small>进入设置，试听六首核心候选</small>
+            </span>
+            <span class="tag">MUS</span>
+          </a>
+          <a href="./P0音频听感验收工作台.html">
+            <span class="icon">审</span>
+            <span>
+              <strong>音频验收台</strong>
+              <small>逐条试听并复制听感结论</small>
+            </span>
+            <span class="tag">AUD</span>
+          </a>
+          <a href="./index.html?recap=1">
+            <span class="icon">志</span>
+            <span>
+              <strong>打开本局复盘</strong>
+              <small>居中查看路线、资源和补给摘要</small>
+            </span>
+            <span class="tag">REC</span>
+          </a>
+          <a href="./index.html?fresh=1&amp;ending=rift&amp;recap=1">
+            <span class="icon">终</span>
+            <span>
+              <strong>结局复盘场景</strong>
+              <small>一键查看完整演示通关复盘</small>
+            </span>
+            <span class="tag">END</span>
+          </a>
+          <a href="./index.html?pressure=low">
+            <span class="icon">危</span>
+            <span>
+              <strong>低资源压力场景</strong>
+              <small>检查告急视觉、污染层和状态灯</small>
+            </span>
+            <span class="tag">LOW</span>
+          </a>
+          <a href="./P0真人试玩验收工作台.html">
+            <span class="icon">验</span>
+            <span>
+              <strong>P0 试玩验收台</strong>
+              <small>汇总试玩、听感和本局复盘</small>
+            </span>
+            <span class="tag">P0</span>
+          </a>
+          <a href="./P0发测批次台.html">
+            <span class="icon">发</span>
+            <span>
+              <strong>P0 发测批次台</strong>
+              <small>记录发给谁、追收谁、谁已完成</small>
+            </span>
+            <span class="tag">OUT</span>
+          </a>
+          <a href="./P0人工反馈收件台.html">
+            <span class="icon">收</span>
+            <span>
+              <strong>P0 反馈收件台</strong>
+              <small>多份反馈编号、缺口和补收状态</small>
+            </span>
+            <span class="tag">IN</span>
+          </a>
+          <a href="./P0反馈填写页.html">
+            <span class="icon">填</span>
+            <span>
+              <strong>P0 反馈填写页</strong>
+              <small>测试者填完后一键复制统一反馈包</small>
+            </span>
+            <span class="tag">FBK</span>
+          </a>
+        </nav>
+        <textarea id="playtestIntroSource" hidden readonly>
+《不思异：九州》试玩说明
+
+这是一款以《山海经》和古典志怪为灵感的横屏旅途生存文字游戏。你带着车队穿过神秘九州，在每个地点处理怪异遭遇、补给资源、选择下一段路，并尽量保住车轴、粮草和神志。
+
+这次试玩不用研究规则，也不用追求最优解。请像第一次打开手机游戏一样试玩 5 分钟：如果你自然知道下一步点哪里、能感到资源压力、并且愿意再走一站，这版就接近成立；如果哪里像网页、哪里卡住、哪里声音打扰，请直接写出来。
+
+试玩时请重点观察：
+1. 是否一眼知道下一步点哪里。
+2. 车轴、粮草、神志的压力是否看得懂。
+3. 哪一刻最像游戏，哪一刻还像网页。
+4. 画面和声音是否加分，还是打扰。
+5. 如果走到结局，请点“复盘本局”里的“复制反馈包”；如果没走完，请打开“志”复制本局复盘。
+        </textarea>
+        <div class="copy-actions" aria-label="试玩交接">
+          <button class="template-button" id="copyPlaytestIntro" type="button" aria-live="polite" onclick="event.preventDefault();var source=document.querySelector('#playtestIntroSource');var text=((source&amp;&amp;source.value)||'').trim();var state=document.querySelector('#copyIntroState');var fallback=document.querySelector('#copyFallback');var label=document.querySelector('#copyFallbackLabel');var field=document.querySelector('#copyFallbackText');if(state)state.textContent='已展开试玩说明';if(fallback)fallback.dataset.visible='true';if(label)label.textContent='手动复制试玩说明';if(field){field.value=text;field.focus();field.select();}if(navigator.clipboard){navigator.clipboard.writeText(text).then(()=>{this.dataset.copied='true';if(state)state.textContent='已复制试玩说明';}).catch(()=>{});}">
+            <span class="icon">介</span>
+            <span>
+              <strong>复制试玩说明</strong>
+              <small id="copyIntroState">给第一次接触项目的人先读</small>
+            </span>
+            <span class="tag">INFO</span>
+          </button>
+          <button class="template-button" id="copyPlaytestLink" type="button" aria-live="polite">
+            <span class="icon">链</span>
+            <span>
+              <strong>复制测试链接</strong>
+              <small id="copyLinkState">直接发给试玩者从新局进入</small>
+            </span>
+            <span class="tag">URL</span>
+          </button>
+          <button class="template-button" id="copyFiveMinuteTask" type="button" aria-live="polite">
+            <span class="icon">五</span>
+            <span>
+              <strong>复制 5 分钟任务</strong>
+              <small id="copyFiveMinuteTaskState">给测试者本人，少解释直接玩</small>
+            </span>
+            <span class="tag">HUM</span>
+          </button>
+          <button class="template-button" id="copyPlaytestTemplate" type="button" aria-live="polite">
+            <span class="icon">录</span>
+            <span>
+              <strong>复制反馈模板</strong>
+              <small id="copyTemplateState">回收卡点、误解和复盘文本</small>
+            </span>
+            <span class="tag">COPY</span>
+          </button>
+          <button class="template-button" id="copyAudioTemplate" type="button" aria-live="polite">
+            <span class="icon">听</span>
+            <span>
+              <strong>复制听感模板</strong>
+              <small id="copyAudioState">回收音乐、环境层和告急音效</small>
+            </span>
+            <span class="tag">AUD</span>
+          </button>
+          <button class="template-button" id="copyPlaytestPackage" type="button" aria-live="polite">
+            <span class="icon">包</span>
+            <span>
+              <strong>复制完整试玩包</strong>
+              <small id="copyPackageState">链接、任务和反馈口径一次带走</small>
+            </span>
+            <span class="tag">P0</span>
+          </button>
+          <button class="template-button" id="copyRecoveryChecklist" type="button" aria-live="polite">
+            <span class="icon">收</span>
+            <span>
+              <strong>复制回收清单</strong>
+              <small id="copyRecoveryState">主线程收口真人试玩和听感</small>
+            </span>
+            <span class="tag">HUM</span>
+          </button>
+        </div>
+        <div class="copy-fallback" id="copyFallback" aria-live="polite">
+          <label for="copyFallbackText" id="copyFallbackLabel">手动复制</label>
+          <textarea id="copyFallbackText" readonly></textarea>
+        </div>
+        <p class="note">正式试玩建议从“开始干净新局”进入；测试结束后打开“志”，复制本局复盘。</p>
+      </section>
+
+      <section class="asset-status-card" aria-label="画面素材状态">
+        <div class="asset-status-head">
+          <div>
+            <span>画面素材状态</span>
+            <strong id="assetStatusTitle">素材待导入</strong>
+          </div>
+          <span class="asset-score" id="assetStatusScore">0/59</span>
+        </div>
+        <div class="asset-meter" aria-hidden="true">
+          <span id="assetStatusMeter"></span>
+        </div>
+        <div class="asset-groups" id="assetStatusGroups"></div>
+        <p class="asset-next" id="assetStatusNext">先补齐路段、地点、事件、路遇、危机和结局图。</p>
+        <div class="asset-links">
+          <a class="asset-link" id="assetPromptLink" href="../../../协作/D_BSI-D-023_首轮12张关键图Prompt包.md">
+            <strong>Prompt 包</strong>
+            <span class="tag">D023</span>
+          </a>
+          <a class="asset-link" id="assetWorkbenchLink" href="./generated-art-import-workbench.md">
+            <strong>核名工作台</strong>
+            <span class="tag">12</span>
+          </a>
+        </div>
+        <div class="priority-visual" aria-label="高频重生图状态">
+          <div class="priority-visual-head">
+            <div>
+              <span>高频重生图</span>
+              <strong id="priorityVisualTitle">待检查</strong>
+            </div>
+            <span class="priority-visual-score" id="priorityVisualScore">0/11</span>
+          </div>
+          <div class="priority-list" id="priorityVisualList"></div>
+          <div class="priority-links">
+            <a class="asset-link" id="priorityPromptLink" href="./highfreq-visual-replacement-workbench.md">
+              <strong>高频工作台</strong>
+              <span class="tag">11</span>
+            </a>
+            <a class="asset-link" id="priorityReportLink" href="./visual-replacement-status.md">
+              <strong>替换报告</strong>
+              <span class="tag">11</span>
+            </a>
+            <a class="asset-link" href="./P0试玩版总验收报告.html">
+              <strong>P0 总验收</strong>
+              <span class="tag">RC</span>
+            </a>
+          </div>
+        </div>
+        <div class="audio-readiness" id="audioReadiness" aria-label="声音状态">
+          <div class="balance-head">
+            <div>
+              <span>声音状态</span>
+              <strong id="audioStatusTitle">待听感复核</strong>
+            </div>
+            <span class="balance-score" id="audioStatusScore">6 首</span>
+          </div>
+          <div class="audio-chips" aria-label="音频素材分层">
+            <div class="audio-chip">
+              <span>音乐</span>
+              <strong>6 待听</strong>
+            </div>
+            <div class="audio-chip">
+              <span>环境</span>
+              <strong>1 临时</strong>
+            </div>
+            <div class="audio-chip">
+              <span>神志</span>
+              <strong>2 临时</strong>
+            </div>
+            <div class="audio-chip">
+              <span>短音</span>
+              <strong>11 临时</strong>
+            </div>
+          </div>
+          <p class="asset-next">音乐已能试听与轮换；环境层、神志层和短音仍按临时素材处理，下一步回收听感和授权状态。</p>
+          <div class="priority-links">
+            <a class="asset-link" href="./index.html?fresh=1&amp;drawer=settings">
+              <strong>试听面板</strong>
+              <span class="tag">AUD</span>
+            </a>
+            <a class="asset-link" href="./P0音频听感验收工作台.html">
+              <strong>音频验收台</strong>
+              <span class="tag">P0</span>
+            </a>
+            <a class="asset-link" href="../../../协作/F_BSI-F-024_下一轮音乐音效生成与验收清单.md">
+              <strong>音频清单</strong>
+              <span class="tag">F024</span>
+            </a>
+          </div>
+        </div>
+        <div class="p0-readiness" id="p0Readiness" aria-label="P0 总验收状态">
+          <div class="balance-head">
+            <div>
+              <span>P0 总验收</span>
+              <strong id="p0ReadinessTitle">待生成报告</strong>
+            </div>
+            <span class="balance-score" id="p0ReadinessScore">--</span>
+          </div>
+          <div class="audio-chips" aria-label="P0 验收摘要">
+            <div class="audio-chip">
+              <span>机器</span>
+              <strong id="p0MachineCount">--</strong>
+            </div>
+            <div class="audio-chip">
+              <span>通过</span>
+              <strong id="p0PassCount">--</strong>
+            </div>
+            <div class="audio-chip">
+              <span>待人工</span>
+              <strong id="p0ManualCount">--</strong>
+            </div>
+            <div class="audio-chip">
+              <span>需处理</span>
+              <strong id="p0FailCount">--</strong>
+            </div>
+          </div>
+          <p class="asset-next" id="p0ReadinessNext">运行 P0 总验收后显示机器项与人工项。</p>
+          <div class="priority-links">
+            <a class="asset-link" id="p0ReadinessReportLink" href="./P0试玩版总验收报告.html">
+              <strong>总验收报告</strong>
+              <span class="tag">P0</span>
+            </a>
+            <a class="asset-link" href="./P0真人试玩验收工作台.html">
+              <strong>真人验收台</strong>
+              <span class="tag">HUM</span>
+            </a>
+            <a class="asset-link" href="./P0发测批次台.html">
+              <strong>发测批次台</strong>
+              <span class="tag">OUT</span>
+            </a>
+            <a class="asset-link" href="./P0人工反馈收件台.html">
+              <strong>反馈收件台</strong>
+              <span class="tag">IN</span>
+            </a>
+          </div>
+        </div>
+        <div class="balance-health" id="balanceHealth" aria-label="机制平衡状态">
+          <div class="balance-head">
+            <div>
+              <span>机制平衡</span>
+              <strong id="balanceStatusTitle">待模拟</strong>
+            </div>
+            <span class="balance-score" id="balanceStatusScore">--</span>
+          </div>
+          <div class="balance-strategies" id="balanceStrategyList"></div>
+          <p class="asset-next" id="balanceStatusNext">运行平衡模拟后显示策略健康度。</p>
+          <div class="priority-links">
+            <a class="asset-link" id="balanceReportLink" href="./balance-status.html">
+              <strong>平衡报告</strong>
+              <span class="tag">SIM</span>
+            </a>
+            <a class="asset-link" href="./index.html?fresh=1&amp;pressure=low">
+              <strong>压力场景</strong>
+              <span class="tag">LOW</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="route-strip" aria-label="试玩路径">
+        <span class="step">处理遭遇</span>
+        <span class="step">搜集补给</span>
+        <span class="step">选择路线</span>
+        <span class="step">半途路遇</span>
+        <span class="step">抵达新地</span>
+      </section>
+    </main>
+    <script src="./generated-art-status.js?v=20260624-c159"></script>
+    <script src="./visual-replacement-status.js?v=20260624-c159"></script>
+    <script src="./balance-status.js?v=20260620-c102"></script>
+    <script src="./p0-readiness-status.js?v=20260624-c160"></script>
+    <script>
+      const artStatus = window.BSI_GENERATED_ART_STATUS || {};
+      const visualStatus = window.BSI_VISUAL_REPLACEMENT_STATUS || {};
+      const balanceStatus = window.BSI_BALANCE_STATUS || {};
+      const p0ReadinessStatus = window.BSI_P0_READINESS_STATUS || {};
+      const artPrioritySummary = artStatus.summary || { ready: 0, total: 12 };
+      const artSummary = artStatus.librarySummary || artPrioritySummary || { ready: 0, total: 59 };
+      const artGroups = Array.isArray(artStatus.libraryGroups) ? artStatus.libraryGroups : (
+        Array.isArray(artStatus.groups) ? artStatus.groups : []
+      );
+      const artNext = artStatus.nextLibraryMissing || artStatus.nextMissing;
+      const assetStatusTitle = document.querySelector("#assetStatusTitle");
+      const assetStatusScore = document.querySelector("#assetStatusScore");
+      const assetStatusMeter = document.querySelector("#assetStatusMeter");
+      const assetStatusGroups = document.querySelector("#assetStatusGroups");
+      const assetStatusNext = document.querySelector("#assetStatusNext");
+      const assetPromptLink = document.querySelector("#assetPromptLink");
+      const assetWorkbenchLink = document.querySelector("#assetWorkbenchLink");
+      const priorityVisualTitle = document.querySelector("#priorityVisualTitle");
+      const priorityVisualScore = document.querySelector("#priorityVisualScore");
+      const priorityVisualList = document.querySelector("#priorityVisualList");
+      const priorityPromptLink = document.querySelector("#priorityPromptLink");
+      const priorityReportLink = document.querySelector("#priorityReportLink");
+      const balanceHealth = document.querySelector("#balanceHealth");
+      const balanceStatusTitle = document.querySelector("#balanceStatusTitle");
+      const balanceStatusScore = document.querySelector("#balanceStatusScore");
+      const balanceStrategyList = document.querySelector("#balanceStrategyList");
+      const balanceStatusNext = document.querySelector("#balanceStatusNext");
+      const balanceReportLink = document.querySelector("#balanceReportLink");
+      const p0Readiness = document.querySelector("#p0Readiness");
+      const p0ReadinessTitle = document.querySelector("#p0ReadinessTitle");
+      const p0ReadinessScore = document.querySelector("#p0ReadinessScore");
+      const p0MachineCount = document.querySelector("#p0MachineCount");
+      const p0PassCount = document.querySelector("#p0PassCount");
+      const p0ManualCount = document.querySelector("#p0ManualCount");
+      const p0FailCount = document.querySelector("#p0FailCount");
+      const p0ReadinessNext = document.querySelector("#p0ReadinessNext");
+      const p0ReadinessReportLink = document.querySelector("#p0ReadinessReportLink");
+
+      function renderAssetStatus() {
+        const ready = Number(artSummary.ready || 0);
+        const total = Math.max(1, Number(artSummary.total || 59));
+        const firstPassReady = Number(artPrioritySummary.ready || 0);
+        const firstPassTotal = Number(artPrioritySummary.total || 12);
+        const percent = Math.max(0, Math.min(100, Math.round((ready / total) * 100)));
+        if (assetStatusTitle) {
+          assetStatusTitle.textContent = ready >= total ? "画面素材已就绪" : "画面素材待补";
+        }
+        if (assetStatusScore) {
+          assetStatusScore.textContent = `${ready}/${total}`;
+        }
+        if (assetStatusMeter) {
+          assetStatusMeter.style.setProperty("--asset-progress", `${percent}%`);
+        }
+        if (assetStatusGroups) {
+          assetStatusGroups.replaceChildren();
+          artGroups.forEach((group) => {
+            const chip = document.createElement("span");
+            const label = document.createElement("span");
+            const count = document.createElement("strong");
+            chip.className = "asset-group-chip";
+            label.textContent = String(group.label || group.group || "");
+            count.textContent = `${Number(group.ready || 0)}/${Number(group.total || 0)}`;
+            chip.append(label, count);
+            assetStatusGroups.append(chip);
+          });
+        }
+        if (assetStatusNext) {
+          assetStatusNext.textContent = artNext
+            ? `下一张：${String(artNext.path || "").split("/").pop()}`
+            : `全量 ${total} 张试玩图已就绪，首轮 ${firstPassReady}/${firstPassTotal} 关键图也已通过。`;
+        }
+        if (assetPromptLink && artStatus.promptPack) {
+          assetPromptLink.href = artStatus.promptPack;
+        }
+        if (assetWorkbenchLink && artStatus.workbench) {
+          assetWorkbenchLink.href = artStatus.workbench;
+        }
+      }
+
+      renderAssetStatus();
+
+      function renderPriorityVisualStatus() {
+        const summary = visualStatus.summary || { replaced: 0, total: 11, open: 11 };
+        const results = Array.isArray(visualStatus.results) ? visualStatus.results : [];
+        const replaced = Number(summary.replaced || 0);
+        const total = Math.max(1, Number(summary.total || 11));
+        const open = Number(summary.open ?? (total - replaced));
+        if (priorityVisualTitle) {
+          priorityVisualTitle.textContent = open > 0 ? "首局高频图待重生" : "高频图已替换";
+        }
+        if (priorityVisualScore) {
+          priorityVisualScore.textContent = `${replaced}/${total}`;
+        }
+        if (priorityPromptLink && (visualStatus.workbench || visualStatus.copyPack || visualStatus.promptPack)) {
+          priorityPromptLink.href = visualStatus.workbench || visualStatus.copyPack || visualStatus.promptPack;
+        }
+        if (priorityReportLink && visualStatus.report) {
+          priorityReportLink.href = visualStatus.report;
+        }
+        if (!priorityVisualList) return;
+        priorityVisualList.replaceChildren();
+        const priorityRank = { P0: 0, P1: 1, P2: 2 };
+        const pending = results
+          .filter((item) => item.status !== "replaced")
+          .sort((a, b) => (
+            (priorityRank[a.priority] ?? 9) - (priorityRank[b.priority] ?? 9)
+            || String(a.id).localeCompare(String(b.id))
+          ))
+          .slice(0, 4);
+        const visibleItems = pending.length ? pending : results.slice(0, 1);
+        visibleItems.forEach((item) => {
+          const row = document.createElement("span");
+          const mark = document.createElement("span");
+          const text = document.createElement("span");
+          const title = document.createElement("span");
+          const reason = document.createElement("span");
+          const state = document.createElement("span");
+          row.className = "priority-item";
+          row.dataset.priority = String(item.priority || "");
+          mark.className = "priority-mark";
+          mark.textContent = String(item.priority || "P?");
+          title.className = "priority-item-title";
+          title.textContent = `${item.id || ""} ${item.name || ""}`.trim();
+          reason.className = "priority-item-reason";
+          reason.textContent = item.issue || item.reason || item.fileName || "";
+          text.append(title, reason);
+          state.className = "priority-state";
+          state.textContent = item.statusLabel || item.status || "";
+          row.append(mark, text, state);
+          priorityVisualList.append(row);
+        });
+      }
+
+      renderPriorityVisualStatus();
+
+      function renderP0ReadinessStatus() {
+        const summary = p0ReadinessStatus.summary || {};
+        const title = p0ReadinessStatus.title || "待生成报告";
+        const failed = Number(summary.failed || 0);
+        const manual = Number(summary.manual || 0);
+        const machineText = String(summary.machineText || "--");
+        if (p0Readiness) {
+          p0Readiness.dataset.tone = failed > 0 ? "danger" : manual > 0 ? "warning" : "stable";
+        }
+        if (p0ReadinessTitle) {
+          p0ReadinessTitle.textContent = title;
+        }
+        if (p0ReadinessScore) {
+          p0ReadinessScore.textContent = machineText;
+        }
+        if (p0MachineCount) p0MachineCount.textContent = machineText;
+        if (p0PassCount) p0PassCount.textContent = String(summary.passed ?? "--");
+        if (p0ManualCount) p0ManualCount.textContent = String(summary.manual ?? "--");
+        if (p0FailCount) p0FailCount.textContent = String(summary.failed ?? "--");
+        if (p0ReadinessNext) {
+          p0ReadinessNext.textContent = failed > 0
+            ? "先处理阻断项，再发给测试者。"
+            : manual > 0
+              ? "机器项已过，下一步回收真人试玩和听感。"
+              : "P0 已可发测，继续整理版本发布边界。";
+        }
+        if (p0ReadinessReportLink && p0ReadinessStatus.report) {
+          p0ReadinessReportLink.href = p0ReadinessStatus.report;
+        }
+      }
+
+      renderP0ReadinessStatus();
+
+      function renderBalanceStatus() {
+        const summary = balanceStatus.summary || {};
+        const strategies = Array.isArray(balanceStatus.strategies) ? balanceStatus.strategies : [];
+        if (balanceHealth) {
+          balanceHealth.dataset.tone = summary.tone || "stable";
+        }
+        if (balanceStatusTitle) {
+          balanceStatusTitle.textContent = summary.title || "待模拟";
+        }
+        if (balanceStatusScore) {
+          const minSuccess = Number(summary.minSuccessRate || 0);
+          balanceStatusScore.textContent = strategies.length ? `${Math.round(minSuccess * 100)}%` : "--";
+        }
+        if (balanceStatusNext) {
+          balanceStatusNext.textContent = summary.nextText || "运行平衡模拟后显示策略健康度。";
+        }
+        if (balanceReportLink && balanceStatus.report) {
+          balanceReportLink.href = balanceStatus.report;
+        }
+        if (!balanceStrategyList) return;
+        balanceStrategyList.replaceChildren();
+        strategies.forEach((item) => {
+          const chip = document.createElement("span");
+          const label = document.createElement("span");
+          const score = document.createElement("strong");
+          chip.className = "balance-chip";
+          label.textContent = String(item.label || item.strategy || "");
+          score.textContent = String(item.successText || "");
+          chip.append(label, score);
+          balanceStrategyList.append(chip);
+        });
+      }
+
+      renderBalanceStatus();
+
+      const playtestTemplate = [
+        "《不思异：九州》5分钟试玩记录",
+        "",
+        "试玩者：",
+        "设备/视口：",
+        "是否开音乐：",
+        "试玩时长：",
+        "抵达进度：中原驿 / 第二站 / 第三站 / 九州裂隙 / 失败",
+        "",
+        "1. 是否一眼知道下一步点哪里：",
+        "2. 资源变化是否看得懂：",
+        "3. 哪一刻最像游戏：",
+        "4. 哪一刻还像网页：",
+        "5. 第一次卡住在哪里：",
+        "6. 最想继续看的地点/事件：",
+        "7. 最不清楚的按钮或文字：",
+        "8. 音乐/音效是否打扰或加分：",
+        "",
+        "本局复盘卡文本："
+      ].join("\n");
+
+      const audioReviewTemplate = [
+        "《不思异：九州》音频听感复核",
+        "",
+        "试听者：",
+        "设备/耳机或外放：",
+        "是否开启音乐：",
+        "试听入口：音乐试听面板 / 正常试玩 / 低资源压力场景",
+        "",
+        "1. 当前主音乐是否适合第一章行旅：",
+        "2. MUS-CORE-001/002/003/004/005/006 中最想保留哪首：",
+        "3. 旅途环境层是否加分：太弱 / 正好 / 太吵 / 需要替换",
+        "4. 神志低时的声音是否能感觉到不对劲：",
+        "5. 地图打开、选路、抵达、资源变化的短音效是否清楚：",
+        "6. 哪个声音最打扰：",
+        "7. 哪个声音最有山海九州感：",
+        "8. 是否愿意默认开低音量音乐：",
+        "",
+        "备注："
+      ].join("\n");
+
+      const playtestUrl = new URL("./index.html?fresh=1", window.location.href).href;
+      const playtestWorkbenchUrl = new URL("./P0真人试玩验收工作台.html", window.location.href).href;
+      const audioWorkbenchUrl = new URL("./P0音频听感验收工作台.html", window.location.href).href;
+      const copyIntroButton = document.querySelector("#copyPlaytestIntro");
+      const copyIntroState = document.querySelector("#copyIntroState");
+      const copyLinkButton = document.querySelector("#copyPlaytestLink");
+      const copyLinkState = document.querySelector("#copyLinkState");
+      const copyFiveMinuteTaskButton = document.querySelector("#copyFiveMinuteTask");
+      const copyFiveMinuteTaskState = document.querySelector("#copyFiveMinuteTaskState");
+      const copyButton = document.querySelector("#copyPlaytestTemplate");
+      const copyState = document.querySelector("#copyTemplateState");
+      const copyAudioButton = document.querySelector("#copyAudioTemplate");
+      const copyAudioState = document.querySelector("#copyAudioState");
+      const copyPackageButton = document.querySelector("#copyPlaytestPackage");
+      const copyPackageState = document.querySelector("#copyPackageState");
+      const copyRecoveryButton = document.querySelector("#copyRecoveryChecklist");
+      const copyRecoveryState = document.querySelector("#copyRecoveryState");
+      const copyFallback = document.querySelector("#copyFallback");
+      const copyFallbackLabel = document.querySelector("#copyFallbackLabel");
+      const copyFallbackText = document.querySelector("#copyFallbackText");
+
+      function showCopyFallback(label, value) {
+        if (!copyFallback || !copyFallbackText || !copyFallbackLabel) return;
+        copyFallback.dataset.visible = "true";
+        copyFallbackLabel.textContent = label;
+        copyFallbackText.value = value;
+        copyFallbackText.focus();
+        copyFallbackText.select();
+      }
+
+      function getPlaytestIntroText() {
+        return [
+          "《不思异：九州》试玩说明",
+          "",
+          "这是一款以《山海经》和古典志怪为灵感的横屏旅途生存文字游戏。你带着车队穿过神秘九州，在每个地点处理怪异遭遇、补给资源、选择下一段路，并尽量保住车轴、粮草和神志。",
+          "",
+          "这次试玩不用研究规则，也不用追求最优解。请像第一次打开手机游戏一样试玩 5 分钟：如果你自然知道下一步点哪里、能感到资源压力、并且愿意再走一站，这版就接近成立；如果哪里像网页、哪里卡住、哪里声音打扰，请直接写出来。",
+          "",
+          "试玩时请重点观察：",
+          "1. 是否一眼知道下一步点哪里。",
+          "2. 车轴、粮草、神志的压力是否看得懂。",
+          "3. 哪一刻最像游戏，哪一刻还像网页。",
+          "4. 画面和声音是否加分，还是打扰。",
+        "5. 如果走到结局，请点“复盘本局”里的“复制反馈包”；如果没走完，请打开“志”复制本局复盘。"
+        ].join("\n");
+      }
+
+      function getFiveMinutePlaytestTaskText() {
+        return [
+          "《不思异：九州》5 分钟试玩任务",
+          "",
+          `试玩链接：${playtestUrl}`,
+          "试玩密码：tusun2026",
+          "",
+          "请横屏打开，像第一次玩手机游戏一样试玩 5 分钟。不需要研究攻略，也不用追求最优解。",
+          "",
+          "## 试玩目标",
+          "",
+          "1. 从干净新局开始。",
+          "2. 处理当前遭遇。",
+          "3. 补给一次。",
+          "4. 打开九州地图，选下一站。",
+          "5. 路上遇到事件时按直觉选择。",
+          "6. 尽量走到结局；如果走不到，也请记录卡住的位置。",
+          "",
+          "## 试玩时只看这 5 件事",
+          "",
+          "1. 是否一眼知道下一步点哪里。",
+          "2. 车轴、粮草、神志的变化是否看得懂。",
+          "3. 哪一刻最像游戏。",
+          "4. 哪一刻还像网页。",
+          "5. 音乐、音效、画面是否加分或打扰。",
+          "",
+          "## 试玩后发回",
+          "",
+          "如果走到结局：请点“复盘本局”里的“复制反馈包”，把整段文字发回。",
+          "如果没走到结局：请打开“志”复制本局复盘，再按下面 8 个问题简单填一下。",
+          "",
+          playtestTemplate
+        ].join("\n");
+      }
+
+      function getPlaytestPackageText() {
+        return [
+          "《不思异：九州》P0 试玩包",
+          "",
+          getPlaytestIntroText(),
+          "",
+          "试玩链接：",
+          playtestUrl,
+          "",
+          "试玩方式：",
+          "1. 建议横屏打开。",
+          "2. 从“开始干净新局”进入。",
+          "3. 目标是走完一段旅程：处理遭遇 -> 补给 -> 开图 -> 选路 -> 半途路遇 -> 抵达下一站。",
+          "4. 到结局时点“复盘本局”里的“复制反馈包”；如果卡住或没走完，再点“志”复制本局复盘。",
+          "",
+          "回收方式：",
+          "1. 优先让测试者发回游戏结局里的《P0 试玩反馈包》。未走到结局时，再发回《5分钟试玩记录》《音频听感复核》和本局复盘文本。",
+          "2. 主线程打开 P0 真人试玩验收台；如果收到《P0 试玩反馈包》，粘贴到任意一栏后点“拆入三栏”，再勾选门槛并复制验收摘要。",
+          "3. 音频单独复核时，打开 P0 音频听感验收台，逐条试听并标记保留 / 待改 / 弃用。",
+          "",
+          "P0 真人试玩验收台：",
+          "P0真人试玩验收工作台.html",
+          playtestWorkbenchUrl,
+          "",
+          "P0 音频听感验收台：",
+          "P0音频听感验收工作台.html",
+          audioWorkbenchUrl,
+          "",
+          "观察重点：",
+          "- 是否一眼知道下一步点哪里。",
+          "- 是否感到车轴、粮草、神志有压力。",
+          "- 是否愿意再走一站。",
+          "- 画面和声音是否像游戏，而不是网页。",
+          "",
+          playtestTemplate,
+          "",
+          audioReviewTemplate
+        ].join("\n");
+      }
+
+      function getRecoveryChecklistText() {
+        const reportUrl = new URL("./P0试玩版总验收报告.html", window.location.href).href;
+        return [
+          "《不思异：九州》P0 人工回收清单",
+          "",
+          "当前机器状态：",
+          p0ReadinessStatus.title || "P0 机器验收通过，待真人确认",
+          `机器项：${p0ReadinessStatus.summary?.machineText || "6/6"}`,
+          `待人工：${p0ReadinessStatus.summary?.manual ?? 2}`,
+          "",
+          "必须回收 3 段材料：",
+          "1. 优先回收游戏结局里的《P0 试玩反馈包》；验收台可一键“拆入三栏”。",
+          "2. 未走到结局时，回收《5分钟试玩记录》：看懂下一步、资源压力、卡点、是否愿意再走一站。",
+          "3. 未走到结局时，回收《音频听感复核》：主音乐、环境层、神志层、短音效是否加分或打扰。",
+          "4. 未走到结局时，回收游戏内“志”里的本局复盘：路线、补给、路遇、资源最低点和结局/卡住位置。",
+          "",
+          "主线程操作顺序：",
+          "1. 打开 P0 真人试玩验收台；整段《P0 试玩反馈包》可粘贴到任意一栏后点“拆入三栏”。",
+          "2. 如果没有反馈包，再把三段材料分别粘贴进去。",
+          "3. 观察“反馈证据雷达”是否五类齐全：下一步、复盘、资源、UI、声音。",
+          "4. 只有人工确认五项门槛都成立，才把本轮标为 P0 通过候选。",
+          "5. 如果声音需要单独判断，打开 P0 音频听感验收台逐条标记，并复制音频验收摘要。",
+          "6. 把真人验收摘要、音频验收摘要和 P0 总验收报告一起回填到主线程。",
+          "",
+          "P0 真人试玩验收台：",
+          "P0真人试玩验收工作台.html",
+          playtestWorkbenchUrl,
+          "",
+          "P0 音频听感验收台：",
+          "P0音频听感验收工作台.html",
+          audioWorkbenchUrl,
+          "",
+          "P0 总验收报告：",
+          reportUrl,
+          "",
+          "判定边界：",
+          "- 机器 6/6 只证明链路可跑，不替代真人手感。",
+          "- 音频 `review-pending` / `demo-temporary` 只代表内部可听，不代表正式授权完成。",
+          "- 如果玩家没有复制本局复盘，先不要判定“可完整试玩”。"
+        ].join("\n");
+      }
+
+      async function copyLauncherText(button, stateNode, label, value) {
+        if (!button || !stateNode) return;
+        try {
+          await navigator.clipboard.writeText(value);
+          button.dataset.copied = "true";
+          stateNode.textContent = `已复制${label}`;
+        } catch {
+          stateNode.textContent = "浏览器未放行，已展开手动复制";
+          showCopyFallback(`手动复制${label}`, value);
+        }
+      }
+
+      window.copyPlaytestIntroNow = (event) => {
+        event?.preventDefault?.();
+        copyLauncherText(copyIntroButton, copyIntroState, "试玩说明", getPlaytestIntroText());
+      };
+
+      document.addEventListener("click", (event) => {
+        const button = event.target?.closest?.("button");
+        if (!button) return;
+        if (button.id === "copyPlaytestIntro") {
+          event.preventDefault();
+          copyLauncherText(copyIntroButton, copyIntroState, "试玩说明", getPlaytestIntroText());
+        } else if (button.id === "copyPlaytestLink") {
+          event.preventDefault();
+          copyLauncherText(copyLinkButton, copyLinkState, "测试链接", playtestUrl);
+        } else if (button.id === "copyFiveMinuteTask") {
+          event.preventDefault();
+          copyLauncherText(copyFiveMinuteTaskButton, copyFiveMinuteTaskState, "5 分钟试玩任务", getFiveMinutePlaytestTaskText());
+        } else if (button.id === "copyPlaytestTemplate") {
+          event.preventDefault();
+          copyLauncherText(copyButton, copyState, "反馈模板", playtestTemplate);
+        } else if (button.id === "copyAudioTemplate") {
+          event.preventDefault();
+          copyLauncherText(copyAudioButton, copyAudioState, "听感模板", audioReviewTemplate);
+        } else if (button.id === "copyPlaytestPackage") {
+          event.preventDefault();
+          copyLauncherText(copyPackageButton, copyPackageState, "完整试玩包", getPlaytestPackageText());
+        } else if (button.id === "copyRecoveryChecklist") {
+          event.preventDefault();
+          copyLauncherText(copyRecoveryButton, copyRecoveryState, "人工回收清单", getRecoveryChecklistText());
+        }
+      });
+
+      copyIntroButton?.addEventListener("click", async () => {
+        const introText = getPlaytestIntroText();
+        try {
+          await navigator.clipboard.writeText(introText);
+          copyIntroButton.dataset.copied = "true";
+          copyIntroState.textContent = "已复制试玩说明";
+        } catch {
+          copyIntroState.textContent = "浏览器未放行，已展开手动复制";
+          showCopyFallback("手动复制试玩说明", introText);
+        }
+      });
+
+      copyLinkButton?.addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(playtestUrl);
+          copyLinkButton.dataset.copied = "true";
+          copyLinkState.textContent = "已复制干净新局链接";
+        } catch {
+          copyLinkState.textContent = "浏览器未放行，已展开手动复制";
+          showCopyFallback("手动复制测试链接", playtestUrl);
+        }
+      });
+
+      copyFiveMinuteTaskButton?.addEventListener("click", async () => {
+        const taskText = getFiveMinutePlaytestTaskText();
+        try {
+          await navigator.clipboard.writeText(taskText);
+          copyFiveMinuteTaskButton.dataset.copied = "true";
+          copyFiveMinuteTaskState.textContent = "已复制 5 分钟试玩任务";
+        } catch {
+          copyFiveMinuteTaskState.textContent = "浏览器未放行，已展开手动复制";
+          showCopyFallback("手动复制 5 分钟试玩任务", taskText);
+        }
+      });
+
+      copyButton?.addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(playtestTemplate);
+          copyButton.dataset.copied = "true";
+          copyState.textContent = "已复制反馈模板";
+        } catch {
+          copyState.textContent = "浏览器未放行，已展开手动复制";
+          showCopyFallback("手动复制反馈模板", playtestTemplate);
+        }
+      });
+
+      copyAudioButton?.addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(audioReviewTemplate);
+          copyAudioButton.dataset.copied = "true";
+          copyAudioState.textContent = "已复制听感模板";
+        } catch {
+          copyAudioState.textContent = "浏览器未放行，已展开手动复制";
+          showCopyFallback("手动复制听感模板", audioReviewTemplate);
+        }
+      });
+
+      copyPackageButton?.addEventListener("click", async () => {
+        const packageText = getPlaytestPackageText();
+        try {
+          await navigator.clipboard.writeText(packageText);
+          copyPackageButton.dataset.copied = "true";
+          copyPackageState.textContent = "已复制完整试玩包";
+        } catch {
+          copyPackageState.textContent = "浏览器未放行，已展开手动复制";
+          showCopyFallback("手动复制完整试玩包", packageText);
+        }
+      });
+
+      copyRecoveryButton?.addEventListener("click", async () => {
+        const checklistText = getRecoveryChecklistText();
+        try {
+          await navigator.clipboard.writeText(checklistText);
+          copyRecoveryButton.dataset.copied = "true";
+          copyRecoveryState.textContent = "已复制人工回收清单";
+        } catch {
+          copyRecoveryState.textContent = "浏览器未放行，已展开手动复制";
+          showCopyFallback("手动复制人工回收清单", checklistText);
+        }
+      });
+    </script>
+    <script>
+      (() => {
+        const introText = [
+          "《不思异：九州》试玩说明",
+          "",
+          "这是一款以《山海经》和古典志怪为灵感的横屏旅途生存文字游戏。你带着车队穿过神秘九州，在每个地点处理怪异遭遇、补给资源、选择下一段路，并尽量保住车轴、粮草和神志。",
+          "",
+          "这次试玩不用研究规则，也不用追求最优解。请像第一次打开手机游戏一样试玩 5 分钟：如果你自然知道下一步点哪里、能感到资源压力、并且愿意再走一站，这版就接近成立；如果哪里像网页、哪里卡住、哪里声音打扰，请直接写出来。",
+          "",
+          "试玩时请重点观察：",
+          "1. 是否一眼知道下一步点哪里。",
+          "2. 车轴、粮草、神志的压力是否看得懂。",
+          "3. 哪一刻最像游戏，哪一刻还像网页。",
+          "4. 画面和声音是否加分，还是打扰。",
+          "5. 如果走到结局，请点“复盘本局”里的“复制反馈包”；如果没走完，请打开“志”复制本局复盘。"
+        ].join("\n");
+
+        window.BSI_PLAYTEST_INTRO_TEXT = introText;
+        window.BSI_COPY_PLAYTEST_INTRO_READY = true;
+
+        window.copyPlaytestIntroNow = async (event) => {
+          event?.preventDefault?.();
+          const button = document.querySelector("#copyPlaytestIntro");
+          const state = document.querySelector("#copyIntroState");
+          const fallback = document.querySelector("#copyFallback");
+          const fallbackLabel = document.querySelector("#copyFallbackLabel");
+          const fallbackText = document.querySelector("#copyFallbackText");
+
+          try {
+            await navigator.clipboard.writeText(introText);
+            if (button) button.dataset.copied = "true";
+            if (state) state.textContent = "已复制试玩说明";
+          } catch {
+            if (state) state.textContent = "浏览器未放行，已展开手动复制";
+            if (fallback && fallbackLabel && fallbackText) {
+              fallback.dataset.visible = "true";
+              fallbackLabel.textContent = "手动复制试玩说明";
+              fallbackText.value = introText;
+              fallbackText.focus();
+              fallbackText.select();
+            }
+          }
+        };
+
+        document
+          .querySelector("#copyPlaytestIntro")
+          ?.addEventListener("click", window.copyPlaytestIntroNow);
+      })();
+    </script>
+  </body>
+</html>

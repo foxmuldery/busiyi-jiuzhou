@@ -1,0 +1,3249 @@
+[
+  {
+    "source_id": "MENU",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-001_主菜单按钮面板素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-001_1049x240.png",
+    "index": 1,
+    "box": [
+      25,
+      38,
+      1074,
+      278
+    ],
+    "size": [
+      1049,
+      240
+    ],
+    "opaque_pixels": 201949
+  },
+  {
+    "source_id": "MENU",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-001_主菜单按钮面板素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-002_526x419.png",
+    "index": 2,
+    "box": [
+      1116,
+      34,
+      1642,
+      453
+    ],
+    "size": [
+      526,
+      419
+    ],
+    "opaque_pixels": 77833
+  },
+  {
+    "source_id": "MENU",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-001_主菜单按钮面板素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-003_329x148.png",
+    "index": 3,
+    "box": [
+      26,
+      309,
+      355,
+      457
+    ],
+    "size": [
+      329,
+      148
+    ],
+    "opaque_pixels": 38804
+  },
+  {
+    "source_id": "MENU",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-001_主菜单按钮面板素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-004_332x144.png",
+    "index": 4,
+    "box": [
+      388,
+      312,
+      720,
+      456
+    ],
+    "size": [
+      332,
+      144
+    ],
+    "opaque_pixels": 38057
+  },
+  {
+    "source_id": "MENU",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-001_主菜单按钮面板素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-005_322x146.png",
+    "index": 5,
+    "box": [
+      746,
+      311,
+      1068,
+      457
+    ],
+    "size": [
+      322,
+      146
+    ],
+    "opaque_pixels": 36224
+  },
+  {
+    "source_id": "MENU",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-001_主菜单按钮面板素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-006_518x264.png",
+    "index": 6,
+    "box": [
+      29,
+      486,
+      547,
+      750
+    ],
+    "size": [
+      518,
+      264
+    ],
+    "opaque_pixels": 14273
+  },
+  {
+    "source_id": "MENU",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-001_主菜单按钮面板素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-007_146x259.png",
+    "index": 7,
+    "box": [
+      571,
+      489,
+      717,
+      748
+    ],
+    "size": [
+      146,
+      259
+    ],
+    "opaque_pixels": 4229
+  },
+  {
+    "source_id": "MENU",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-001_主菜单按钮面板素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-008_374x259.png",
+    "index": 8,
+    "box": [
+      664,
+      489,
+      1038,
+      748
+    ],
+    "size": [
+      374,
+      259
+    ],
+    "opaque_pixels": 7998
+  },
+  {
+    "source_id": "MENU",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-001_主菜单按钮面板素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-009_573x56.png",
+    "index": 9,
+    "box": [
+      1072,
+      489,
+      1645,
+      545
+    ],
+    "size": [
+      573,
+      56
+    ],
+    "opaque_pixels": 20057
+  },
+  {
+    "source_id": "MENU",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-001_主菜单按钮面板素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-010_571x42.png",
+    "index": 10,
+    "box": [
+      1073,
+      553,
+      1644,
+      595
+    ],
+    "size": [
+      571,
+      42
+    ],
+    "opaque_pixels": 8312
+  },
+  {
+    "source_id": "MENU",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-001_主菜单按钮面板素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-011_283x24.png",
+    "index": 11,
+    "box": [
+      1074,
+      621,
+      1357,
+      645
+    ],
+    "size": [
+      283,
+      24
+    ],
+    "opaque_pixels": 916
+  },
+  {
+    "source_id": "MENU",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-001_主菜单按钮面板素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-012_282x24.png",
+    "index": 12,
+    "box": [
+      1362,
+      621,
+      1644,
+      645
+    ],
+    "size": [
+      282,
+      24
+    ],
+    "opaque_pixels": 824
+  },
+  {
+    "source_id": "MENU",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-001_主菜单按钮面板素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-013_571x42.png",
+    "index": 13,
+    "box": [
+      1073,
+      660,
+      1644,
+      702
+    ],
+    "size": [
+      571,
+      42
+    ],
+    "opaque_pixels": 5272
+  },
+  {
+    "source_id": "MENU",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-001_主菜单按钮面板素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-014_294x39.png",
+    "index": 14,
+    "box": [
+      1073,
+      720,
+      1367,
+      759
+    ],
+    "size": [
+      294,
+      39
+    ],
+    "opaque_pixels": 3031
+  },
+  {
+    "source_id": "MENU",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-001_主菜单按钮面板素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-015_292x40.png",
+    "index": 15,
+    "box": [
+      1352,
+      719,
+      1644,
+      759
+    ],
+    "size": [
+      292,
+      40
+    ],
+    "opaque_pixels": 2923
+  },
+  {
+    "source_id": "MENU",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-001_主菜单按钮面板素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-016_105x105.png",
+    "index": 16,
+    "box": [
+      31,
+      793,
+      136,
+      898
+    ],
+    "size": [
+      105,
+      105
+    ],
+    "opaque_pixels": 3379
+  },
+  {
+    "source_id": "MENU",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-001_主菜单按钮面板素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-017_101x103.png",
+    "index": 17,
+    "box": [
+      160,
+      794,
+      261,
+      897
+    ],
+    "size": [
+      101,
+      103
+    ],
+    "opaque_pixels": 3385
+  },
+  {
+    "source_id": "MENU",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-001_主菜单按钮面板素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-018_100x103.png",
+    "index": 18,
+    "box": [
+      283,
+      794,
+      383,
+      897
+    ],
+    "size": [
+      100,
+      103
+    ],
+    "opaque_pixels": 3594
+  },
+  {
+    "source_id": "MENU",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-001_主菜单按钮面板素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-019_100x103.png",
+    "index": 19,
+    "box": [
+      401,
+      794,
+      501,
+      897
+    ],
+    "size": [
+      100,
+      103
+    ],
+    "opaque_pixels": 3688
+  },
+  {
+    "source_id": "MENU",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-001_主菜单按钮面板素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-020_80x102.png",
+    "index": 20,
+    "box": [
+      529,
+      795,
+      609,
+      897
+    ],
+    "size": [
+      80,
+      102
+    ],
+    "opaque_pixels": 3390
+  },
+  {
+    "source_id": "MENU",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-001_主菜单按钮面板素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-021_99x102.png",
+    "index": 21,
+    "box": [
+      631,
+      794,
+      730,
+      896
+    ],
+    "size": [
+      99,
+      102
+    ],
+    "opaque_pixels": 4901
+  },
+  {
+    "source_id": "MENU",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-001_主菜单按钮面板素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-022_291x32.png",
+    "index": 22,
+    "box": [
+      1073,
+      775,
+      1364,
+      807
+    ],
+    "size": [
+      291,
+      32
+    ],
+    "opaque_pixels": 1975
+  },
+  {
+    "source_id": "MENU",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-001_主菜单按钮面板素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-023_288x31.png",
+    "index": 23,
+    "box": [
+      1356,
+      776,
+      1644,
+      807
+    ],
+    "size": [
+      288,
+      31
+    ],
+    "opaque_pixels": 2047
+  },
+  {
+    "source_id": "MENU",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-001_主菜单按钮面板素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-024_84x100.png",
+    "index": 24,
+    "box": [
+      739,
+      797,
+      823,
+      897
+    ],
+    "size": [
+      84,
+      100
+    ],
+    "opaque_pixels": 3493
+  },
+  {
+    "source_id": "MENU",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-001_主菜单按钮面板素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-025_65x90.png",
+    "index": 25,
+    "box": [
+      842,
+      802,
+      907,
+      892
+    ],
+    "size": [
+      65,
+      90
+    ],
+    "opaque_pixels": 2424
+  },
+  {
+    "source_id": "MENU",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-001_主菜单按钮面板素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-026_82x83.png",
+    "index": 26,
+    "box": [
+      930,
+      810,
+      1012,
+      893
+    ],
+    "size": [
+      82,
+      83
+    ],
+    "opaque_pixels": 3459
+  },
+  {
+    "source_id": "MENU",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-001_主菜单按钮面板素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-027_82x84.png",
+    "index": 27,
+    "box": [
+      1027,
+      812,
+      1109,
+      896
+    ],
+    "size": [
+      82,
+      84
+    ],
+    "opaque_pixels": 3468
+  },
+  {
+    "source_id": "MENU",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-001_主菜单按钮面板素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-028_74x75.png",
+    "index": 28,
+    "box": [
+      1141,
+      824,
+      1215,
+      899
+    ],
+    "size": [
+      74,
+      75
+    ],
+    "opaque_pixels": 2616
+  },
+  {
+    "source_id": "MENU",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-001_主菜单按钮面板素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-029_88x88.png",
+    "index": 29,
+    "box": [
+      1365,
+      821,
+      1453,
+      909
+    ],
+    "size": [
+      88,
+      88
+    ],
+    "opaque_pixels": 5107
+  },
+  {
+    "source_id": "MENU",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-001_主菜单按钮面板素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-030_94x91.png",
+    "index": 30,
+    "box": [
+      1509,
+      820,
+      1603,
+      911
+    ],
+    "size": [
+      94,
+      91
+    ],
+    "opaque_pixels": 4554
+  },
+  {
+    "source_id": "MENU",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-001_主菜单按钮面板素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-031_52x53.png",
+    "index": 31,
+    "box": [
+      1242,
+      838,
+      1294,
+      891
+    ],
+    "size": [
+      52,
+      53
+    ],
+    "opaque_pixels": 1042
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-001_852x415.png",
+    "index": 1,
+    "box": [
+      25,
+      21,
+      877,
+      436
+    ],
+    "size": [
+      852,
+      415
+    ],
+    "opaque_pixels": 315852
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-002_372x117.png",
+    "index": 2,
+    "box": [
+      889,
+      49,
+      1261,
+      166
+    ],
+    "size": [
+      372,
+      117
+    ],
+    "opaque_pixels": 29349
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-003_381x108.png",
+    "index": 3,
+    "box": [
+      1270,
+      55,
+      1651,
+      163
+    ],
+    "size": [
+      381,
+      108
+    ],
+    "opaque_pixels": 29734
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-004_381x109.png",
+    "index": 4,
+    "box": [
+      1270,
+      166,
+      1651,
+      275
+    ],
+    "size": [
+      381,
+      109
+    ],
+    "opaque_pixels": 29785
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-005_371x105.png",
+    "index": 5,
+    "box": [
+      889,
+      168,
+      1260,
+      273
+    ],
+    "size": [
+      371,
+      105
+    ],
+    "opaque_pixels": 29915
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-006_373x102.png",
+    "index": 6,
+    "box": [
+      888,
+      281,
+      1261,
+      383
+    ],
+    "size": [
+      373,
+      102
+    ],
+    "opaque_pixels": 30061
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-007_382x104.png",
+    "index": 7,
+    "box": [
+      1269,
+      282,
+      1651,
+      386
+    ],
+    "size": [
+      382,
+      104
+    ],
+    "opaque_pixels": 31421
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-008_529x123.png",
+    "index": 8,
+    "box": [
+      30,
+      437,
+      559,
+      560
+    ],
+    "size": [
+      529,
+      123
+    ],
+    "opaque_pixels": 49219
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-009_528x115.png",
+    "index": 9,
+    "box": [
+      578,
+      440,
+      1106,
+      555
+    ],
+    "size": [
+      528,
+      115
+    ],
+    "opaque_pixels": 48789
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-010_525x121.png",
+    "index": 10,
+    "box": [
+      1123,
+      440,
+      1648,
+      561
+    ],
+    "size": [
+      525,
+      121
+    ],
+    "opaque_pixels": 47264
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-011_530x116.png",
+    "index": 11,
+    "box": [
+      29,
+      556,
+      559,
+      672
+    ],
+    "size": [
+      530,
+      116
+    ],
+    "opaque_pixels": 47819
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-012_530x115.png",
+    "index": 12,
+    "box": [
+      573,
+      557,
+      1103,
+      672
+    ],
+    "size": [
+      530,
+      115
+    ],
+    "opaque_pixels": 49696
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-013_521x119.png",
+    "index": 13,
+    "box": [
+      1126,
+      553,
+      1647,
+      672
+    ],
+    "size": [
+      521,
+      119
+    ],
+    "opaque_pixels": 46644
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-014_457x68.png",
+    "index": 14,
+    "box": [
+      35,
+      678,
+      492,
+      746
+    ],
+    "size": [
+      457,
+      68
+    ],
+    "opaque_pixels": 21293
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-015_55x55.png",
+    "index": 15,
+    "box": [
+      515,
+      688,
+      570,
+      743
+    ],
+    "size": [
+      55,
+      55
+    ],
+    "opaque_pixels": 1156
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-016_54x55.png",
+    "index": 16,
+    "box": [
+      573,
+      688,
+      627,
+      743
+    ],
+    "size": [
+      54,
+      55
+    ],
+    "opaque_pixels": 1148
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-017_54x55.png",
+    "index": 17,
+    "box": [
+      629,
+      688,
+      683,
+      743
+    ],
+    "size": [
+      54,
+      55
+    ],
+    "opaque_pixels": 1190
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-018_55x55.png",
+    "index": 18,
+    "box": [
+      686,
+      688,
+      741,
+      743
+    ],
+    "size": [
+      55,
+      55
+    ],
+    "opaque_pixels": 1185
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-019_53x54.png",
+    "index": 19,
+    "box": [
+      845,
+      689,
+      898,
+      743
+    ],
+    "size": [
+      53,
+      54
+    ],
+    "opaque_pixels": 1083
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-020_54x53.png",
+    "index": 20,
+    "box": [
+      900,
+      690,
+      954,
+      743
+    ],
+    "size": [
+      54,
+      53
+    ],
+    "opaque_pixels": 1087
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-021_87x211.png",
+    "index": 21,
+    "box": [
+      1070,
+      689,
+      1157,
+      900
+    ],
+    "size": [
+      87,
+      211
+    ],
+    "opaque_pixels": 6111
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-022_68x213.png",
+    "index": 22,
+    "box": [
+      1165,
+      685,
+      1233,
+      898
+    ],
+    "size": [
+      68,
+      213
+    ],
+    "opaque_pixels": 4422
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-023_49x205.png",
+    "index": 23,
+    "box": [
+      1229,
+      686,
+      1278,
+      891
+    ],
+    "size": [
+      49,
+      205
+    ],
+    "opaque_pixels": 2691
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-024_43x214.png",
+    "index": 24,
+    "box": [
+      1277,
+      686,
+      1320,
+      900
+    ],
+    "size": [
+      43,
+      214
+    ],
+    "opaque_pixels": 3186
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-025_99x107.png",
+    "index": 25,
+    "box": [
+      1326,
+      685,
+      1425,
+      792
+    ],
+    "size": [
+      99,
+      107
+    ],
+    "opaque_pixels": 3876
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-026_51x104.png",
+    "index": 26,
+    "box": [
+      1427,
+      687,
+      1478,
+      791
+    ],
+    "size": [
+      51,
+      104
+    ],
+    "opaque_pixels": 2548
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-027_46x106.png",
+    "index": 27,
+    "box": [
+      1489,
+      687,
+      1535,
+      793
+    ],
+    "size": [
+      46,
+      106
+    ],
+    "opaque_pixels": 2464
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-028_38x105.png",
+    "index": 28,
+    "box": [
+      1546,
+      687,
+      1584,
+      792
+    ],
+    "size": [
+      38,
+      105
+    ],
+    "opaque_pixels": 1715
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-029_54x105.png",
+    "index": 29,
+    "box": [
+      1592,
+      689,
+      1646,
+      794
+    ],
+    "size": [
+      54,
+      105
+    ],
+    "opaque_pixels": 3064
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-030_106x198.png",
+    "index": 30,
+    "box": [
+      968,
+      695,
+      1074,
+      893
+    ],
+    "size": [
+      106,
+      198
+    ],
+    "opaque_pixels": 6713
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-031_470x65.png",
+    "index": 31,
+    "box": [
+      21,
+      738,
+      491,
+      803
+    ],
+    "size": [
+      470,
+      65
+    ],
+    "opaque_pixels": 20452
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-032_79x80.png",
+    "index": 32,
+    "box": [
+      516,
+      751,
+      595,
+      831
+    ],
+    "size": [
+      79,
+      80
+    ],
+    "opaque_pixels": 2417
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-033_84x82.png",
+    "index": 33,
+    "box": [
+      604,
+      752,
+      688,
+      834
+    ],
+    "size": [
+      84,
+      82
+    ],
+    "opaque_pixels": 2609
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-034_71x79.png",
+    "index": 34,
+    "box": [
+      703,
+      754,
+      774,
+      833
+    ],
+    "size": [
+      71,
+      79
+    ],
+    "opaque_pixels": 3173
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-035_53x79.png",
+    "index": 35,
+    "box": [
+      790,
+      755,
+      843,
+      834
+    ],
+    "size": [
+      53,
+      79
+    ],
+    "opaque_pixels": 1699
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-036_46x67.png",
+    "index": 36,
+    "box": [
+      858,
+      761,
+      904,
+      828
+    ],
+    "size": [
+      46,
+      67
+    ],
+    "opaque_pixels": 1335
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-037_49x67.png",
+    "index": 37,
+    "box": [
+      922,
+      761,
+      971,
+      828
+    ],
+    "size": [
+      49,
+      67
+    ],
+    "opaque_pixels": 1479
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-038_456x66.png",
+    "index": 38,
+    "box": [
+      30,
+      794,
+      486,
+      860
+    ],
+    "size": [
+      456,
+      66
+    ],
+    "opaque_pixels": 20280
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-039_79x112.png",
+    "index": 39,
+    "box": [
+      1336,
+      794,
+      1415,
+      906
+    ],
+    "size": [
+      79,
+      112
+    ],
+    "opaque_pixels": 4119
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-040_55x113.png",
+    "index": 40,
+    "box": [
+      1421,
+      794,
+      1476,
+      907
+    ],
+    "size": [
+      55,
+      113
+    ],
+    "opaque_pixels": 3250
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-041_46x110.png",
+    "index": 41,
+    "box": [
+      1543,
+      796,
+      1589,
+      906
+    ],
+    "size": [
+      46,
+      110
+    ],
+    "opaque_pixels": 2500
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-042_56x110.png",
+    "index": 42,
+    "box": [
+      1483,
+      797,
+      1539,
+      907
+    ],
+    "size": [
+      56,
+      110
+    ],
+    "opaque_pixels": 3256
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-043_54x109.png",
+    "index": 43,
+    "box": [
+      1593,
+      799,
+      1647,
+      908
+    ],
+    "size": [
+      54,
+      109
+    ],
+    "opaque_pixels": 3171
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-044_458x64.png",
+    "index": 44,
+    "box": [
+      29,
+      854,
+      487,
+      918
+    ],
+    "size": [
+      458,
+      64
+    ],
+    "opaque_pixels": 19281
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-045_89x75.png",
+    "index": 45,
+    "box": [
+      513,
+      838,
+      602,
+      913
+    ],
+    "size": [
+      89,
+      75
+    ],
+    "opaque_pixels": 2523
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-046_89x76.png",
+    "index": 46,
+    "box": [
+      610,
+      838,
+      699,
+      914
+    ],
+    "size": [
+      89,
+      76
+    ],
+    "opaque_pixels": 2838
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-047_68x73.png",
+    "index": 47,
+    "box": [
+      708,
+      839,
+      776,
+      912
+    ],
+    "size": [
+      68,
+      73
+    ],
+    "opaque_pixels": 2200
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-048_69x72.png",
+    "index": 48,
+    "box": [
+      780,
+      839,
+      849,
+      911
+    ],
+    "size": [
+      69,
+      72
+    ],
+    "opaque_pixels": 1743
+  },
+  {
+    "source_id": "EVENT",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-002_事件文本框选择按钮素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-049_99x60.png",
+    "index": 49,
+    "box": [
+      855,
+      842,
+      954,
+      902
+    ],
+    "size": [
+      99,
+      60
+    ],
+    "opaque_pixels": 2466
+  },
+  {
+    "source_id": "MAPROUTE",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-003_地图节点路线UI素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-001_199x252.png",
+    "index": 1,
+    "box": [
+      121,
+      35,
+      320,
+      287
+    ],
+    "size": [
+      199,
+      252
+    ],
+    "opaque_pixels": 31161
+  },
+  {
+    "source_id": "MAPROUTE",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-003_地图节点路线UI素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-002_188x217.png",
+    "index": 2,
+    "box": [
+      713,
+      56,
+      901,
+      273
+    ],
+    "size": [
+      188,
+      217
+    ],
+    "opaque_pixels": 25542
+  },
+  {
+    "source_id": "MAPROUTE",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-003_地图节点路线UI素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-003_195x218.png",
+    "index": 3,
+    "box": [
+      1290,
+      59,
+      1485,
+      277
+    ],
+    "size": [
+      195,
+      218
+    ],
+    "opaque_pixels": 25332
+  },
+  {
+    "source_id": "MAPROUTE",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-003_地图节点路线UI素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-004_177x206.png",
+    "index": 4,
+    "box": [
+      439,
+      65,
+      616,
+      271
+    ],
+    "size": [
+      177,
+      206
+    ],
+    "opaque_pixels": 21879
+  },
+  {
+    "source_id": "MAPROUTE",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-003_地图节点路线UI素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-005_177x206.png",
+    "index": 5,
+    "box": [
+      999,
+      65,
+      1176,
+      271
+    ],
+    "size": [
+      177,
+      206
+    ],
+    "opaque_pixels": 21916
+  },
+  {
+    "source_id": "MAPROUTE",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-003_地图节点路线UI素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-006_448x58.png",
+    "index": 6,
+    "box": [
+      79,
+      329,
+      527,
+      387
+    ],
+    "size": [
+      448,
+      58
+    ],
+    "opaque_pixels": 8685
+  },
+  {
+    "source_id": "MAPROUTE",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-003_地图节点路线UI素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-007_434x57.png",
+    "index": 7,
+    "box": [
+      603,
+      329,
+      1037,
+      386
+    ],
+    "size": [
+      434,
+      57
+    ],
+    "opaque_pixels": 8187
+  },
+  {
+    "source_id": "MAPROUTE",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-003_地图节点路线UI素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-008_477x79.png",
+    "index": 8,
+    "box": [
+      1105,
+      325,
+      1582,
+      404
+    ],
+    "size": [
+      477,
+      79
+    ],
+    "opaque_pixels": 9318
+  },
+  {
+    "source_id": "MAPROUTE",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-003_地图节点路线UI素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-009_477x90.png",
+    "index": 9,
+    "box": [
+      1105,
+      407,
+      1582,
+      497
+    ],
+    "size": [
+      477,
+      90
+    ],
+    "opaque_pixels": 11818
+  },
+  {
+    "source_id": "MAPROUTE",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-003_地图节点路线UI素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-010_448x58.png",
+    "index": 10,
+    "box": [
+      79,
+      422,
+      527,
+      480
+    ],
+    "size": [
+      448,
+      58
+    ],
+    "opaque_pixels": 8583
+  },
+  {
+    "source_id": "MAPROUTE",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-003_地图节点路线UI素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-011_433x63.png",
+    "index": 11,
+    "box": [
+      603,
+      422,
+      1036,
+      485
+    ],
+    "size": [
+      433,
+      63
+    ],
+    "opaque_pixels": 8209
+  },
+  {
+    "source_id": "MAPROUTE",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-003_地图节点路线UI素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-012_304x76.png",
+    "index": 12,
+    "box": [
+      79,
+      514,
+      383,
+      590
+    ],
+    "size": [
+      304,
+      76
+    ],
+    "opaque_pixels": 5549
+  },
+  {
+    "source_id": "MAPROUTE",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-003_地图节点路线UI素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-013_94x58.png",
+    "index": 13,
+    "box": [
+      433,
+      514,
+      527,
+      572
+    ],
+    "size": [
+      94,
+      58
+    ],
+    "opaque_pixels": 1826
+  },
+  {
+    "source_id": "MAPROUTE",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-003_地图节点路线UI素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-014_432x69.png",
+    "index": 14,
+    "box": [
+      605,
+      513,
+      1037,
+      582
+    ],
+    "size": [
+      432,
+      69
+    ],
+    "opaque_pixels": 8208
+  },
+  {
+    "source_id": "MAPROUTE",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-003_地图节点路线UI素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-015_477x86.png",
+    "index": 15,
+    "box": [
+      1106,
+      512,
+      1583,
+      598
+    ],
+    "size": [
+      477,
+      86
+    ],
+    "opaque_pixels": 11723
+  },
+  {
+    "source_id": "MAPROUTE",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-003_地图节点路线UI素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-016_208x253.png",
+    "index": 16,
+    "box": [
+      44,
+      626,
+      252,
+      879
+    ],
+    "size": [
+      208,
+      253
+    ],
+    "opaque_pixels": 30371
+  },
+  {
+    "source_id": "MAPROUTE",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-003_地图节点路线UI素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-017_227x231.png",
+    "index": 17,
+    "box": [
+      255,
+      644,
+      482,
+      875
+    ],
+    "size": [
+      227,
+      231
+    ],
+    "opaque_pixels": 30189
+  },
+  {
+    "source_id": "MAPROUTE",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-003_地图节点路线UI素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-018_252x234.png",
+    "index": 18,
+    "box": [
+      487,
+      641,
+      739,
+      875
+    ],
+    "size": [
+      252,
+      234
+    ],
+    "opaque_pixels": 32103
+  },
+  {
+    "source_id": "MAPROUTE",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-003_地图节点路线UI素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-019_203x220.png",
+    "index": 19,
+    "box": [
+      755,
+      645,
+      958,
+      865
+    ],
+    "size": [
+      203,
+      220
+    ],
+    "opaque_pixels": 20073
+  },
+  {
+    "source_id": "MAPROUTE",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-003_地图节点路线UI素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-020_207x209.png",
+    "index": 20,
+    "box": [
+      985,
+      649,
+      1192,
+      858
+    ],
+    "size": [
+      207,
+      209
+    ],
+    "opaque_pixels": 16514
+  },
+  {
+    "source_id": "MAPROUTE",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-003_地图节点路线UI素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-021_161x191.png",
+    "index": 21,
+    "box": [
+      1246,
+      666,
+      1407,
+      857
+    ],
+    "size": [
+      161,
+      191
+    ],
+    "opaque_pixels": 18828
+  },
+  {
+    "source_id": "MAPROUTE",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-003_地图节点路线UI素材绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-022_172x196.png",
+    "index": 22,
+    "box": [
+      1451,
+      663,
+      1623,
+      859
+    ],
+    "size": [
+      172,
+      196
+    ],
+    "opaque_pixels": 20174
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-001_84x116.png",
+    "index": 1,
+    "box": [
+      39,
+      23,
+      123,
+      139
+    ],
+    "size": [
+      84,
+      116
+    ],
+    "opaque_pixels": 4126
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-002_56x139.png",
+    "index": 2,
+    "box": [
+      467,
+      15,
+      523,
+      154
+    ],
+    "size": [
+      56,
+      139
+    ],
+    "opaque_pixels": 3533
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-003_72x90.png",
+    "index": 3,
+    "box": [
+      144,
+      33,
+      216,
+      123
+    ],
+    "size": [
+      72,
+      90
+    ],
+    "opaque_pixels": 2525
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-004_80x106.png",
+    "index": 4,
+    "box": [
+      239,
+      28,
+      319,
+      134
+    ],
+    "size": [
+      80,
+      106
+    ],
+    "opaque_pixels": 2222
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-005_90x88.png",
+    "index": 5,
+    "box": [
+      342,
+      37,
+      432,
+      125
+    ],
+    "size": [
+      90,
+      88
+    ],
+    "opaque_pixels": 4837
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-006_96x98.png",
+    "index": 6,
+    "box": [
+      549,
+      32,
+      645,
+      130
+    ],
+    "size": [
+      96,
+      98
+    ],
+    "opaque_pixels": 2921
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-007_96x97.png",
+    "index": 7,
+    "box": [
+      655,
+      32,
+      751,
+      129
+    ],
+    "size": [
+      96,
+      97
+    ],
+    "opaque_pixels": 5144
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-008_70x101.png",
+    "index": 8,
+    "box": [
+      768,
+      31,
+      838,
+      132
+    ],
+    "size": [
+      70,
+      101
+    ],
+    "opaque_pixels": 3295
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-009_273x139.png",
+    "index": 9,
+    "box": [
+      871,
+      33,
+      1144,
+      172
+    ],
+    "size": [
+      273,
+      139
+    ],
+    "opaque_pixels": 17360
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-010_177x124.png",
+    "index": 10,
+    "box": [
+      1069,
+      38,
+      1246,
+      162
+    ],
+    "size": [
+      177,
+      124
+    ],
+    "opaque_pixels": 10087
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-011_181x144.png",
+    "index": 11,
+    "box": [
+      1241,
+      27,
+      1422,
+      171
+    ],
+    "size": [
+      181,
+      144
+    ],
+    "opaque_pixels": 13026
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-012_68x69.png",
+    "index": 12,
+    "box": [
+      48,
+      166,
+      116,
+      235
+    ],
+    "size": [
+      68,
+      69
+    ],
+    "opaque_pixels": 2208
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-013_80x81.png",
+    "index": 13,
+    "box": [
+      240,
+      160,
+      320,
+      241
+    ],
+    "size": [
+      80,
+      81
+    ],
+    "opaque_pixels": 3169
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-014_77x77.png",
+    "index": 14,
+    "box": [
+      349,
+      163,
+      426,
+      240
+    ],
+    "size": [
+      77,
+      77
+    ],
+    "opaque_pixels": 2912
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-015_82x81.png",
+    "index": 15,
+    "box": [
+      455,
+      160,
+      537,
+      241
+    ],
+    "size": [
+      82,
+      81
+    ],
+    "opaque_pixels": 3361
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-016_79x79.png",
+    "index": 16,
+    "box": [
+      563,
+      161,
+      642,
+      240
+    ],
+    "size": [
+      79,
+      79
+    ],
+    "opaque_pixels": 3076
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-017_82x80.png",
+    "index": 17,
+    "box": [
+      664,
+      161,
+      746,
+      241
+    ],
+    "size": [
+      82,
+      80
+    ],
+    "opaque_pixels": 3298
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-018_77x76.png",
+    "index": 18,
+    "box": [
+      765,
+      163,
+      842,
+      239
+    ],
+    "size": [
+      77,
+      76
+    ],
+    "opaque_pixels": 2909
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-019_173x145.png",
+    "index": 19,
+    "box": [
+      1064,
+      161,
+      1237,
+      306
+    ],
+    "size": [
+      173,
+      145
+    ],
+    "opaque_pixels": 11174
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-020_189x147.png",
+    "index": 20,
+    "box": [
+      1231,
+      162,
+      1420,
+      309
+    ],
+    "size": [
+      189,
+      147
+    ],
+    "opaque_pixels": 14897
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-021_65x65.png",
+    "index": 21,
+    "box": [
+      148,
+      168,
+      213,
+      233
+    ],
+    "size": [
+      65,
+      65
+    ],
+    "opaque_pixels": 1921
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-022_200x115.png",
+    "index": 22,
+    "box": [
+      870,
+      187,
+      1070,
+      302
+    ],
+    "size": [
+      200,
+      115
+    ],
+    "opaque_pixels": 9490
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-023_82x87.png",
+    "index": 23,
+    "box": [
+      41,
+      265,
+      123,
+      352
+    ],
+    "size": [
+      82,
+      87
+    ],
+    "opaque_pixels": 3633
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-024_69x81.png",
+    "index": 24,
+    "box": [
+      147,
+      269,
+      216,
+      350
+    ],
+    "size": [
+      69,
+      81
+    ],
+    "opaque_pixels": 2807
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-025_80x87.png",
+    "index": 25,
+    "box": [
+      241,
+      264,
+      321,
+      351
+    ],
+    "size": [
+      80,
+      87
+    ],
+    "opaque_pixels": 3301
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-026_81x86.png",
+    "index": 26,
+    "box": [
+      347,
+      265,
+      428,
+      351
+    ],
+    "size": [
+      81,
+      86
+    ],
+    "opaque_pixels": 3606
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-027_97x86.png",
+    "index": 27,
+    "box": [
+      451,
+      265,
+      548,
+      351
+    ],
+    "size": [
+      97,
+      86
+    ],
+    "opaque_pixels": 3939
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-028_99x85.png",
+    "index": 28,
+    "box": [
+      553,
+      266,
+      652,
+      351
+    ],
+    "size": [
+      99,
+      85
+    ],
+    "opaque_pixels": 3344
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-029_82x87.png",
+    "index": 29,
+    "box": [
+      664,
+      265,
+      746,
+      352
+    ],
+    "size": [
+      82,
+      87
+    ],
+    "opaque_pixels": 3801
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-030_73x84.png",
+    "index": 30,
+    "box": [
+      765,
+      268,
+      838,
+      352
+    ],
+    "size": [
+      73,
+      84
+    ],
+    "opaque_pixels": 3068
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-031_122x193.png",
+    "index": 31,
+    "box": [
+      870,
+      297,
+      992,
+      490
+    ],
+    "size": [
+      122,
+      193
+    ],
+    "opaque_pixels": 11139
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-032_182x187.png",
+    "index": 32,
+    "box": [
+      1004,
+      302,
+      1186,
+      489
+    ],
+    "size": [
+      182,
+      187
+    ],
+    "opaque_pixels": 18802
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-033_110x190.png",
+    "index": 33,
+    "box": [
+      1180,
+      299,
+      1290,
+      489
+    ],
+    "size": [
+      110,
+      190
+    ],
+    "opaque_pixels": 11118
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-034_152x187.png",
+    "index": 34,
+    "box": [
+      1280,
+      303,
+      1432,
+      490
+    ],
+    "size": [
+      152,
+      187
+    ],
+    "opaque_pixels": 13026
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-035_54x80.png",
+    "index": 35,
+    "box": [
+      42,
+      377,
+      96,
+      457
+    ],
+    "size": [
+      54,
+      80
+    ],
+    "opaque_pixels": 1087
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-036_47x80.png",
+    "index": 36,
+    "box": [
+      79,
+      377,
+      126,
+      457
+    ],
+    "size": [
+      47,
+      80
+    ],
+    "opaque_pixels": 971
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-037_87x76.png",
+    "index": 37,
+    "box": [
+      558,
+      380,
+      645,
+      456
+    ],
+    "size": [
+      87,
+      76
+    ],
+    "opaque_pixels": 2238
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-038_45x74.png",
+    "index": 38,
+    "box": [
+      663,
+      381,
+      708,
+      455
+    ],
+    "size": [
+      45,
+      74
+    ],
+    "opaque_pixels": 808
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-039_77x73.png",
+    "index": 39,
+    "box": [
+      762,
+      381,
+      839,
+      454
+    ],
+    "size": [
+      77,
+      73
+    ],
+    "opaque_pixels": 1649
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-040_144x68.png",
+    "index": 40,
+    "box": [
+      29,
+      500,
+      173,
+      568
+    ],
+    "size": [
+      144,
+      68
+    ],
+    "opaque_pixels": 1887
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-041_146x88.png",
+    "index": 41,
+    "box": [
+      145,
+      499,
+      291,
+      587
+    ],
+    "size": [
+      146,
+      88
+    ],
+    "opaque_pixels": 2122
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-042_116x98.png",
+    "index": 42,
+    "box": [
+      261,
+      489,
+      377,
+      587
+    ],
+    "size": [
+      116,
+      98
+    ],
+    "opaque_pixels": 2836
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-043_200x104.png",
+    "index": 43,
+    "box": [
+      379,
+      486,
+      579,
+      590
+    ],
+    "size": [
+      200,
+      104
+    ],
+    "opaque_pixels": 3516
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-044_179x105.png",
+    "index": 44,
+    "box": [
+      665,
+      484,
+      844,
+      589
+    ],
+    "size": [
+      179,
+      105
+    ],
+    "opaque_pixels": 3002
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-045_158x97.png",
+    "index": 45,
+    "box": [
+      794,
+      497,
+      952,
+      594
+    ],
+    "size": [
+      158,
+      97
+    ],
+    "opaque_pixels": 2996
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-046_166x93.png",
+    "index": 46,
+    "box": [
+      918,
+      493,
+      1084,
+      586
+    ],
+    "size": [
+      166,
+      93
+    ],
+    "opaque_pixels": 3166
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-047_153x101.png",
+    "index": 47,
+    "box": [
+      1048,
+      492,
+      1201,
+      593
+    ],
+    "size": [
+      153,
+      101
+    ],
+    "opaque_pixels": 3544
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-048_93x74.png",
+    "index": 48,
+    "box": [
+      1203,
+      504,
+      1296,
+      578
+    ],
+    "size": [
+      93,
+      74
+    ],
+    "opaque_pixels": 1830
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-049_96x90.png",
+    "index": 49,
+    "box": [
+      1320,
+      495,
+      1416,
+      585
+    ],
+    "size": [
+      96,
+      90
+    ],
+    "opaque_pixels": 1889
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-050_151x46.png",
+    "index": 50,
+    "box": [
+      28,
+      616,
+      179,
+      662
+    ],
+    "size": [
+      151,
+      46
+    ],
+    "opaque_pixels": 711
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-051_132x55.png",
+    "index": 51,
+    "box": [
+      172,
+      615,
+      304,
+      670
+    ],
+    "size": [
+      132,
+      55
+    ],
+    "opaque_pixels": 725
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-052_205x55.png",
+    "index": 52,
+    "box": [
+      309,
+      615,
+      514,
+      670
+    ],
+    "size": [
+      205,
+      55
+    ],
+    "opaque_pixels": 1186
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-053_153x61.png",
+    "index": 53,
+    "box": [
+      812,
+      608,
+      965,
+      669
+    ],
+    "size": [
+      153,
+      61
+    ],
+    "opaque_pixels": 724
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-054_175x48.png",
+    "index": 54,
+    "box": [
+      965,
+      620,
+      1140,
+      668
+    ],
+    "size": [
+      175,
+      48
+    ],
+    "opaque_pixels": 665
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-055_131x51.png",
+    "index": 55,
+    "box": [
+      1292,
+      615,
+      1423,
+      666
+    ],
+    "size": [
+      131,
+      51
+    ],
+    "opaque_pixels": 714
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-056_123x50.png",
+    "index": 56,
+    "box": [
+      484,
+      623,
+      607,
+      673
+    ],
+    "size": [
+      123,
+      50
+    ],
+    "opaque_pixels": 723
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-057_101x38.png",
+    "index": 57,
+    "box": [
+      664,
+      634,
+      765,
+      672
+    ],
+    "size": [
+      101,
+      38
+    ],
+    "opaque_pixels": 422
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-058_87x41.png",
+    "index": 58,
+    "box": [
+      1145,
+      623,
+      1232,
+      664
+    ],
+    "size": [
+      87,
+      41
+    ],
+    "opaque_pixels": 491
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-059_115x82.png",
+    "index": 59,
+    "box": [
+      799,
+      688,
+      914,
+      770
+    ],
+    "size": [
+      115,
+      82
+    ],
+    "opaque_pixels": 3301
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-060_85x58.png",
+    "index": 60,
+    "box": [
+      29,
+      715,
+      114,
+      773
+    ],
+    "size": [
+      85,
+      58
+    ],
+    "opaque_pixels": 1416
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-061_108x81.png",
+    "index": 61,
+    "box": [
+      182,
+      696,
+      290,
+      777
+    ],
+    "size": [
+      108,
+      81
+    ],
+    "opaque_pixels": 3562
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-062_74x87.png",
+    "index": 62,
+    "box": [
+      362,
+      694,
+      436,
+      781
+    ],
+    "size": [
+      74,
+      87
+    ],
+    "opaque_pixels": 2336
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-063_103x63.png",
+    "index": 63,
+    "box": [
+      489,
+      704,
+      592,
+      767
+    ],
+    "size": [
+      103,
+      63
+    ],
+    "opaque_pixels": 2100
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-064_54x88.png",
+    "index": 64,
+    "box": [
+      633,
+      692,
+      687,
+      780
+    ],
+    "size": [
+      54,
+      88
+    ],
+    "opaque_pixels": 364
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-065_137x56.png",
+    "index": 65,
+    "box": [
+      1023,
+      697,
+      1160,
+      753
+    ],
+    "size": [
+      137,
+      56
+    ],
+    "opaque_pixels": 2052
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-066_160x142.png",
+    "index": 66,
+    "box": [
+      32,
+      795,
+      192,
+      937
+    ],
+    "size": [
+      160,
+      142
+    ],
+    "opaque_pixels": 13213
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-067_163x146.png",
+    "index": 67,
+    "box": [
+      192,
+      794,
+      355,
+      940
+    ],
+    "size": [
+      163,
+      146
+    ],
+    "opaque_pixels": 12216
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-068_171x150.png",
+    "index": 68,
+    "box": [
+      349,
+      795,
+      520,
+      945
+    ],
+    "size": [
+      171,
+      150
+    ],
+    "opaque_pixels": 12886
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-069_136x136.png",
+    "index": 69,
+    "box": [
+      520,
+      800,
+      656,
+      936
+    ],
+    "size": [
+      136,
+      136
+    ],
+    "opaque_pixels": 9206
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-070_66x85.png",
+    "index": 70,
+    "box": [
+      678,
+      809,
+      744,
+      894
+    ],
+    "size": [
+      66,
+      85
+    ],
+    "opaque_pixels": 2093
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-071_66x83.png",
+    "index": 71,
+    "box": [
+      749,
+      810,
+      815,
+      893
+    ],
+    "size": [
+      66,
+      83
+    ],
+    "opaque_pixels": 2104
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-072_133x82.png",
+    "index": 72,
+    "box": [
+      823,
+      810,
+      956,
+      892
+    ],
+    "size": [
+      133,
+      82
+    ],
+    "opaque_pixels": 4490
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-073_69x81.png",
+    "index": 73,
+    "box": [
+      969,
+      810,
+      1038,
+      891
+    ],
+    "size": [
+      69,
+      81
+    ],
+    "opaque_pixels": 2381
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-074_59x72.png",
+    "index": 74,
+    "box": [
+      1039,
+      816,
+      1098,
+      888
+    ],
+    "size": [
+      59,
+      72
+    ],
+    "opaque_pixels": 1596
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-075_85x79.png",
+    "index": 75,
+    "box": [
+      1138,
+      812,
+      1223,
+      891
+    ],
+    "size": [
+      85,
+      79
+    ],
+    "opaque_pixels": 3107
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-076_65x80.png",
+    "index": 76,
+    "box": [
+      1282,
+      813,
+      1347,
+      893
+    ],
+    "size": [
+      65,
+      80
+    ],
+    "opaque_pixels": 2291
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-077_47x76.png",
+    "index": 77,
+    "box": [
+      1345,
+      813,
+      1392,
+      889
+    ],
+    "size": [
+      47,
+      76
+    ],
+    "opaque_pixels": 647
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-078_83x50.png",
+    "index": 78,
+    "box": [
+      1241,
+      920,
+      1324,
+      970
+    ],
+    "size": [
+      83,
+      50
+    ],
+    "opaque_pixels": 569
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-079_155x133.png",
+    "index": 79,
+    "box": [
+      31,
+      937,
+      186,
+      1070
+    ],
+    "size": [
+      155,
+      133
+    ],
+    "opaque_pixels": 11558
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-080_164x128.png",
+    "index": 80,
+    "box": [
+      189,
+      939,
+      353,
+      1067
+    ],
+    "size": [
+      164,
+      128
+    ],
+    "opaque_pixels": 10812
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-081_123x128.png",
+    "index": 81,
+    "box": [
+      356,
+      940,
+      479,
+      1068
+    ],
+    "size": [
+      123,
+      128
+    ],
+    "opaque_pixels": 6978
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-082_176x134.png",
+    "index": 82,
+    "box": [
+      478,
+      937,
+      654,
+      1071
+    ],
+    "size": [
+      176,
+      134
+    ],
+    "opaque_pixels": 12576
+  },
+  {
+    "source_id": "MAPEL",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI拼版/UI-004_地图UI节点路线迷雾元素绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-083_77x56.png",
+    "index": 83,
+    "box": [
+      1202,
+      1004,
+      1279,
+      1060
+    ],
+    "size": [
+      77,
+      56
+    ],
+    "opaque_pixels": 464
+  },
+  {
+    "source_id": "RESSET",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/资源图标/RES-004_车轴粮草神志资源图标绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/RESSET/RESSET-001_519x457.png",
+    "index": 1,
+    "box": [
+      565,
+      236,
+      1084,
+      693
+    ],
+    "size": [
+      519,
+      457
+    ],
+    "opaque_pixels": 153233
+  },
+  {
+    "source_id": "RESSET",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/资源图标/RES-004_车轴粮草神志资源图标绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/RESSET/RESSET-002_463x464.png",
+    "index": 2,
+    "box": [
+      1156,
+      213,
+      1619,
+      677
+    ],
+    "size": [
+      463,
+      464
+    ],
+    "opaque_pixels": 114258
+  },
+  {
+    "source_id": "RESSET",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/资源图标/RES-004_车轴粮草神志资源图标绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/RESSET/RESSET-003_500x428.png",
+    "index": 3,
+    "box": [
+      31,
+      245,
+      531,
+      673
+    ],
+    "size": [
+      500,
+      428
+    ],
+    "opaque_pixels": 111402
+  },
+  {
+    "source_id": "RESSET",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/资源图标/RES-004_车轴粮草神志资源图标绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/RESSET/RESSET-004_204x199.png",
+    "index": 4,
+    "box": [
+      1162,
+      476,
+      1366,
+      675
+    ],
+    "size": [
+      204,
+      199
+    ],
+    "opaque_pixels": 15759
+  },
+  {
+    "source_id": "RESSET",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/资源图标/RES-004_车轴粮草神志资源图标绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/RESSET/RESSET-005_104x110.png",
+    "index": 5,
+    "box": [
+      1497,
+      569,
+      1601,
+      679
+    ],
+    "size": [
+      104,
+      110
+    ],
+    "opaque_pixels": 4395
+  },
+  {
+    "source_id": "RESSET",
+    "source": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/资源图标/RES-004_车轴粮草神志资源图标绿幕拼版_透明抠图.png",
+    "slice": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/RESSET/RESSET-006_87x55.png",
+    "index": 6,
+    "box": [
+      765,
+      634,
+      852,
+      689
+    ],
+    "size": [
+      87,
+      55
+    ],
+    "opaque_pixels": 1367
+  }
+]

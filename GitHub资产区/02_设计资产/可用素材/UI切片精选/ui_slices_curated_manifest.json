@@ -1,0 +1,2102 @@
+[
+  {
+    "category": "菜单按钮",
+    "source_id": "MENU",
+    "index": 1,
+    "name": "menu_wide_title_panel",
+    "usage": "主菜单标题或章节标题背板",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-001_1049x240.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/菜单按钮/P1_menu_wide_title_panel.png",
+    "size": [
+      1049,
+      240
+    ]
+  },
+  {
+    "category": "菜单按钮",
+    "source_id": "MENU",
+    "index": 2,
+    "name": "menu_large_frame_panel",
+    "usage": "主菜单/设置/结束页大面板",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-002_526x419.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/菜单按钮/P1_menu_large_frame_panel.png",
+    "size": [
+      526,
+      419
+    ]
+  },
+  {
+    "category": "菜单按钮",
+    "source_id": "MENU",
+    "index": 3,
+    "name": "menu_primary_button_a",
+    "usage": "主按钮正常态",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-003_329x148.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/菜单按钮/P1_menu_primary_button_a.png",
+    "size": [
+      329,
+      148
+    ]
+  },
+  {
+    "category": "菜单按钮",
+    "source_id": "MENU",
+    "index": 4,
+    "name": "menu_primary_button_b",
+    "usage": "主按钮悬停/备选态",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-004_332x144.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/菜单按钮/P1_menu_primary_button_b.png",
+    "size": [
+      332,
+      144
+    ]
+  },
+  {
+    "category": "菜单按钮",
+    "source_id": "MENU",
+    "index": 5,
+    "name": "menu_primary_button_c",
+    "usage": "主按钮禁用/危险态",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-005_322x146.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/菜单按钮/P1_menu_primary_button_c.png",
+    "size": [
+      322,
+      146
+    ]
+  },
+  {
+    "category": "菜单按钮",
+    "source_id": "MENU",
+    "index": 6,
+    "name": "menu_medium_dialog_panel",
+    "usage": "小弹窗或确认面板",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-006_518x264.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/菜单按钮/P1_menu_medium_dialog_panel.png",
+    "size": [
+      518,
+      264
+    ]
+  },
+  {
+    "category": "菜单按钮",
+    "source_id": "MENU",
+    "index": 8,
+    "name": "menu_side_panel",
+    "usage": "侧栏或存档列表背板",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-008_374x259.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/菜单按钮/P1_menu_side_panel.png",
+    "size": [
+      374,
+      259
+    ]
+  },
+  {
+    "category": "菜单按钮",
+    "source_id": "MENU",
+    "index": 9,
+    "name": "menu_long_divider_a",
+    "usage": "长分割线/标题下划线",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-009_573x56.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/菜单按钮/P1_menu_long_divider_a.png",
+    "size": [
+      573,
+      56
+    ]
+  },
+  {
+    "category": "菜单按钮",
+    "source_id": "MENU",
+    "index": 10,
+    "name": "menu_long_divider_b",
+    "usage": "长分割线备选",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-010_571x42.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/菜单按钮/P1_menu_long_divider_b.png",
+    "size": [
+      571,
+      42
+    ]
+  },
+  {
+    "category": "菜单按钮",
+    "source_id": "MENU",
+    "index": 13,
+    "name": "menu_long_divider_c",
+    "usage": "长分割线备选",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-013_571x42.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/菜单按钮/P1_menu_long_divider_c.png",
+    "size": [
+      571,
+      42
+    ]
+  },
+  {
+    "category": "菜单按钮",
+    "source_id": "MENU",
+    "index": 16,
+    "name": "menu_corner_tl",
+    "usage": "面板角装饰",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-016_105x105.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/菜单按钮/P1_menu_corner_tl.png",
+    "size": [
+      105,
+      105
+    ]
+  },
+  {
+    "category": "菜单按钮",
+    "source_id": "MENU",
+    "index": 17,
+    "name": "menu_corner_tr",
+    "usage": "面板角装饰",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-017_101x103.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/菜单按钮/P1_menu_corner_tr.png",
+    "size": [
+      101,
+      103
+    ]
+  },
+  {
+    "category": "菜单按钮",
+    "source_id": "MENU",
+    "index": 18,
+    "name": "menu_corner_bl",
+    "usage": "面板角装饰",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-018_100x103.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/菜单按钮/P1_menu_corner_bl.png",
+    "size": [
+      100,
+      103
+    ]
+  },
+  {
+    "category": "菜单按钮",
+    "source_id": "MENU",
+    "index": 19,
+    "name": "menu_corner_br",
+    "usage": "面板角装饰",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-019_100x103.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/菜单按钮/P1_menu_corner_br.png",
+    "size": [
+      100,
+      103
+    ]
+  },
+  {
+    "category": "菜单按钮",
+    "source_id": "MENU",
+    "index": 22,
+    "name": "menu_short_divider_a",
+    "usage": "短分割线",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-022_291x32.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/菜单按钮/P1_menu_short_divider_a.png",
+    "size": [
+      291,
+      32
+    ]
+  },
+  {
+    "category": "菜单按钮",
+    "source_id": "MENU",
+    "index": 23,
+    "name": "menu_short_divider_b",
+    "usage": "短分割线备选",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MENU/MENU-023_288x31.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/菜单按钮/P1_menu_short_divider_b.png",
+    "size": [
+      288,
+      31
+    ]
+  },
+  {
+    "category": "事件面板",
+    "source_id": "EVENT",
+    "index": 1,
+    "name": "event_main_text_panel",
+    "usage": "事件正文大文本框",
+    "priority": "P0",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-001_852x415.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/事件面板/P0_event_main_text_panel.png",
+    "size": [
+      852,
+      415
+    ]
+  },
+  {
+    "category": "事件面板",
+    "source_id": "EVENT",
+    "index": 2,
+    "name": "event_choice_button_a",
+    "usage": "事件选择按钮正常态",
+    "priority": "P0",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-002_372x117.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/事件面板/P0_event_choice_button_a.png",
+    "size": [
+      372,
+      117
+    ]
+  },
+  {
+    "category": "事件面板",
+    "source_id": "EVENT",
+    "index": 3,
+    "name": "event_choice_button_b",
+    "usage": "事件选择按钮悬停态",
+    "priority": "P0",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-003_381x108.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/事件面板/P0_event_choice_button_b.png",
+    "size": [
+      381,
+      108
+    ]
+  },
+  {
+    "category": "事件面板",
+    "source_id": "EVENT",
+    "index": 4,
+    "name": "event_choice_button_c",
+    "usage": "事件选择按钮备选态",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-004_381x109.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/事件面板/P1_event_choice_button_c.png",
+    "size": [
+      381,
+      109
+    ]
+  },
+  {
+    "category": "事件面板",
+    "source_id": "EVENT",
+    "index": 5,
+    "name": "event_choice_button_d",
+    "usage": "事件选择按钮危险/低神志态",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-005_371x105.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/事件面板/P1_event_choice_button_d.png",
+    "size": [
+      371,
+      105
+    ]
+  },
+  {
+    "category": "事件面板",
+    "source_id": "EVENT",
+    "index": 6,
+    "name": "event_choice_button_e",
+    "usage": "事件选择按钮灰态",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-006_373x102.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/事件面板/P1_event_choice_button_e.png",
+    "size": [
+      373,
+      102
+    ]
+  },
+  {
+    "category": "事件面板",
+    "source_id": "EVENT",
+    "index": 7,
+    "name": "event_choice_button_f",
+    "usage": "事件选择按钮补充态",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-007_382x104.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/事件面板/P1_event_choice_button_f.png",
+    "size": [
+      382,
+      104
+    ]
+  },
+  {
+    "category": "事件面板",
+    "source_id": "EVENT",
+    "index": 8,
+    "name": "event_log_row_a",
+    "usage": "日志条/长按钮",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-008_529x123.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/事件面板/P1_event_log_row_a.png",
+    "size": [
+      529,
+      123
+    ]
+  },
+  {
+    "category": "事件面板",
+    "source_id": "EVENT",
+    "index": 9,
+    "name": "event_log_row_b",
+    "usage": "日志条/长按钮备选",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-009_528x115.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/事件面板/P1_event_log_row_b.png",
+    "size": [
+      528,
+      115
+    ]
+  },
+  {
+    "category": "事件面板",
+    "source_id": "EVENT",
+    "index": 10,
+    "name": "event_log_row_c",
+    "usage": "日志条/长按钮备选",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-010_525x121.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/事件面板/P1_event_log_row_c.png",
+    "size": [
+      525,
+      121
+    ]
+  },
+  {
+    "category": "事件面板",
+    "source_id": "EVENT",
+    "index": 11,
+    "name": "event_log_row_d",
+    "usage": "日志条/长按钮备选",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-011_530x116.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/事件面板/P1_event_log_row_d.png",
+    "size": [
+      530,
+      116
+    ]
+  },
+  {
+    "category": "事件面板",
+    "source_id": "EVENT",
+    "index": 12,
+    "name": "event_log_row_e",
+    "usage": "日志条/长按钮备选",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-012_530x115.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/事件面板/P1_event_log_row_e.png",
+    "size": [
+      530,
+      115
+    ]
+  },
+  {
+    "category": "事件面板",
+    "source_id": "EVENT",
+    "index": 13,
+    "name": "event_log_row_f",
+    "usage": "日志条/长按钮备选",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-013_521x119.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/事件面板/P1_event_log_row_f.png",
+    "size": [
+      521,
+      119
+    ]
+  },
+  {
+    "category": "事件面板",
+    "source_id": "EVENT",
+    "index": 14,
+    "name": "event_text_divider",
+    "usage": "事件区标题分割线",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-014_457x68.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/事件面板/P1_event_text_divider.png",
+    "size": [
+      457,
+      68
+    ]
+  },
+  {
+    "category": "事件面板",
+    "source_id": "EVENT",
+    "index": 15,
+    "name": "event_corner_a",
+    "usage": "事件面板角装饰",
+    "priority": "P2",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-015_55x55.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/事件面板/P2_event_corner_a.png",
+    "size": [
+      55,
+      55
+    ]
+  },
+  {
+    "category": "事件面板",
+    "source_id": "EVENT",
+    "index": 16,
+    "name": "event_corner_b",
+    "usage": "事件面板角装饰",
+    "priority": "P2",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-016_54x55.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/事件面板/P2_event_corner_b.png",
+    "size": [
+      54,
+      55
+    ]
+  },
+  {
+    "category": "事件面板",
+    "source_id": "EVENT",
+    "index": 17,
+    "name": "event_corner_c",
+    "usage": "事件面板角装饰",
+    "priority": "P2",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-017_54x55.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/事件面板/P2_event_corner_c.png",
+    "size": [
+      54,
+      55
+    ]
+  },
+  {
+    "category": "事件面板",
+    "source_id": "EVENT",
+    "index": 18,
+    "name": "event_corner_d",
+    "usage": "事件面板角装饰",
+    "priority": "P2",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-018_55x55.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/事件面板/P2_event_corner_d.png",
+    "size": [
+      55,
+      55
+    ]
+  },
+  {
+    "category": "事件面板",
+    "source_id": "EVENT",
+    "index": 21,
+    "name": "event_vertical_binding_a",
+    "usage": "文本框侧边竹简/骨片装饰",
+    "priority": "P2",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-021_87x211.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/事件面板/P2_event_vertical_binding_a.png",
+    "size": [
+      87,
+      211
+    ]
+  },
+  {
+    "category": "事件面板",
+    "source_id": "EVENT",
+    "index": 22,
+    "name": "event_vertical_binding_b",
+    "usage": "文本框侧边竹简/骨片装饰",
+    "priority": "P2",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-022_68x213.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/事件面板/P2_event_vertical_binding_b.png",
+    "size": [
+      68,
+      213
+    ]
+  },
+  {
+    "category": "事件面板",
+    "source_id": "EVENT",
+    "index": 31,
+    "name": "event_thin_button_a",
+    "usage": "小按钮/标签条",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-031_470x65.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/事件面板/P1_event_thin_button_a.png",
+    "size": [
+      470,
+      65
+    ]
+  },
+  {
+    "category": "事件面板",
+    "source_id": "EVENT",
+    "index": 38,
+    "name": "event_thin_button_b",
+    "usage": "小按钮/标签条备选",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-038_456x66.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/事件面板/P1_event_thin_button_b.png",
+    "size": [
+      456,
+      66
+    ]
+  },
+  {
+    "category": "事件面板",
+    "source_id": "EVENT",
+    "index": 44,
+    "name": "event_thin_button_c",
+    "usage": "小按钮/标签条备选",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-044_458x64.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/事件面板/P1_event_thin_button_c.png",
+    "size": [
+      458,
+      64
+    ]
+  },
+  {
+    "category": "事件面板",
+    "source_id": "EVENT",
+    "index": 45,
+    "name": "event_stamp_small_a",
+    "usage": "小印记/状态徽章",
+    "priority": "P2",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-045_89x75.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/事件面板/P2_event_stamp_small_a.png",
+    "size": [
+      89,
+      75
+    ]
+  },
+  {
+    "category": "事件面板",
+    "source_id": "EVENT",
+    "index": 46,
+    "name": "event_stamp_small_b",
+    "usage": "小印记/状态徽章",
+    "priority": "P2",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/EVENT/EVENT-046_89x76.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/事件面板/P2_event_stamp_small_b.png",
+    "size": [
+      89,
+      76
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPROUTE",
+    "index": 1,
+    "name": "map_node_large_01",
+    "usage": "大地图节点/地点状态标记",
+    "priority": "P0",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-001_199x252.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P0_map_node_large_01.png",
+    "size": [
+      199,
+      252
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPROUTE",
+    "index": 2,
+    "name": "map_node_large_02",
+    "usage": "大地图节点/地点状态标记",
+    "priority": "P0",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-002_188x217.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P0_map_node_large_02.png",
+    "size": [
+      188,
+      217
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPROUTE",
+    "index": 3,
+    "name": "map_node_large_03",
+    "usage": "大地图节点/地点状态标记",
+    "priority": "P0",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-003_195x218.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P0_map_node_large_03.png",
+    "size": [
+      195,
+      218
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPROUTE",
+    "index": 4,
+    "name": "map_node_large_04",
+    "usage": "大地图节点/地点状态标记",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-004_177x206.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_node_large_04.png",
+    "size": [
+      177,
+      206
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPROUTE",
+    "index": 5,
+    "name": "map_node_large_05",
+    "usage": "大地图节点/地点状态标记",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-005_177x206.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_node_large_05.png",
+    "size": [
+      177,
+      206
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPROUTE",
+    "index": 6,
+    "name": "map_route_line_06",
+    "usage": "地图路线线段/虚线连接",
+    "priority": "P0",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-006_448x58.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P0_map_route_line_06.png",
+    "size": [
+      448,
+      58
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPROUTE",
+    "index": 7,
+    "name": "map_route_line_07",
+    "usage": "地图路线线段/虚线连接",
+    "priority": "P0",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-007_434x57.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P0_map_route_line_07.png",
+    "size": [
+      434,
+      57
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPROUTE",
+    "index": 8,
+    "name": "map_route_line_08",
+    "usage": "地图路线线段/虚线连接",
+    "priority": "P0",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-008_477x79.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P0_map_route_line_08.png",
+    "size": [
+      477,
+      79
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPROUTE",
+    "index": 9,
+    "name": "map_route_line_09",
+    "usage": "地图路线线段/虚线连接",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-009_477x90.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_route_line_09.png",
+    "size": [
+      477,
+      90
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPROUTE",
+    "index": 10,
+    "name": "map_route_line_10",
+    "usage": "地图路线线段/虚线连接",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-010_448x58.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_route_line_10.png",
+    "size": [
+      448,
+      58
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPROUTE",
+    "index": 11,
+    "name": "map_route_line_11",
+    "usage": "地图路线线段/虚线连接",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-011_433x63.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_route_line_11.png",
+    "size": [
+      433,
+      63
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPROUTE",
+    "index": 12,
+    "name": "map_route_line_12",
+    "usage": "地图路线线段/虚线连接",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-012_304x76.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_route_line_12.png",
+    "size": [
+      304,
+      76
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPROUTE",
+    "index": 13,
+    "name": "map_route_line_13",
+    "usage": "地图路线线段/虚线连接",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-013_94x58.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_route_line_13.png",
+    "size": [
+      94,
+      58
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPROUTE",
+    "index": 14,
+    "name": "map_route_line_14",
+    "usage": "地图路线线段/虚线连接",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-014_432x69.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_route_line_14.png",
+    "size": [
+      432,
+      69
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPROUTE",
+    "index": 15,
+    "name": "map_route_line_15",
+    "usage": "地图路线线段/虚线连接",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-015_477x86.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_route_line_15.png",
+    "size": [
+      477,
+      86
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPROUTE",
+    "index": 16,
+    "name": "map_node_large_16",
+    "usage": "大地图节点/地点状态标记",
+    "priority": "P0",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-016_208x253.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P0_map_node_large_16.png",
+    "size": [
+      208,
+      253
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPROUTE",
+    "index": 17,
+    "name": "map_node_large_17",
+    "usage": "大地图节点/地点状态标记",
+    "priority": "P0",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-017_227x231.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P0_map_node_large_17.png",
+    "size": [
+      227,
+      231
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPROUTE",
+    "index": 18,
+    "name": "map_node_large_18",
+    "usage": "大地图节点/地点状态标记",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-018_252x234.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_node_large_18.png",
+    "size": [
+      252,
+      234
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPROUTE",
+    "index": 19,
+    "name": "map_node_large_19",
+    "usage": "大地图节点/地点状态标记",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-019_203x220.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_node_large_19.png",
+    "size": [
+      203,
+      220
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPROUTE",
+    "index": 20,
+    "name": "map_node_large_20",
+    "usage": "大地图节点/地点状态标记",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-020_207x209.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_node_large_20.png",
+    "size": [
+      207,
+      209
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPROUTE",
+    "index": 21,
+    "name": "map_node_large_21",
+    "usage": "大地图节点/地点状态标记",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-021_161x191.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_node_large_21.png",
+    "size": [
+      161,
+      191
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPROUTE",
+    "index": 22,
+    "name": "map_node_large_22",
+    "usage": "大地图节点/地点状态标记",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPROUTE/MAPROUTE-022_172x196.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_node_large_22.png",
+    "size": [
+      172,
+      196
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 1,
+    "name": "map_pin_red_01",
+    "usage": "朱砂地点针/当前目标/危险节点",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-001_84x116.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_pin_red_01.png",
+    "size": [
+      84,
+      116
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 2,
+    "name": "map_pin_red_02",
+    "usage": "朱砂地点针/当前目标/危险节点",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-002_56x139.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_pin_red_02.png",
+    "size": [
+      56,
+      139
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 3,
+    "name": "map_pin_red_03",
+    "usage": "朱砂地点针/当前目标/危险节点",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-003_72x90.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_pin_red_03.png",
+    "size": [
+      72,
+      90
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 4,
+    "name": "map_pin_red_04",
+    "usage": "朱砂地点针/当前目标/危险节点",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-004_80x106.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_pin_red_04.png",
+    "size": [
+      80,
+      106
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 5,
+    "name": "map_pin_red_05",
+    "usage": "朱砂地点针/当前目标/危险节点",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-005_90x88.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_pin_red_05.png",
+    "size": [
+      90,
+      88
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 6,
+    "name": "map_pin_red_06",
+    "usage": "朱砂地点针/当前目标/危险节点",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-006_96x98.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_pin_red_06.png",
+    "size": [
+      96,
+      98
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 7,
+    "name": "map_pin_red_07",
+    "usage": "朱砂地点针/当前目标/危险节点",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-007_96x97.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_pin_red_07.png",
+    "size": [
+      96,
+      97
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 8,
+    "name": "map_pin_red_08",
+    "usage": "朱砂地点针/当前目标/危险节点",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-008_70x101.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_pin_red_08.png",
+    "size": [
+      70,
+      101
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 9,
+    "name": "map_fog_small_09",
+    "usage": "地图迷雾/未探索遮罩",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-009_273x139.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_fog_small_09.png",
+    "size": [
+      273,
+      139
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 10,
+    "name": "map_fog_small_10",
+    "usage": "地图迷雾/未探索遮罩",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-010_177x124.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_fog_small_10.png",
+    "size": [
+      177,
+      124
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 11,
+    "name": "map_fog_small_11",
+    "usage": "地图迷雾/未探索遮罩",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-011_181x144.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_fog_small_11.png",
+    "size": [
+      181,
+      144
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 14,
+    "name": "map_node_gold_14",
+    "usage": "已知地点/可前往节点",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-014_77x77.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_node_gold_14.png",
+    "size": [
+      77,
+      77
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 15,
+    "name": "map_node_gold_15",
+    "usage": "已知地点/可前往节点",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-015_82x81.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_node_gold_15.png",
+    "size": [
+      82,
+      81
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 16,
+    "name": "map_node_gold_16",
+    "usage": "已知地点/可前往节点",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-016_79x79.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_node_gold_16.png",
+    "size": [
+      79,
+      79
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 17,
+    "name": "map_node_gold_17",
+    "usage": "已知地点/可前往节点",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-017_82x80.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_node_gold_17.png",
+    "size": [
+      82,
+      80
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 18,
+    "name": "map_node_gold_18",
+    "usage": "已知地点/可前往节点",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-018_77x76.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_node_gold_18.png",
+    "size": [
+      77,
+      76
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 21,
+    "name": "map_node_gray_unknown_21",
+    "usage": "未显影地点/迷雾节点",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-021_65x65.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_node_gray_unknown_21.png",
+    "size": [
+      65,
+      65
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 22,
+    "name": "map_node_gray_unknown_22",
+    "usage": "未显影地点/迷雾节点",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-022_200x115.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_node_gray_unknown_22.png",
+    "size": [
+      200,
+      115
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 23,
+    "name": "map_node_gray_unknown_23",
+    "usage": "未显影地点/迷雾节点",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-023_82x87.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_node_gray_unknown_23.png",
+    "size": [
+      82,
+      87
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 24,
+    "name": "map_node_gray_unknown_24",
+    "usage": "未显影地点/迷雾节点",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-024_69x81.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_node_gray_unknown_24.png",
+    "size": [
+      69,
+      81
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 25,
+    "name": "map_node_gray_unknown_25",
+    "usage": "未显影地点/迷雾节点",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-025_80x87.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_node_gray_unknown_25.png",
+    "size": [
+      80,
+      87
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 26,
+    "name": "map_node_gray_unknown_26",
+    "usage": "未显影地点/迷雾节点",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-026_81x86.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_node_gray_unknown_26.png",
+    "size": [
+      81,
+      86
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 27,
+    "name": "map_node_gray_unknown_27",
+    "usage": "未显影地点/迷雾节点",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-027_97x86.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_node_gray_unknown_27.png",
+    "size": [
+      97,
+      86
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 28,
+    "name": "map_node_gray_unknown_28",
+    "usage": "未显影地点/迷雾节点",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-028_99x85.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_node_gray_unknown_28.png",
+    "size": [
+      99,
+      85
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 29,
+    "name": "map_node_gray_unknown_29",
+    "usage": "未显影地点/迷雾节点",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-029_82x87.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_node_gray_unknown_29.png",
+    "size": [
+      82,
+      87
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 30,
+    "name": "map_node_gray_unknown_30",
+    "usage": "未显影地点/迷雾节点",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-030_73x84.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_node_gray_unknown_30.png",
+    "size": [
+      73,
+      84
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 31,
+    "name": "map_fog_patch_31",
+    "usage": "地图迷雾/未探索遮罩",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-031_122x193.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_fog_patch_31.png",
+    "size": [
+      122,
+      193
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 32,
+    "name": "map_fog_patch_32",
+    "usage": "地图迷雾/未探索遮罩",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-032_182x187.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_fog_patch_32.png",
+    "size": [
+      182,
+      187
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 33,
+    "name": "map_fog_patch_33",
+    "usage": "地图迷雾/未探索遮罩",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-033_110x190.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_fog_patch_33.png",
+    "size": [
+      110,
+      190
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 34,
+    "name": "map_fog_patch_34",
+    "usage": "地图迷雾/未探索遮罩",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-034_152x187.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_fog_patch_34.png",
+    "size": [
+      152,
+      187
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 35,
+    "name": "map_red_ring_marker_35",
+    "usage": "地图装饰/状态标记",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-035_54x80.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_red_ring_marker_35.png",
+    "size": [
+      54,
+      80
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 36,
+    "name": "map_red_ring_marker_36",
+    "usage": "地图装饰/状态标记",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-036_47x80.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_red_ring_marker_36.png",
+    "size": [
+      47,
+      80
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 37,
+    "name": "map_red_ring_marker_37",
+    "usage": "地图装饰/状态标记",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-037_87x76.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_red_ring_marker_37.png",
+    "size": [
+      87,
+      76
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 38,
+    "name": "map_red_ring_marker_38",
+    "usage": "地图装饰/状态标记",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-038_45x74.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_red_ring_marker_38.png",
+    "size": [
+      45,
+      74
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 39,
+    "name": "map_red_ring_marker_39",
+    "usage": "地图装饰/状态标记",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-039_77x73.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_red_ring_marker_39.png",
+    "size": [
+      77,
+      73
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 40,
+    "name": "map_red_ring_marker_40",
+    "usage": "地图装饰/状态标记",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-040_144x68.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_red_ring_marker_40.png",
+    "size": [
+      144,
+      68
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 41,
+    "name": "map_red_ring_marker_41",
+    "usage": "地图装饰/状态标记",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-041_146x88.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_red_ring_marker_41.png",
+    "size": [
+      146,
+      88
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 42,
+    "name": "map_ink_route_mark_42",
+    "usage": "路线连接/裂纹/移动轨迹",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-042_116x98.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_ink_route_mark_42.png",
+    "size": [
+      116,
+      98
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 43,
+    "name": "map_ink_route_mark_43",
+    "usage": "路线连接/裂纹/移动轨迹",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-043_200x104.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_ink_route_mark_43.png",
+    "size": [
+      200,
+      104
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 44,
+    "name": "map_ink_route_mark_44",
+    "usage": "路线连接/裂纹/移动轨迹",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-044_179x105.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_ink_route_mark_44.png",
+    "size": [
+      179,
+      105
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 45,
+    "name": "map_ink_route_mark_45",
+    "usage": "路线连接/裂纹/移动轨迹",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-045_158x97.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_ink_route_mark_45.png",
+    "size": [
+      158,
+      97
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 46,
+    "name": "map_ink_route_mark_46",
+    "usage": "路线连接/裂纹/移动轨迹",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-046_166x93.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_ink_route_mark_46.png",
+    "size": [
+      166,
+      93
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 47,
+    "name": "map_ink_route_mark_47",
+    "usage": "路线连接/裂纹/移动轨迹",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-047_153x101.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_ink_route_mark_47.png",
+    "size": [
+      153,
+      101
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 48,
+    "name": "map_ink_route_mark_48",
+    "usage": "路线连接/裂纹/移动轨迹",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-048_93x74.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_ink_route_mark_48.png",
+    "size": [
+      93,
+      74
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 49,
+    "name": "map_ink_route_mark_49",
+    "usage": "路线连接/裂纹/移动轨迹",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-049_96x90.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_ink_route_mark_49.png",
+    "size": [
+      96,
+      90
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 50,
+    "name": "map_red_route_segment_50",
+    "usage": "路线连接/裂纹/移动轨迹",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-050_151x46.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_red_route_segment_50.png",
+    "size": [
+      151,
+      46
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 51,
+    "name": "map_red_route_segment_51",
+    "usage": "路线连接/裂纹/移动轨迹",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-051_132x55.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_red_route_segment_51.png",
+    "size": [
+      132,
+      55
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 52,
+    "name": "map_red_route_segment_52",
+    "usage": "路线连接/裂纹/移动轨迹",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-052_205x55.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_red_route_segment_52.png",
+    "size": [
+      205,
+      55
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 53,
+    "name": "map_red_route_segment_53",
+    "usage": "路线连接/裂纹/移动轨迹",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-053_153x61.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_red_route_segment_53.png",
+    "size": [
+      153,
+      61
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 54,
+    "name": "map_red_route_segment_54",
+    "usage": "路线连接/裂纹/移动轨迹",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-054_175x48.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_red_route_segment_54.png",
+    "size": [
+      175,
+      48
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 55,
+    "name": "map_red_route_segment_55",
+    "usage": "路线连接/裂纹/移动轨迹",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-055_131x51.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_red_route_segment_55.png",
+    "size": [
+      131,
+      51
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 56,
+    "name": "map_red_route_segment_56",
+    "usage": "路线连接/裂纹/移动轨迹",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-056_123x50.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_red_route_segment_56.png",
+    "size": [
+      123,
+      50
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 57,
+    "name": "map_red_route_segment_57",
+    "usage": "路线连接/裂纹/移动轨迹",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-057_101x38.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_red_route_segment_57.png",
+    "size": [
+      101,
+      38
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 58,
+    "name": "map_red_route_segment_58",
+    "usage": "路线连接/裂纹/移动轨迹",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-058_87x41.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_red_route_segment_58.png",
+    "size": [
+      87,
+      41
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 59,
+    "name": "map_red_route_segment_59",
+    "usage": "路线连接/裂纹/移动轨迹",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-059_115x82.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_red_route_segment_59.png",
+    "size": [
+      115,
+      82
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 60,
+    "name": "map_red_route_segment_60",
+    "usage": "路线连接/裂纹/移动轨迹",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-060_85x58.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_red_route_segment_60.png",
+    "size": [
+      85,
+      58
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 61,
+    "name": "map_red_route_segment_61",
+    "usage": "路线连接/裂纹/移动轨迹",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-061_108x81.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_red_route_segment_61.png",
+    "size": [
+      108,
+      81
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 62,
+    "name": "map_red_route_segment_62",
+    "usage": "路线连接/裂纹/移动轨迹",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-062_74x87.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_red_route_segment_62.png",
+    "size": [
+      74,
+      87
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 63,
+    "name": "map_red_route_segment_63",
+    "usage": "路线连接/裂纹/移动轨迹",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-063_103x63.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_red_route_segment_63.png",
+    "size": [
+      103,
+      63
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 64,
+    "name": "map_red_route_segment_64",
+    "usage": "路线连接/裂纹/移动轨迹",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-064_54x88.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_red_route_segment_64.png",
+    "size": [
+      54,
+      88
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 65,
+    "name": "map_red_route_segment_65",
+    "usage": "路线连接/裂纹/移动轨迹",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-065_137x56.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_red_route_segment_65.png",
+    "size": [
+      137,
+      56
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 66,
+    "name": "map_parchment_patch_66",
+    "usage": "地图装饰/状态标记",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-066_160x142.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_parchment_patch_66.png",
+    "size": [
+      160,
+      142
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 67,
+    "name": "map_parchment_patch_67",
+    "usage": "地图装饰/状态标记",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-067_163x146.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_parchment_patch_67.png",
+    "size": [
+      163,
+      146
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 68,
+    "name": "map_parchment_patch_68",
+    "usage": "地图装饰/状态标记",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-068_171x150.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_parchment_patch_68.png",
+    "size": [
+      171,
+      150
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 69,
+    "name": "map_parchment_patch_69",
+    "usage": "地图装饰/状态标记",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-069_136x136.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_parchment_patch_69.png",
+    "size": [
+      136,
+      136
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 70,
+    "name": "map_small_node_variant_70",
+    "usage": "地图装饰/状态标记",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-070_66x85.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_small_node_variant_70.png",
+    "size": [
+      66,
+      85
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 71,
+    "name": "map_small_node_variant_71",
+    "usage": "地图装饰/状态标记",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-071_66x83.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_small_node_variant_71.png",
+    "size": [
+      66,
+      83
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 72,
+    "name": "map_small_node_variant_72",
+    "usage": "地图装饰/状态标记",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-072_133x82.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_small_node_variant_72.png",
+    "size": [
+      133,
+      82
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 73,
+    "name": "map_small_node_variant_73",
+    "usage": "地图装饰/状态标记",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-073_69x81.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_small_node_variant_73.png",
+    "size": [
+      69,
+      81
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 74,
+    "name": "map_small_node_variant_74",
+    "usage": "地图装饰/状态标记",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-074_59x72.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_small_node_variant_74.png",
+    "size": [
+      59,
+      72
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 75,
+    "name": "map_small_node_variant_75",
+    "usage": "地图装饰/状态标记",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-075_85x79.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_small_node_variant_75.png",
+    "size": [
+      85,
+      79
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 76,
+    "name": "map_small_node_variant_76",
+    "usage": "地图装饰/状态标记",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-076_65x80.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_small_node_variant_76.png",
+    "size": [
+      65,
+      80
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 77,
+    "name": "map_small_node_variant_77",
+    "usage": "地图装饰/状态标记",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-077_47x76.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_small_node_variant_77.png",
+    "size": [
+      47,
+      76
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 78,
+    "name": "map_small_node_variant_78",
+    "usage": "地图装饰/状态标记",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-078_83x50.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_small_node_variant_78.png",
+    "size": [
+      83,
+      50
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 79,
+    "name": "map_large_fog_patch_79",
+    "usage": "地图迷雾/未探索遮罩",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-079_155x133.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_large_fog_patch_79.png",
+    "size": [
+      155,
+      133
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 80,
+    "name": "map_large_fog_patch_80",
+    "usage": "地图迷雾/未探索遮罩",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-080_164x128.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_large_fog_patch_80.png",
+    "size": [
+      164,
+      128
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 81,
+    "name": "map_large_fog_patch_81",
+    "usage": "地图迷雾/未探索遮罩",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-081_123x128.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_large_fog_patch_81.png",
+    "size": [
+      123,
+      128
+    ]
+  },
+  {
+    "category": "地图节点路线",
+    "source_id": "MAPEL",
+    "index": 82,
+    "name": "map_large_fog_patch_82",
+    "usage": "地图迷雾/未探索遮罩",
+    "priority": "P1",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/MAPEL/MAPEL-082_176x134.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/地图节点路线/P1_map_large_fog_patch_82.png",
+    "size": [
+      176,
+      134
+    ]
+  },
+  {
+    "category": "资源图标",
+    "source_id": "RES",
+    "index": 0,
+    "name": "res_axle_icon",
+    "usage": "车轴资源小图标",
+    "priority": "P0",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/资源图标/RES-001_车轴资源图标绿幕_透明抠图.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/资源图标/P0_res_axle_icon.png",
+    "size": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "category": "资源图标",
+    "source_id": "RES",
+    "index": 0,
+    "name": "res_food_icon",
+    "usage": "粮草资源小图标",
+    "priority": "P0",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/资源图标/RES-002_粮草资源图标绿幕_透明抠图.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/资源图标/P0_res_food_icon.png",
+    "size": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "category": "资源图标",
+    "source_id": "RES",
+    "index": 0,
+    "name": "res_sanity_icon",
+    "usage": "神志资源小图标",
+    "priority": "P0",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/资源图标/RES-003_神志资源图标绿幕_透明抠图.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/资源图标/P0_res_sanity_icon.png",
+    "size": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "category": "资源图标",
+    "source_id": "RESSET",
+    "index": 1,
+    "name": "resset_axle_large",
+    "usage": "车轴大图标备用",
+    "priority": "P2",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/RESSET/RESSET-001_519x457.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/资源图标/P2_resset_axle_large.png",
+    "size": [
+      519,
+      457
+    ]
+  },
+  {
+    "category": "资源图标",
+    "source_id": "RESSET",
+    "index": 2,
+    "name": "resset_food_large",
+    "usage": "粮草大图标备用",
+    "priority": "P2",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/RESSET/RESSET-002_463x464.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/资源图标/P2_resset_food_large.png",
+    "size": [
+      463,
+      464
+    ]
+  },
+  {
+    "category": "资源图标",
+    "source_id": "RESSET",
+    "index": 3,
+    "name": "resset_sanity_large",
+    "usage": "神志大图标备用",
+    "priority": "P2",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/RESSET/RESSET-003_500x428.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/资源图标/P2_resset_sanity_large.png",
+    "size": [
+      500,
+      428
+    ]
+  },
+  {
+    "category": "资源图标",
+    "source_id": "RESSET",
+    "index": 4,
+    "name": "resset_small_badge_a",
+    "usage": "资源徽章备用",
+    "priority": "P2",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/RESSET/RESSET-004_204x199.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/资源图标/P2_resset_small_badge_a.png",
+    "size": [
+      204,
+      199
+    ]
+  },
+  {
+    "category": "资源图标",
+    "source_id": "RESSET",
+    "index": 5,
+    "name": "resset_small_badge_b",
+    "usage": "资源徽章备用",
+    "priority": "P2",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/RESSET/RESSET-005_104x110.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/资源图标/P2_resset_small_badge_b.png",
+    "size": [
+      104,
+      110
+    ]
+  },
+  {
+    "category": "资源图标",
+    "source_id": "RESSET",
+    "index": 6,
+    "name": "resset_small_badge_c",
+    "usage": "资源徽章备用",
+    "priority": "P2",
+    "source_path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片/RESSET/RESSET-006_87x55.png",
+    "path": "/Users/yuanzhe/Documents/game/GitHub资产区/02_设计资产/可用素材/UI切片精选/资源图标/P2_resset_small_badge_c.png",
+    "size": [
+      87,
+      55
+    ]
+  }
+]
