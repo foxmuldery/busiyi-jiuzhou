@@ -28,7 +28,7 @@
           <div class="resource-card" data-resource="axle">
             <div class="resource-head">
               <span>车轴</span>
-              <strong id="axleValue">80</strong>
+              <strong id="axleValue" role="status">80</strong>
             </div>
             <div class="meter"><span id="axleMeter"></span></div>
             <small id="axleHint">尚可远行</small>
@@ -36,7 +36,7 @@
           <div class="resource-card" data-resource="grain">
             <div class="resource-head">
               <span>粮草</span>
-              <strong id="grainValue">90</strong>
+              <strong id="grainValue" role="status">90</strong>
             </div>
             <div class="meter"><span id="grainMeter"></span></div>
             <small id="grainHint">队伍安稳</small>
@@ -44,7 +44,7 @@
           <div class="resource-card" data-resource="sanity">
             <div class="resource-head">
               <span>神志</span>
-              <strong id="sanityValue">85</strong>
+              <strong id="sanityValue" role="status">85</strong>
             </div>
             <div class="meter"><span id="sanityMeter"></span></div>
             <small id="sanityHint">文字可信</small>
@@ -53,8 +53,8 @@
 
         <section class="journey-overview" aria-label="旅程总览">
           <div class="view-tabs" role="tablist" aria-label="模式切换">
-            <button class="view-tab active" id="townViewButton" type="button" data-view-target="town" role="tab" aria-selected="true">旅途</button>
-            <button class="view-tab" id="mapViewButton" type="button" data-view-target="map" role="tab" aria-selected="false">地图</button>
+            <button class="view-tab active" id="townViewButton" type="button" data-view-target="town" role="tab" aria-selected="true" aria-controls="townView">旅途</button>
+            <button class="view-tab" id="mapViewButton" type="button" data-view-target="map" role="tab" aria-selected="false" aria-controls="mapView">地图</button>
           </div>
           <div class="distance-board">
             <div class="distance-copy">
@@ -96,7 +96,7 @@
           <button id="playtestReminderFeedback" type="button">填写反馈</button>
           <button id="playtestReminderDismiss" type="button" aria-label="继续试玩">继续</button>
         </div>
-        <section class="view-panel town-view active" id="townView" data-view="town" aria-label="旅途模式">
+        <section class="view-panel town-view active" id="townView" data-view="town" aria-label="旅途模式" role="tabpanel" aria-labelledby="townViewButton">
         <section class="journey-stage" id="journeyStage" aria-label="横向山海旅途舞台">
           <div class="video-layer" id="videoLayer" aria-hidden="true">
             <video id="ambientVideo" muted playsinline loop preload="none" poster=""></video>
@@ -206,7 +206,7 @@
         </section>
         </section>
 
-        <section class="view-panel map-view" id="mapView" data-view="map" aria-label="九州图战略模式" hidden>
+        <section class="view-panel map-view" id="mapView" data-view="map" aria-label="九州图战略模式" role="tabpanel" aria-labelledby="mapViewButton" hidden>
           <section class="panel map-panel">
             <div class="panel-title">
               <span>九州图</span>

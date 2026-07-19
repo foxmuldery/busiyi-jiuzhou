@@ -6428,15 +6428,15 @@ function renderRoutes() {
       const routeArt = getLocationIllustrationSrc(route.to);
       const routeSignal = getRouteSignalForRoute(route);
       return `
-        <button class="route-card ${locked ? "locked" : ""} ${selected ? "selected" : ""}" type="button" data-route="${route.id}" data-event-tone="${escapeHtml(routeSignal.tone)}" data-event-threat="${escapeHtml(routeSignal.threat)}" aria-pressed="${selected}" title="${selected ? "已选中，再点启程" : "点选路线"}" ${actionBusy ? "disabled" : ""}>
+        <button class="route-card ${locked ? "locked" : ""} ${selected ? "selected" : ""}" type="button" data-route="${escapeHtml(route.id)}" data-event-tone="${escapeHtml(routeSignal.tone)}" data-event-threat="${escapeHtml(routeSignal.threat)}" aria-pressed="${selected}" title="${selected ? "已选中，再点启程" : "点选路线"}" ${actionBusy ? "disabled" : ""}>
           ${routeArt ? `<span class="route-art"><img src="${escapeHtml(routeArt)}" alt="" onerror="this.closest('.route-art').hidden = true;" /></span>` : ""}
           <span class="route-heading">
-            <strong>${getRouteDisplayName(route)}</strong>
+            <strong>${escapeHtml(getRouteDisplayName(route))}</strong>
             ${renderRouteSignalBadge(routeSignal)}
             ${selected ? '<span class="route-confirm-mark">再点启程</span>' : ""}
           </span>
-          <span class="route-destination"><b>至</b>${toName}</span>
-          <span class="route-path">${fromName} → ${toName}</span>
+          <span class="route-destination"><b>至</b>${escapeHtml(toName)}</span>
+          <span class="route-path">${escapeHtml(fromName)} → ${escapeHtml(toName)}</span>
           <span class="route-verse">${renderSceneVerseMarkupFromText(routeVerse)}</span>
           ${renderResourceDeltaChips(route.cost, { emptyLabel: "无耗", predict: true })}
           ${renderRouteIntelStrip(route, routeSignal)}
@@ -6445,8 +6445,8 @@ function renderRoutes() {
             <span class="route-event-short">${escapeHtml(formatRouteEventShort(route))}</span>
           </span>
           ${renderRouteOmenBadges(route)}
-          <span class="route-scan route-supply-preview">${getDestinationSupplyPreview(route.to)}</span>
-          <span class="route-hint">${selected ? "已预览路线，再点一次正式启程。" : unresolvedEventContext ? "先处理当前遭遇，再起行。" : locked ? getLockedHintText(route) : getRouteHintText(route)}</span>
+          <span class="route-scan route-supply-preview">${escapeHtml(getDestinationSupplyPreview(route.to))}</span>
+          <span class="route-hint">${selected ? "已预览路线，再点一次正式启程。" : unresolvedEventContext ? "先处理当前遭遇，再起行。" : locked ? escapeHtml(getLockedHintText(route)) : escapeHtml(getRouteHintText(route))}</span>
         </button>
       `;
     })
@@ -6688,9 +6688,9 @@ function renderMap() {
       const supplyScan = isFogged ? "雾中未显" : renderMapNodeSupplyStrip(location.id);
       return `
         <button class="map-node ${stateClass}" type="button" style="--x:${map.x}%; --y:${map.y}%" ${routeAttr} aria-pressed="${selected}" ${actionBusy ? "disabled" : ""}>
-          <strong>${title}</strong>
-          <span class="map-node-route-scan">${routeScan}</span>
-          ${isFogged ? `<small>${supplyScan}</small>` : supplyScan}
+          <strong>${escapeHtml(title)}</strong>
+          <span class="map-node-route-scan">${escapeHtml(routeScan)}</span>
+          ${isFogged ? `<small>${escapeHtml(supplyScan)}</small>` : supplyScan}
         </button>
       `;
     })
@@ -6711,6 +6711,7 @@ function renderLocationLore() {
     if (el.locationArt.getAttribute("src") !== artSrc) {
       el.locationArt.src = artSrc;
     }
+    el.locationArt.alt = `${loc.name}地点图`;
     el.locationArtFrame.hidden = false;
   } else if (el.locationArtFrame) {
     el.locationArtFrame.hidden = true;
@@ -6763,10 +6764,10 @@ function renderSupplies() {
           ? "本次抵达已补给"
           : "可搜集";
       return `
-      <button class="supply-card ${supply.used ? "used" : ""} ${supply.blockedThisArrival && !supply.used ? "blocked" : ""}" type="button" data-supply="${supply.id}" title="${supply.hint}" aria-label="${supply.label}：${supply.hint}，${ariaState}" ${disabled ? "disabled" : ""}>
-        <span class="supply-icon" data-supply-type="${badge.type}">${badge.icon}</span>
+      <button class="supply-card ${supply.used ? "used" : ""} ${supply.blockedThisArrival && !supply.used ? "blocked" : ""}" type="button" data-supply="${escapeHtml(supply.id)}" title="${escapeHtml(supply.hint)}" aria-label="${escapeHtml(`${supply.label}：${supply.hint}，${ariaState}`)}" ${disabled ? "disabled" : ""}>
+        <span class="supply-icon" data-supply-type="${escapeHtml(badge.type)}">${escapeHtml(badge.icon)}</span>
         <span class="supply-copy">
-          <strong>${badge.label}</strong>
+          <strong>${escapeHtml(badge.label)}</strong>
           <small>${renderResourceDeltaChips(supply.effect, { predict: true })}</small>
         </span>
         <span class="supply-state" data-short-state="${shortStateText}">${stateText}</span>

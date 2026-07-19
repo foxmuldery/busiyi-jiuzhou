@@ -763,7 +763,7 @@ function collectRoutePreviewContractProblems(app, css, html) {
     ["路线卡片使用目标地点插图", "getLocationIllustrationSrc(route.to)"],
     ["路线卡片展示出发与目标地点", "route-path"],
     ["路线卡片展示目标地点短标签", "route-destination"],
-    ["路线卡片目标地点短标签使用目的地名", "<b>至</b>${toName}"],
+    ["路线卡片目标地点短标签使用目的地名", "<b>至</b>${escapeHtml(toName)}"],
     ["路线卡片展示资源消耗预测", 'renderResourceDeltaChips(route.cost, { emptyLabel: "无耗", predict: true })'],
     ["路线卡片展示风险等级", "renderRouteRiskBadge(route)"],
     ["路线卡片展示路遇摘要", "formatRouteEventShort(route)"],
