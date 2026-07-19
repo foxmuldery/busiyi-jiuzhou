@@ -842,6 +842,7 @@ function run() {
   const readme = read(FILES.readme);
   const webdeployPackage = fs.existsSync(FILES.webdeployPackage) ? read(FILES.webdeployPackage) : "";
   const balanceSimSource = fs.existsSync(FILES.balanceSim) ? read(FILES.balanceSim) : "";
+  const dataSource = read(FILES.data);
   const data = loadGameData();
 
   check("game data loaded", Boolean(data.locations && data.routes && data.events));
@@ -1839,6 +1840,16 @@ function run() {
     && app.includes('loadLegacyPayload(META_KEY_PREFIX)')
     && app.includes("旧存档已迁移至新版本，旅途继续。")
     && app.includes("-discarded-v")
+  ));
+  check("content pack interface contract", (
+    dataSource.includes("const BSI_CORE_DATA = {")
+    && dataSource.includes('const BSI_P0_CONTENT_PACK = {')
+    && dataSource.includes('id: "p0"')
+    && dataSource.includes("window.BSI_CONTENT_PACKS = {")
+    && dataSource.includes("window.BSI_GAME_DATA = { ...BSI_CORE_DATA, ...BSI_CORE_AUDIO, ...BSI_P0_CONTENT_PACK }")
+    && app.includes("function resolveGameData()")
+    && app.includes('.get("pack")')
+    && app.includes("window.BSI_CONTENT_PACKS?.[packId]")
   ));
   check("first minute next-step hud contract", (
     html.includes('id="nextStepLabel"')

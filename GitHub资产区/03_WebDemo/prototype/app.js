@@ -1,4 +1,19 @@
-const gameData = window.BSI_GAME_DATA;
+function resolveGameData() {
+  const base = window.BSI_GAME_DATA;
+  if (!base) return base;
+  const packId = new URLSearchParams(window.location.search).get("pack");
+  if (!packId || packId === base.id) return base;
+  const pack = window.BSI_CONTENT_PACKS?.[packId];
+  if (!pack) return base;
+  return {
+    ...base,
+    ...pack,
+    audioAssets: { ...base.audioAssets, ...(pack.audioAssets || {}) },
+    audioHooks: { ...base.audioHooks, ...(pack.audioHooks || {}) }
+  };
+}
+
+const gameData = resolveGameData();
 
 if (!gameData) {
   throw new Error("BSI_GAME_DATA 未加载，请先加载 data.js。");

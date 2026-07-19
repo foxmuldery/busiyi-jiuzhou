@@ -1,7 +1,12 @@
-window.BSI_GAME_DATA = {
+const BSI_CORE_DATA = {
   saveVersion: 2,
   resourceKeys: ["axle", "grain", "sanity"],
-  terrainKeys: ["road", "market", "water", "rift"],
+  terrainKeys: ["road", "market", "water", "rift"]
+};
+
+const BSI_P0_CONTENT_PACK = {
+  id: "p0",
+  name: "P0 原型基线",
   startLocation: "central_post",
   stageAssets: {
     map: {
@@ -3062,7 +3067,10 @@ window.BSI_GAME_DATA = {
         }
       ]
     }
-  },
+  }
+};
+
+const BSI_CORE_AUDIO = {
   audioAssets: {
     musicLoop: {
       id: "MUS-CORE-001",
@@ -3251,23 +3259,27 @@ window.BSI_GAME_DATA = {
     locationArrive: "locationArrive",
     routeSelect: "routeSelect",
     supplyComplete: "supplyComplete"
-  },
-  musicProfileByTerrain: {
+  }
+};
+
+BSI_P0_CONTENT_PACK.musicProfileByTerrain = {
     default: "musicLoop",
     road: "musicLoop",
     market: "musicBorder",
     water: "musicWater",
     rift: "musicBorder"
-  },
-  musicProfileByLocation: {
+};
+
+BSI_P0_CONTENT_PACK.musicProfileByLocation = {
     old_king_road: "musicJourney",
     bird_mouse_pass: "musicMountain",
     nameless_shrine: "musicJourney",
     qingqiu_outer_city: "musicDawn",
     black_teeth_market: "musicDawn",
     feather_folk_ford: "musicDawn"
-  },
-  initialStateTemplate: {
+};
+
+BSI_P0_CONTENT_PACK.initialStateTemplate = {
     day: 1,
     currentLocation: "central_post",
     resources: { axle: 80, grain: 90, sanity: 85 },
@@ -3300,5 +3312,10 @@ window.BSI_GAME_DATA = {
       hardFailures: 0
     },
     log: ["第 1 日：车队自中原驿整装，西路未明。"]
-  }
+  };
+
+window.BSI_CONTENT_PACKS = {
+  ...(window.BSI_CONTENT_PACKS || {}),
+  [BSI_P0_CONTENT_PACK.id]: BSI_P0_CONTENT_PACK
 };
+window.BSI_GAME_DATA = { ...BSI_CORE_DATA, ...BSI_CORE_AUDIO, ...BSI_P0_CONTENT_PACK };
