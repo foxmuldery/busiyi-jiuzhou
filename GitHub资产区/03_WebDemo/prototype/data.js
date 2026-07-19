@@ -1,7 +1,45 @@
 const BSI_CORE_DATA = {
   saveVersion: 2,
   resourceKeys: ["axle", "grain", "sanity"],
-  terrainKeys: ["road", "market", "water", "rift"]
+  terrainKeys: ["road", "market", "water", "rift"],
+  balanceConfig: {
+    randomRouteEventBaseChance: 0.21,
+    randomRouteEventMaxChance: 0.63,
+    routeEventBreatherStreak: 2,
+    maxRescuesBeforeStranding: 3,
+    hardBadLuckThreshold: 96,
+    resourceCriticalLimit: 15,
+    sameCrisisHardFailCount: 2,
+    breatherBadLuckLimit: 55,
+    badLuckMidBoostThreshold: 35,
+    badLuckMidBoost: 0.08,
+    badLuckHighBoostThreshold: 65,
+    badLuckHighBoost: 0.14,
+    dangerEventChanceBoost: 0.09,
+    highChanceDangerCount: 2,
+    highChanceBadLuckThreshold: 72,
+    highChanceFloor: 0.58,
+    rescueWeightLowResourceLimit: 45,
+    rescueWeightSupply: 22,
+    rescueWeightRest: 18,
+    rescueWeightItem: 14,
+    rescueWeightBadLuckThreshold: 55,
+    rescueWeightBadLuck: 28,
+    rescueForceBadLuckThreshold: 60,
+    sanityEventPenaltyLimit: 28,
+    sanityEventPenalty: -8,
+    lowSanityProtectionLimit: 30,
+    lowSanityProtectionMaxLoss: -8,
+    highPressureSanityLoss: -6,
+    crisisBadLuckGain: 12,
+    badLuckRoutePressureDivisor: 10,
+    badLuckEventPressureDivisor: 14,
+    badLuckEventRecoveryDivisor: 12,
+    badLuckCrisisRecoveryDivisor: 10,
+    badLuckLowResourceLimit: 20,
+    badLuckLowResourceShift: 3,
+    resourceWarningLimits: { axle: 30, grain: 35, sanity: 45 }
+  }
 };
 
 const BSI_P0_CONTENT_PACK = {

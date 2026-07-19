@@ -67,6 +67,44 @@ const audioHooks = {
   ...(gameData.audioHooks || {})
 };
 const initialStateTemplate = gameData.initialStateTemplate || {};
+const BALANCE_DEFAULTS = {
+  randomRouteEventBaseChance: 0.21,
+  randomRouteEventMaxChance: 0.63,
+  routeEventBreatherStreak: 2,
+  maxRescuesBeforeStranding: 3,
+  hardBadLuckThreshold: 96,
+  resourceCriticalLimit: 15,
+  sameCrisisHardFailCount: 2,
+  breatherBadLuckLimit: 55,
+  badLuckMidBoostThreshold: 35,
+  badLuckMidBoost: 0.08,
+  badLuckHighBoostThreshold: 65,
+  badLuckHighBoost: 0.14,
+  dangerEventChanceBoost: 0.09,
+  highChanceDangerCount: 2,
+  highChanceBadLuckThreshold: 72,
+  highChanceFloor: 0.58,
+  rescueWeightLowResourceLimit: 45,
+  rescueWeightSupply: 22,
+  rescueWeightRest: 18,
+  rescueWeightItem: 14,
+  rescueWeightBadLuckThreshold: 55,
+  rescueWeightBadLuck: 28,
+  rescueForceBadLuckThreshold: 60,
+  sanityEventPenaltyLimit: 28,
+  sanityEventPenalty: -8,
+  lowSanityProtectionLimit: 30,
+  lowSanityProtectionMaxLoss: -8,
+  highPressureSanityLoss: -6,
+  crisisBadLuckGain: 12,
+  badLuckRoutePressureDivisor: 10,
+  badLuckEventPressureDivisor: 14,
+  badLuckEventRecoveryDivisor: 12,
+  badLuckCrisisRecoveryDivisor: 10,
+  badLuckLowResourceLimit: 20,
+  badLuckLowResourceShift: 3
+};
+const BALANCE = { ...BALANCE_DEFAULTS, ...(gameData.balanceConfig || {}) };
 const resourceKeys = gameData.resourceKeys || ["axle", "grain", "sanity"];
 const terrainKeys = gameData.terrainKeys || ["road", "market", "water", "rift"];
 const conditionKeys = ["flag", "sanityMax", "sanityMin", "languageMin"];
@@ -77,9 +115,9 @@ const ACTION_FEEDBACK_RESET_MS = 2200;
 const DEBUG_ACTION_SETTLE_MS = 980;
 const PLAYTEST_REMINDER_DEFAULT_MS = 5 * 60 * 1000;
 const PLAYTEST_REMINDER_MS = getPlaytestReminderMs();
-const RANDOM_ROUTE_EVENT_BASE_CHANCE = 0.21;
-const RANDOM_ROUTE_EVENT_MAX_CHANCE = 0.63;
-const ROUTE_EVENT_BREATHER_STREAK = 2;
+const RANDOM_ROUTE_EVENT_BASE_CHANCE = BALANCE.randomRouteEventBaseChance;
+const RANDOM_ROUTE_EVENT_MAX_CHANCE = BALANCE.randomRouteEventMaxChance;
+const ROUTE_EVENT_BREATHER_STREAK = BALANCE.routeEventBreatherStreak;
 
 const crisisMeta = {
   axle: { label: "断轴", statKey: "axleCrises" },
@@ -127,9 +165,14 @@ const drawerLabels = {
   log: "行旅日志",
   settings: "设置"
 };
-const MAX_RESCUES_BEFORE_STRANDING = 3;
-const HARD_BAD_LUCK_THRESHOLD = 96;
-const RESOURCE_WARNING_LIMITS = { axle: 30, grain: 35, sanity: 45 };
+const MAX_RESCUES_BEFORE_STRANDING = BALANCE.maxRescuesBeforeStranding;
+const HARD_BAD_LUCK_THRESHOLD = BALANCE.hardBadLuckThreshold;
+const RESOURCE_WARNING_LIMITS = {
+  axle: 30,
+  grain: 35,
+  sanity: 45,
+  ...(gameData.balanceConfig?.resourceWarningLimits || {})
+};
 const RESOURCE_RESCUE_TAGS = {
   axle: "axle_rescue",
   grain: "grain_rescue",
@@ -753,7 +796,7 @@ function getDangerResourceKeys(targetState) {
 }
 
 function getCriticalResourceKeys(targetState = state) {
-  return resourceKeys.filter((key) => Number(targetState.resources?.[key] || 0) <= 15);
+  return resourceKeys.filter((key) => Number(targetState.resources?.[key] || 0) <= BALANCE.resourceCriticalLimit);
 }
 
 function itemMatchesRescueNeed(item, targetState) {
@@ -3670,13 +3713,13 @@ function updateBadLuck(delta = {}, context = "event") {
     const value = Number(delta[key] || 0);
     return value > 0 ? total + value : total;
   }, 0);
-  const lowResourceCount = resourceKeys.filter((key) => state.resources[key] <= 20).length;
+  const lowResourceCount = resourceKeys.filter((key) => state.resources[key] <= BALANCE.badLuckLowResourceLimit).length;
   let shift = Number(delta.badLuck || 0);
 
-  if (context === "route") shift += Math.ceil(pressure / 10);
-  if (context === "event") shift += Math.ceil(pressure / 14) - Math.floor(recovery / 12);
-  if (context === "crisis") shift -= Math.floor(recovery / 10);
-  shift += lowResourceCount * 3;
+  if (context === "route") shift += Math.ceil(pressure / BALANCE.badLuckRoutePressureDivisor);
+  if (context === "event") shift += Math.ceil(pressure / BALANCE.badLuckEventPressureDivisor) - Math.floor(recovery / BALANCE.badLuckEventRecoveryDivisor);
+  if (context === "crisis") shift -= Math.floor(recovery / BALANCE.badLuckCrisisRecoveryDivisor);
+  shift += lowResourceCount * BALANCE.badLuckLowResourceShift;
 
   state.badLuckMeter = clamp((state.badLuckMeter || 0) + shift);
 }
@@ -3873,7 +3916,7 @@ function isHighPressureRouteEvent(event) {
   const pools = Array.isArray(event?.pool) ? event.pool : [];
   return event?.risk === "high"
     || (event?.risk === "medium" && pools.includes("sanity"))
-    || getWorstSanityLoss(event) <= -6;
+    || getWorstSanityLoss(event) <= BALANCE.highPressureSanityLoss;
 }
 
 function isLowPressureRouteEvent(event) {
@@ -3884,19 +3927,23 @@ function isLowPressureRouteEvent(event) {
 
 function randomEventPassesProtection(event) {
   const pools = Array.isArray(event?.pool) ? event.pool : [];
-  if (state.resources.sanity <= 30) {
+  if (state.resources.sanity <= BALANCE.lowSanityProtectionLimit) {
     const safeLowSanityPool = Boolean(event?.rescueCandidate)
       || pools.some((pool) => ["rest", "supply", "clue"].includes(pool));
-    if (!safeLowSanityPool || getWorstSanityLoss(event) < -8) return false;
+    if (!safeLowSanityPool || getWorstSanityLoss(event) < BALANCE.lowSanityProtectionMaxLoss) return false;
   }
   return !(isHighPressureRouteEvent(getLastResolvedRouteEvent()) && isHighPressureRouteEvent(event));
 }
 
 function getRandomRouteEventChance(route) {
-  if (isBreatherRoute(route) && !getDangerResourceKeys(state).length && state.badLuckMeter < 55) return 0;
+  if (isBreatherRoute(route) && !getDangerResourceKeys(state).length && state.badLuckMeter < BALANCE.breatherBadLuckLimit) return 0;
   const dangerCount = getDangerResourceKeys(state).length;
-  const pressureBoost = state.badLuckMeter >= 65 ? 0.14 : state.badLuckMeter >= 35 ? 0.08 : 0;
-  const dangerBoost = dangerCount * 0.09;
+  const pressureBoost = state.badLuckMeter >= BALANCE.badLuckHighBoostThreshold
+    ? BALANCE.badLuckHighBoost
+    : state.badLuckMeter >= BALANCE.badLuckMidBoostThreshold
+      ? BALANCE.badLuckMidBoost
+      : 0;
+  const dangerBoost = dangerCount * BALANCE.dangerEventChanceBoost;
   return Math.min(
     RANDOM_ROUTE_EVENT_MAX_CHANCE,
     RANDOM_ROUTE_EVENT_BASE_CHANCE + pressureBoost + dangerBoost
@@ -3906,11 +3953,11 @@ function getRandomRouteEventChance(route) {
 function getRandomRouteEventWeight(event) {
   const pools = Array.isArray(event.pool) ? event.pool : [];
   let weight = Math.max(1, Number(event.weight) || 10);
-  if (state.resources.grain <= 45 && pools.includes("supply")) weight += 22;
-  if (state.resources.sanity <= 45 && pools.includes("rest")) weight += 18;
-  if (state.resources.axle <= 45 && pools.includes("item")) weight += 14;
-  if (state.badLuckMeter >= 55 && event.rescueCandidate) weight += 28;
-  if (pools.includes("sanity") && state.resources.sanity <= 28) weight -= 8;
+  if (state.resources.grain <= BALANCE.rescueWeightLowResourceLimit && pools.includes("supply")) weight += BALANCE.rescueWeightSupply;
+  if (state.resources.sanity <= BALANCE.rescueWeightLowResourceLimit && pools.includes("rest")) weight += BALANCE.rescueWeightRest;
+  if (state.resources.axle <= BALANCE.rescueWeightLowResourceLimit && pools.includes("item")) weight += BALANCE.rescueWeightItem;
+  if (state.badLuckMeter >= BALANCE.rescueWeightBadLuckThreshold && event.rescueCandidate) weight += BALANCE.rescueWeightBadLuck;
+  if (pools.includes("sanity") && state.resources.sanity <= BALANCE.sanityEventPenaltyLimit) weight += BALANCE.sanityEventPenalty;
   return Math.max(1, weight);
 }
 
@@ -3956,12 +4003,12 @@ function selectRandomRouteEventId(route) {
   if (isBreatherRoute(route)) {
     const breatherCandidates = candidates.filter((item) => isLowPressureRouteEvent(item.event));
     if (!breatherCandidates.length) return "";
-    const needsRescue = getDangerResourceKeys(state).length > 0 || state.badLuckMeter >= 55;
+    const needsRescue = getDangerResourceKeys(state).length > 0 || state.badLuckMeter >= BALANCE.breatherBadLuckLimit;
     return needsRescue ? pickWeightedRouteEvent(breatherCandidates, route, "random-route-event-breather") : "";
   }
   const dangerCount = getDangerResourceKeys(state).length;
-  const chance = (dangerCount >= 2 || state.badLuckMeter >= 72)
-    ? Math.max(0.58, getRandomRouteEventChance(route))
+  const chance = (dangerCount >= BALANCE.highChanceDangerCount || state.badLuckMeter >= BALANCE.highChanceBadLuckThreshold)
+    ? Math.max(BALANCE.highChanceFloor, getRandomRouteEventChance(route))
     : getRandomRouteEventChance(route);
   const roll = seededScore(
     state.runId || "run",
@@ -3970,9 +4017,9 @@ function selectRandomRouteEventId(route) {
     state.traveledRoutes.length,
     "random-route-event-roll"
   );
-  if (roll > chance && !(criticalRescue || (rescueCandidates.length && state.badLuckMeter >= 60))) return "";
+  if (roll > chance && !(criticalRescue || (rescueCandidates.length && state.badLuckMeter >= BALANCE.rescueForceBadLuckThreshold))) return "";
   return pickWeightedRouteEvent(
-    criticalRescue || (rescueCandidates.length && state.badLuckMeter >= 60) ? rescueCandidates : candidates,
+    criticalRescue || (rescueCandidates.length && state.badLuckMeter >= BALANCE.rescueForceBadLuckThreshold) ? rescueCandidates : candidates,
     route,
     "random-route-event-pick"
   );
@@ -5924,7 +5971,7 @@ function shouldHardFail(crisisType) {
   const sameCrisisCount = meta?.statKey ? state.failureStats[meta.statKey] : 0;
   return (
     state.failureStats.rescues >= MAX_RESCUES_BEFORE_STRANDING
-    || sameCrisisCount >= 2
+    || sameCrisisCount >= BALANCE.sameCrisisHardFailCount
     || state.badLuckMeter >= HARD_BAD_LUCK_THRESHOLD
   );
 }
@@ -5933,7 +5980,7 @@ function enterCrisis(crisisType) {
   const meta = crisisMeta[crisisType];
   state.status = "crisis";
   state.crisisType = crisisType;
-  state.badLuckMeter = clamp(state.badLuckMeter + 12);
+  state.badLuckMeter = clamp(state.badLuckMeter + BALANCE.crisisBadLuckGain);
   if (meta?.statKey) state.failureStats[meta.statKey] += 1;
   const warningMap = { axle: "warnAxle", grain: "warnGrain", sanity: "warnSanity" };
   playElement(warningMap[crisisType]);

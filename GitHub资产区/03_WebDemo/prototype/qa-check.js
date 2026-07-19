@@ -1406,7 +1406,7 @@ function run() {
     app.includes("function getCriticalResourceKeys")
     && app.includes("criticalRescue")
     && app.includes("getCriticalResourceKeys(state).length > 0")
-    && balanceSimSource.includes("const CRITICAL_RESCUE_LIMIT = 15")
+    && balanceSimSource.includes("let CRITICAL_RESCUE_LIMIT = 15")
     && balanceSimSource.includes("function getCriticalResourceKeys")
     && balanceSimSource.includes("criticalRescue")
   ));
@@ -1850,6 +1850,18 @@ function run() {
     && app.includes("function resolveGameData()")
     && app.includes('.get("pack")')
     && app.includes("window.BSI_CONTENT_PACKS?.[packId]")
+  ));
+  check("balance config contract", (
+    dataSource.includes("balanceConfig: {")
+    && dataSource.includes("randomRouteEventBaseChance: 0.21")
+    && dataSource.includes("hardBadLuckThreshold: 96")
+    && dataSource.includes("resourceWarningLimits: { axle: 30, grain: 35, sanity: 45 }")
+    && app.includes("const BALANCE = { ...BALANCE_DEFAULTS, ...(gameData.balanceConfig || {}) };")
+    && app.includes("BALANCE.resourceCriticalLimit")
+    && app.includes("BALANCE.crisisBadLuckGain")
+    && app.includes("BALANCE.rescueForceBadLuckThreshold")
+    && balanceSimSource.includes("function applyBalanceConfig(config = {})")
+    && balanceSimSource.includes("applyBalanceConfig(data.balanceConfig)")
   ));
   check("first minute next-step hud contract", (
     html.includes('id="nextStepLabel"')
