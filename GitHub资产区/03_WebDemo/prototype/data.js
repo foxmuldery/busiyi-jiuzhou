@@ -416,9 +416,9 @@ window.BSI_GAME_DATA = {
         {
           id: "pass_nails",
           label: "拔关楼铁钉",
-          hint: "车轴 +6，神志 -2",
-          effect: { axle: 6, grain: 0, sanity: -2 },
-          result: "铁钉从关楼梁骨里拔出，钉头上还沾着一点旧火的黑。"
+          hint: "车轴 +6，粮草 +4，神志 -2",
+          effect: { axle: 6, grain: 4, sanity: -2 },
+          result: "铁钉从关楼梁骨里拔出，钉头还沾着旧火的黑；墟人识货，愿以干粮换这几枚好钉。"
         }
       ]
     },

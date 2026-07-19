@@ -5,8 +5,14 @@ if (!gameData) {
 }
 
 const SAVE_VERSION = gameData.saveVersion || 2;
-const SAVE_KEY = `busi-kyushu-prototype-run-v${SAVE_VERSION}`;
-const META_KEY = `busi-kyushu-prototype-meta-v${SAVE_VERSION}`;
+const SAVE_KEY_PREFIX = "busi-kyushu-prototype-run";
+const META_KEY_PREFIX = "busi-kyushu-prototype-meta";
+const SAVE_KEY = `${SAVE_KEY_PREFIX}-v${SAVE_VERSION}`;
+const META_KEY = `${META_KEY_PREFIX}-v${SAVE_VERSION}`;
+const SAVE_MIGRATIONS = {
+  // 版本升级时在此登记迁移函数，键为旧版本号：
+  // 2: (saved) => ({ ...saved, saveVersion: 3 })
+};
 const SETTINGS_KEY = "busi-kyushu-prototype-settings-v1";
 const AUDIO_REVIEW_KEY = "busi-kyushu-prototype-audio-review-v1";
 
@@ -206,6 +212,7 @@ let storyResultOverride = null;
 let lastDecisionKey = "";
 let decisionModalDismissedKey = "";
 let actionBusy = false;
+let runToken = 0;
 let actionFeedback = null;
 let actionFeedbackResetTimer = 0;
 let playtestReminderTimer = 0;
@@ -216,6 +223,7 @@ let openingHintShown = false;
 settings.audioEnabled = false;
 let poetryFallbackSpin = 0;
 let poetryState = null;
+let poetryRequestToken = 0;
 const audioState = {
   elements: {},
   failed: new Set(),
@@ -507,6 +515,8 @@ el.playtestReminderDismiss?.addEventListener("click", () => {
 });
 
 function restartRun() {
+  runToken += 1;
+  setActionBusy(false);
   state = createInitialState();
   selectedRoute = null;
   openingHintShown = false;
@@ -3041,6 +3051,8 @@ async function refreshPoetryForCurrentLocation(options = {}) {
   if (options.force) {
     poetryFallbackSpin += 1;
   }
+  poetryRequestToken += 1;
+  const requestToken = poetryRequestToken;
   const fallbackState = createPoetryFallbackState(locationId, "fallback");
   const requestUrl = buildPoetryRequestUrl(locationId);
   if (!requestUrl || typeof window.fetch !== "function") {
@@ -3070,6 +3082,7 @@ async function refreshPoetryForCurrentLocation(options = {}) {
     if (!poem) {
       throw new Error("Poetry API returned an empty poem");
     }
+    if (requestToken !== poetryRequestToken) return;
     poetryState = {
       locationId,
       status: "ready",
@@ -3079,6 +3092,7 @@ async function refreshPoetryForCurrentLocation(options = {}) {
       poem
     };
   } catch {
+    if (requestToken !== poetryRequestToken) return;
     poetryState = {
       ...fallbackState,
       requestUrl,
@@ -3086,7 +3100,9 @@ async function refreshPoetryForCurrentLocation(options = {}) {
     };
   } finally {
     window.clearTimeout(timeout);
-    renderPoetry();
+    if (requestToken === poetryRequestToken) {
+      renderPoetry();
+    }
   }
 }
 
@@ -3164,7 +3180,8 @@ function playElement(key, volumeOverride) {
   element.play().then(() => {
     audioState.blocked.delete(key);
     renderAudioStatus();
-  }).catch(() => {
+  }).catch((error) => {
+    if (error?.name === "AbortError") return;
     audioState.blocked.add(key);
     renderAudioStatus();
   });
@@ -3194,7 +3211,8 @@ function setLoopVolume(key, targetVolume) {
   element.play().then(() => {
     audioState.blocked.delete(key);
     renderAudioStatus();
-  }).catch(() => {
+  }).catch((error) => {
+    if (error?.name === "AbortError") return;
     audioState.blocked.add(key);
     renderAudioStatus();
   });
@@ -3542,9 +3560,27 @@ function describeRouteProcess(route) {
   };
 }
 
+function loadLegacyPayload(keyPrefix) {
+  for (let version = SAVE_VERSION - 1; version >= 1; version -= 1) {
+    const legacy = localStorage.getItem(`${keyPrefix}-v${version}`);
+    if (legacy) return legacy;
+  }
+  return "";
+}
+
+function migrateSavedState(parsed) {
+  let migrated = parsed;
+  let version = Number(migrated?.saveVersion) || 0;
+  while (version < SAVE_VERSION && typeof SAVE_MIGRATIONS[version] === "function") {
+    migrated = SAVE_MIGRATIONS[version](migrated);
+    version = Number(migrated?.saveVersion) || 0;
+  }
+  return version === SAVE_VERSION ? migrated : null;
+}
+
 function loadMeta() {
   try {
-    const saved = localStorage.getItem(META_KEY);
+    const saved = localStorage.getItem(META_KEY) || loadLegacyPayload(META_KEY_PREFIX);
     if (!saved) return { seenEvents: [], endings: [], lastPlayedAt: "" };
     return { seenEvents: [], endings: [], lastPlayedAt: "", ...JSON.parse(saved) };
   } catch {
@@ -3564,16 +3600,24 @@ function loadState() {
     return freshState;
   }
   try {
-    const saved = localStorage.getItem(SAVE_KEY);
+    const saved = localStorage.getItem(SAVE_KEY) || loadLegacyPayload(SAVE_KEY_PREFIX);
     if (!saved) return createInitialState();
     const parsed = JSON.parse(saved);
     if (parsed.saveVersion !== SAVE_VERSION) {
+      const migrated = migrateSavedState(parsed);
+      if (migrated) {
+        const migratedState = normalizeState(migrated);
+        migratedState.log = ["旧存档已迁移至新版本，旅途继续。", ...migratedState.log];
+        return migratedState;
+      }
+      writeLocalStorage(`${SAVE_KEY_PREFIX}-discarded-v${parsed.saveVersion ?? "unknown"}`, parsed);
       const freshState = createInitialState();
       freshState.log = ["存档版本已变化，已回到新开局。", ...freshState.log];
       return freshState;
     }
     return normalizeState(parsed);
-  } catch {
+  } catch (error) {
+    console.warn("读档失败", error);
     const freshState = createInitialState();
     freshState.log = ["读档失败，已回到新开局。", ...freshState.log];
     return freshState;
@@ -5430,7 +5474,9 @@ async function useSupply(supplyId) {
   setActionBusy(true);
   setActionFeedback({ ...process, phase: "running", tone: "supply" });
   playElement("select");
+  const supplyRunToken = runToken;
   await waitForActionProcess(620);
+  if (supplyRunToken !== runToken) return;
   playSfx(audioHooks.supplyComplete || "supplyComplete", "resourceUp");
   applyDelta(supply.effect, "supply");
   state.usedSupplies[supplyKey] = true;
@@ -5502,6 +5548,7 @@ function confirmRoute(routeId) {
 
 async function move(routeId) {
   if (actionBusy || state.status !== "playing" || state.pendingRoute) return;
+  const moveRunToken = runToken;
   const route = routes.find((item) => item.id === routeId);
   if (!route) return;
   if (route.from !== state.currentLocation || !state.revealedRoutes.includes(route.id)) {
@@ -5543,6 +5590,7 @@ async function move(routeId) {
   setActionFeedback({ ...process, phase: "running", tone: "route" });
   playElement("select");
   await waitForActionProcess(520);
+  if (moveRunToken !== runToken) return;
   selectedRoute = route;
   playSfx(audioHooks.routeSelect || "routeSelect", "select");
   applyDelta(route.cost, "route");
@@ -5555,6 +5603,7 @@ async function move(routeId) {
 
   window.setTimeout(
     () => {
+      if (moveRunToken !== runToken) return;
       const routeEventId = selectRouteEventId(route);
       const routeEvent = getRouteEventById(routeEventId);
       if (routeEvent) {
@@ -5669,7 +5718,9 @@ async function choose(index) {
   setActionBusy(true);
   setActionFeedback({ ...process, phase: "running", tone: "event" });
   playElement("select");
+  const choiceRunToken = runToken;
   await waitForActionProcess(560);
+  if (choiceRunToken !== runToken) return;
   applyDelta(choice.effect, "event");
   state.eventResults[eventId] = choice.result;
   setStoryResultModal({
@@ -5718,7 +5769,9 @@ async function resolveFieldNote(index) {
   setActionBusy(true);
   setActionFeedback({ ...process, phase: "running", tone: "event" });
   playElement("select");
+  const fieldNoteRunToken = runToken;
   await waitForActionProcess(420);
+  if (fieldNoteRunToken !== runToken) return;
   applyDelta(choice.effect, "event");
   state.fieldNoteReports[getFieldNoteKey(loc.id)] = {
     style: choice.fieldNoteStyle,
@@ -5768,7 +5821,9 @@ async function resolveRouteEvent(index) {
   setActionBusy(true);
   setActionFeedback({ ...process, phase: "running", tone: "event" });
   playElement("select");
+  const routeChoiceRunToken = runToken;
   await waitForActionProcess(560);
+  if (routeChoiceRunToken !== runToken) return;
   applyDelta(choice.effect, "event");
   state.routeEventResults[getRouteEventKey(route, pending.eventId)] = choice.result;
   setStoryResultModal({
@@ -5895,7 +5950,9 @@ async function resolveCrisis(index) {
   setActionBusy(true);
   setActionFeedback({ ...process, phase: "running", tone: "warning" });
   playElement("select");
+  const crisisRunToken = runToken;
   await waitForActionProcess(620);
+  if (crisisRunToken !== runToken) return;
   applyDelta(choice.effect, "crisis");
   state.failureStats.rescues += 1;
   state.status = "playing";
@@ -6942,7 +6999,13 @@ function render(isTraveling = false) {
   flushVisualFeedbackQueue();
   showOpeningHintIfNeeded();
   schedulePlaytestReminder();
-  if (activeView === "town" && storyModalActions.length && !actionBusy && !storyResultOverride) {
+  if (
+    activeView === "town"
+    && storyModalActions.length
+    && !actionBusy
+    && !storyResultOverride
+    && decisionModalDismissedKey !== getDecisionKey()
+  ) {
     textPanelState = { location: false, event: true };
     renderStoryModal("event");
   }

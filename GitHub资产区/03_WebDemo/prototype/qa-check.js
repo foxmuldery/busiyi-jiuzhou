@@ -1823,6 +1823,23 @@ function run() {
     && css.includes(".map-route-panel .route-list")
     && app.includes('matchMedia("(max-height: 560px) and (orientation: landscape)")')
   ));
+  check("mobile safe-area contract", (
+    html.includes("viewport-fit=cover")
+    && html.includes('rel="preload" as="font"')
+    && html.includes('defer></script>')
+    && css.includes("env(safe-area-inset-top)")
+    && css.includes("env(safe-area-inset-left)")
+    && css.includes("calc(var(--game-gap) + env(safe-area-inset-top))")
+  ));
+  check("save migration contract", (
+    app.includes("const SAVE_MIGRATIONS = {")
+    && app.includes("function migrateSavedState(parsed)")
+    && app.includes("function loadLegacyPayload(keyPrefix)")
+    && app.includes('loadLegacyPayload(SAVE_KEY_PREFIX)')
+    && app.includes('loadLegacyPayload(META_KEY_PREFIX)')
+    && app.includes("旧存档已迁移至新版本，旅途继续。")
+    && app.includes("-discarded-v")
+  ));
   check("first minute next-step hud contract", (
     html.includes('id="nextStepLabel"')
     && html.includes('class="next-step-label"')
@@ -1852,9 +1869,9 @@ function run() {
     && html.includes('id="playtestReminderDismiss"')
     && html.includes("已试玩 5 分钟")
     && html.includes("填写反馈")
-    && html.includes("styles.css?v=20260625-c168")
-    && html.includes("data.js?v=20260625-c168")
-    && html.includes("app.js?v=20260625-c168")
+    && html.includes("styles.css?v=20260720-c169")
+    && html.includes("data.js?v=20260720-c169")
+    && html.includes("app.js?v=20260720-c169")
     && app.includes("PLAYTEST_REMINDER_DEFAULT_MS = 5 * 60 * 1000")
     && app.includes("PLAYTEST_REMINDER_MS = getPlaytestReminderMs()")
     && app.includes('params.get("playtestReminderMs")')
@@ -2014,7 +2031,7 @@ function run() {
     && app.includes('dataset.action === "return-town"')
     && app.includes('action: "return-town"')
     && app.includes('if (actions.length && activeView === "town")')
-    && app.includes('if (activeView === "town" && storyModalActions.length && !actionBusy && !storyResultOverride)')
+    && app.includes('activeView === "town"\n    && storyModalActions.length\n    && !actionBusy\n    && !storyResultOverride\n    && decisionModalDismissedKey !== getDecisionKey()')
     && app.includes('setAttribute("tabindex", "0")')
     && app.includes('setAttribute("aria-disabled", "false")')
     && app.includes('setAttribute("aria-disabled", "true")')
