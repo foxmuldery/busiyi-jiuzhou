@@ -1,7 +1,50 @@
-window.BSI_GAME_DATA = {
+const BSI_CORE_DATA = {
   saveVersion: 2,
   resourceKeys: ["axle", "grain", "sanity"],
   terrainKeys: ["road", "market", "water", "rift"],
+  balanceConfig: {
+    randomRouteEventBaseChance: 0.21,
+    randomRouteEventMaxChance: 0.63,
+    routeEventBreatherStreak: 2,
+    maxRescuesBeforeStranding: 3,
+    hardBadLuckThreshold: 96,
+    resourceCriticalLimit: 15,
+    sameCrisisHardFailCount: 2,
+    breatherBadLuckLimit: 55,
+    badLuckMidBoostThreshold: 35,
+    badLuckMidBoost: 0.08,
+    badLuckHighBoostThreshold: 65,
+    badLuckHighBoost: 0.14,
+    dangerEventChanceBoost: 0.09,
+    highChanceDangerCount: 2,
+    highChanceBadLuckThreshold: 72,
+    highChanceFloor: 0.58,
+    rescueWeightLowResourceLimit: 45,
+    rescueWeightSupply: 22,
+    rescueWeightRest: 18,
+    rescueWeightItem: 14,
+    rescueWeightBadLuckThreshold: 55,
+    rescueWeightBadLuck: 28,
+    rescueForceBadLuckThreshold: 60,
+    sanityEventPenaltyLimit: 28,
+    sanityEventPenalty: -8,
+    lowSanityProtectionLimit: 30,
+    lowSanityProtectionMaxLoss: -8,
+    highPressureSanityLoss: -6,
+    crisisBadLuckGain: 12,
+    badLuckRoutePressureDivisor: 10,
+    badLuckEventPressureDivisor: 14,
+    badLuckEventRecoveryDivisor: 12,
+    badLuckCrisisRecoveryDivisor: 10,
+    badLuckLowResourceLimit: 20,
+    badLuckLowResourceShift: 3,
+    resourceWarningLimits: { axle: 30, grain: 35, sanity: 45 }
+  }
+};
+
+const BSI_P0_CONTENT_PACK = {
+  id: "p0",
+  name: "P0 原型基线",
   startLocation: "central_post",
   stageAssets: {
     map: {
@@ -416,9 +459,9 @@ window.BSI_GAME_DATA = {
         {
           id: "pass_nails",
           label: "拔关楼铁钉",
-          hint: "车轴 +6，神志 -2",
-          effect: { axle: 6, grain: 0, sanity: -2 },
-          result: "铁钉从关楼梁骨里拔出，钉头上还沾着一点旧火的黑。"
+          hint: "车轴 +6，粮草 +4，神志 -2",
+          effect: { axle: 6, grain: 4, sanity: -2 },
+          result: "铁钉从关楼梁骨里拔出，钉头还沾着旧火的黑；墟人识货，愿以干粮换这几枚好钉。"
         }
       ]
     },
@@ -3062,7 +3105,10 @@ window.BSI_GAME_DATA = {
         }
       ]
     }
-  },
+  }
+};
+
+const BSI_CORE_AUDIO = {
   audioAssets: {
     musicLoop: {
       id: "MUS-CORE-001",
@@ -3251,23 +3297,27 @@ window.BSI_GAME_DATA = {
     locationArrive: "locationArrive",
     routeSelect: "routeSelect",
     supplyComplete: "supplyComplete"
-  },
-  musicProfileByTerrain: {
+  }
+};
+
+BSI_P0_CONTENT_PACK.musicProfileByTerrain = {
     default: "musicLoop",
     road: "musicLoop",
     market: "musicBorder",
     water: "musicWater",
     rift: "musicBorder"
-  },
-  musicProfileByLocation: {
+};
+
+BSI_P0_CONTENT_PACK.musicProfileByLocation = {
     old_king_road: "musicJourney",
     bird_mouse_pass: "musicMountain",
     nameless_shrine: "musicJourney",
     qingqiu_outer_city: "musicDawn",
     black_teeth_market: "musicDawn",
     feather_folk_ford: "musicDawn"
-  },
-  initialStateTemplate: {
+};
+
+BSI_P0_CONTENT_PACK.initialStateTemplate = {
     day: 1,
     currentLocation: "central_post",
     resources: { axle: 80, grain: 90, sanity: 85 },
@@ -3300,5 +3350,10 @@ window.BSI_GAME_DATA = {
       hardFailures: 0
     },
     log: ["第 1 日：车队自中原驿整装，西路未明。"]
-  }
+  };
+
+window.BSI_CONTENT_PACKS = {
+  ...(window.BSI_CONTENT_PACKS || {}),
+  [BSI_P0_CONTENT_PACK.id]: BSI_P0_CONTENT_PACK
 };
+window.BSI_GAME_DATA = { ...BSI_CORE_DATA, ...BSI_CORE_AUDIO, ...BSI_P0_CONTENT_PACK };

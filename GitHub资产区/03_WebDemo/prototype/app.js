@@ -1,12 +1,33 @@
-const gameData = window.BSI_GAME_DATA;
+function resolveGameData() {
+  const base = window.BSI_GAME_DATA;
+  if (!base) return base;
+  const packId = new URLSearchParams(window.location.search).get("pack");
+  if (!packId || packId === base.id) return base;
+  const pack = window.BSI_CONTENT_PACKS?.[packId];
+  if (!pack) return base;
+  return {
+    ...base,
+    ...pack,
+    audioAssets: { ...base.audioAssets, ...(pack.audioAssets || {}) },
+    audioHooks: { ...base.audioHooks, ...(pack.audioHooks || {}) }
+  };
+}
+
+const gameData = resolveGameData();
 
 if (!gameData) {
   throw new Error("BSI_GAME_DATA 未加载，请先加载 data.js。");
 }
 
 const SAVE_VERSION = gameData.saveVersion || 2;
-const SAVE_KEY = `busi-kyushu-prototype-run-v${SAVE_VERSION}`;
-const META_KEY = `busi-kyushu-prototype-meta-v${SAVE_VERSION}`;
+const SAVE_KEY_PREFIX = "busi-kyushu-prototype-run";
+const META_KEY_PREFIX = "busi-kyushu-prototype-meta";
+const SAVE_KEY = `${SAVE_KEY_PREFIX}-v${SAVE_VERSION}`;
+const META_KEY = `${META_KEY_PREFIX}-v${SAVE_VERSION}`;
+const SAVE_MIGRATIONS = {
+  // 版本升级时在此登记迁移函数，键为旧版本号：
+  // 2: (saved) => ({ ...saved, saveVersion: 3 })
+};
 const SETTINGS_KEY = "busi-kyushu-prototype-settings-v1";
 const AUDIO_REVIEW_KEY = "busi-kyushu-prototype-audio-review-v1";
 
@@ -46,6 +67,44 @@ const audioHooks = {
   ...(gameData.audioHooks || {})
 };
 const initialStateTemplate = gameData.initialStateTemplate || {};
+const BALANCE_DEFAULTS = {
+  randomRouteEventBaseChance: 0.21,
+  randomRouteEventMaxChance: 0.63,
+  routeEventBreatherStreak: 2,
+  maxRescuesBeforeStranding: 3,
+  hardBadLuckThreshold: 96,
+  resourceCriticalLimit: 15,
+  sameCrisisHardFailCount: 2,
+  breatherBadLuckLimit: 55,
+  badLuckMidBoostThreshold: 35,
+  badLuckMidBoost: 0.08,
+  badLuckHighBoostThreshold: 65,
+  badLuckHighBoost: 0.14,
+  dangerEventChanceBoost: 0.09,
+  highChanceDangerCount: 2,
+  highChanceBadLuckThreshold: 72,
+  highChanceFloor: 0.58,
+  rescueWeightLowResourceLimit: 45,
+  rescueWeightSupply: 22,
+  rescueWeightRest: 18,
+  rescueWeightItem: 14,
+  rescueWeightBadLuckThreshold: 55,
+  rescueWeightBadLuck: 28,
+  rescueForceBadLuckThreshold: 60,
+  sanityEventPenaltyLimit: 28,
+  sanityEventPenalty: -8,
+  lowSanityProtectionLimit: 30,
+  lowSanityProtectionMaxLoss: -8,
+  highPressureSanityLoss: -6,
+  crisisBadLuckGain: 12,
+  badLuckRoutePressureDivisor: 10,
+  badLuckEventPressureDivisor: 14,
+  badLuckEventRecoveryDivisor: 12,
+  badLuckCrisisRecoveryDivisor: 10,
+  badLuckLowResourceLimit: 20,
+  badLuckLowResourceShift: 3
+};
+const BALANCE = { ...BALANCE_DEFAULTS, ...(gameData.balanceConfig || {}) };
 const resourceKeys = gameData.resourceKeys || ["axle", "grain", "sanity"];
 const terrainKeys = gameData.terrainKeys || ["road", "market", "water", "rift"];
 const conditionKeys = ["flag", "sanityMax", "sanityMin", "languageMin"];
@@ -56,9 +115,9 @@ const ACTION_FEEDBACK_RESET_MS = 2200;
 const DEBUG_ACTION_SETTLE_MS = 980;
 const PLAYTEST_REMINDER_DEFAULT_MS = 5 * 60 * 1000;
 const PLAYTEST_REMINDER_MS = getPlaytestReminderMs();
-const RANDOM_ROUTE_EVENT_BASE_CHANCE = 0.21;
-const RANDOM_ROUTE_EVENT_MAX_CHANCE = 0.63;
-const ROUTE_EVENT_BREATHER_STREAK = 2;
+const RANDOM_ROUTE_EVENT_BASE_CHANCE = BALANCE.randomRouteEventBaseChance;
+const RANDOM_ROUTE_EVENT_MAX_CHANCE = BALANCE.randomRouteEventMaxChance;
+const ROUTE_EVENT_BREATHER_STREAK = BALANCE.routeEventBreatherStreak;
 
 const crisisMeta = {
   axle: { label: "断轴", statKey: "axleCrises" },
@@ -106,9 +165,14 @@ const drawerLabels = {
   log: "行旅日志",
   settings: "设置"
 };
-const MAX_RESCUES_BEFORE_STRANDING = 3;
-const HARD_BAD_LUCK_THRESHOLD = 96;
-const RESOURCE_WARNING_LIMITS = { axle: 30, grain: 35, sanity: 45 };
+const MAX_RESCUES_BEFORE_STRANDING = BALANCE.maxRescuesBeforeStranding;
+const HARD_BAD_LUCK_THRESHOLD = BALANCE.hardBadLuckThreshold;
+const RESOURCE_WARNING_LIMITS = {
+  axle: 30,
+  grain: 35,
+  sanity: 45,
+  ...(gameData.balanceConfig?.resourceWarningLimits || {})
+};
 const RESOURCE_RESCUE_TAGS = {
   axle: "axle_rescue",
   grain: "grain_rescue",
@@ -206,6 +270,7 @@ let storyResultOverride = null;
 let lastDecisionKey = "";
 let decisionModalDismissedKey = "";
 let actionBusy = false;
+let runToken = 0;
 let actionFeedback = null;
 let actionFeedbackResetTimer = 0;
 let playtestReminderTimer = 0;
@@ -216,6 +281,7 @@ let openingHintShown = false;
 settings.audioEnabled = false;
 let poetryFallbackSpin = 0;
 let poetryState = null;
+let poetryRequestToken = 0;
 const audioState = {
   elements: {},
   failed: new Set(),
@@ -507,6 +573,8 @@ el.playtestReminderDismiss?.addEventListener("click", () => {
 });
 
 function restartRun() {
+  runToken += 1;
+  setActionBusy(false);
   state = createInitialState();
   selectedRoute = null;
   openingHintShown = false;
@@ -728,7 +796,7 @@ function getDangerResourceKeys(targetState) {
 }
 
 function getCriticalResourceKeys(targetState = state) {
-  return resourceKeys.filter((key) => Number(targetState.resources?.[key] || 0) <= 15);
+  return resourceKeys.filter((key) => Number(targetState.resources?.[key] || 0) <= BALANCE.resourceCriticalLimit);
 }
 
 function itemMatchesRescueNeed(item, targetState) {
@@ -3041,6 +3109,8 @@ async function refreshPoetryForCurrentLocation(options = {}) {
   if (options.force) {
     poetryFallbackSpin += 1;
   }
+  poetryRequestToken += 1;
+  const requestToken = poetryRequestToken;
   const fallbackState = createPoetryFallbackState(locationId, "fallback");
   const requestUrl = buildPoetryRequestUrl(locationId);
   if (!requestUrl || typeof window.fetch !== "function") {
@@ -3070,6 +3140,7 @@ async function refreshPoetryForCurrentLocation(options = {}) {
     if (!poem) {
       throw new Error("Poetry API returned an empty poem");
     }
+    if (requestToken !== poetryRequestToken) return;
     poetryState = {
       locationId,
       status: "ready",
@@ -3079,6 +3150,7 @@ async function refreshPoetryForCurrentLocation(options = {}) {
       poem
     };
   } catch {
+    if (requestToken !== poetryRequestToken) return;
     poetryState = {
       ...fallbackState,
       requestUrl,
@@ -3086,7 +3158,9 @@ async function refreshPoetryForCurrentLocation(options = {}) {
     };
   } finally {
     window.clearTimeout(timeout);
-    renderPoetry();
+    if (requestToken === poetryRequestToken) {
+      renderPoetry();
+    }
   }
 }
 
@@ -3164,7 +3238,8 @@ function playElement(key, volumeOverride) {
   element.play().then(() => {
     audioState.blocked.delete(key);
     renderAudioStatus();
-  }).catch(() => {
+  }).catch((error) => {
+    if (error?.name === "AbortError") return;
     audioState.blocked.add(key);
     renderAudioStatus();
   });
@@ -3194,7 +3269,8 @@ function setLoopVolume(key, targetVolume) {
   element.play().then(() => {
     audioState.blocked.delete(key);
     renderAudioStatus();
-  }).catch(() => {
+  }).catch((error) => {
+    if (error?.name === "AbortError") return;
     audioState.blocked.add(key);
     renderAudioStatus();
   });
@@ -3542,9 +3618,27 @@ function describeRouteProcess(route) {
   };
 }
 
+function loadLegacyPayload(keyPrefix) {
+  for (let version = SAVE_VERSION - 1; version >= 1; version -= 1) {
+    const legacy = localStorage.getItem(`${keyPrefix}-v${version}`);
+    if (legacy) return legacy;
+  }
+  return "";
+}
+
+function migrateSavedState(parsed) {
+  let migrated = parsed;
+  let version = Number(migrated?.saveVersion) || 0;
+  while (version < SAVE_VERSION && typeof SAVE_MIGRATIONS[version] === "function") {
+    migrated = SAVE_MIGRATIONS[version](migrated);
+    version = Number(migrated?.saveVersion) || 0;
+  }
+  return version === SAVE_VERSION ? migrated : null;
+}
+
 function loadMeta() {
   try {
-    const saved = localStorage.getItem(META_KEY);
+    const saved = localStorage.getItem(META_KEY) || loadLegacyPayload(META_KEY_PREFIX);
     if (!saved) return { seenEvents: [], endings: [], lastPlayedAt: "" };
     return { seenEvents: [], endings: [], lastPlayedAt: "", ...JSON.parse(saved) };
   } catch {
@@ -3564,16 +3658,24 @@ function loadState() {
     return freshState;
   }
   try {
-    const saved = localStorage.getItem(SAVE_KEY);
+    const saved = localStorage.getItem(SAVE_KEY) || loadLegacyPayload(SAVE_KEY_PREFIX);
     if (!saved) return createInitialState();
     const parsed = JSON.parse(saved);
     if (parsed.saveVersion !== SAVE_VERSION) {
+      const migrated = migrateSavedState(parsed);
+      if (migrated) {
+        const migratedState = normalizeState(migrated);
+        migratedState.log = ["旧存档已迁移至新版本，旅途继续。", ...migratedState.log];
+        return migratedState;
+      }
+      writeLocalStorage(`${SAVE_KEY_PREFIX}-discarded-v${parsed.saveVersion ?? "unknown"}`, parsed);
       const freshState = createInitialState();
       freshState.log = ["存档版本已变化，已回到新开局。", ...freshState.log];
       return freshState;
     }
     return normalizeState(parsed);
-  } catch {
+  } catch (error) {
+    console.warn("读档失败", error);
     const freshState = createInitialState();
     freshState.log = ["读档失败，已回到新开局。", ...freshState.log];
     return freshState;
@@ -3611,13 +3713,13 @@ function updateBadLuck(delta = {}, context = "event") {
     const value = Number(delta[key] || 0);
     return value > 0 ? total + value : total;
   }, 0);
-  const lowResourceCount = resourceKeys.filter((key) => state.resources[key] <= 20).length;
+  const lowResourceCount = resourceKeys.filter((key) => state.resources[key] <= BALANCE.badLuckLowResourceLimit).length;
   let shift = Number(delta.badLuck || 0);
 
-  if (context === "route") shift += Math.ceil(pressure / 10);
-  if (context === "event") shift += Math.ceil(pressure / 14) - Math.floor(recovery / 12);
-  if (context === "crisis") shift -= Math.floor(recovery / 10);
-  shift += lowResourceCount * 3;
+  if (context === "route") shift += Math.ceil(pressure / BALANCE.badLuckRoutePressureDivisor);
+  if (context === "event") shift += Math.ceil(pressure / BALANCE.badLuckEventPressureDivisor) - Math.floor(recovery / BALANCE.badLuckEventRecoveryDivisor);
+  if (context === "crisis") shift -= Math.floor(recovery / BALANCE.badLuckCrisisRecoveryDivisor);
+  shift += lowResourceCount * BALANCE.badLuckLowResourceShift;
 
   state.badLuckMeter = clamp((state.badLuckMeter || 0) + shift);
 }
@@ -3814,7 +3916,7 @@ function isHighPressureRouteEvent(event) {
   const pools = Array.isArray(event?.pool) ? event.pool : [];
   return event?.risk === "high"
     || (event?.risk === "medium" && pools.includes("sanity"))
-    || getWorstSanityLoss(event) <= -6;
+    || getWorstSanityLoss(event) <= BALANCE.highPressureSanityLoss;
 }
 
 function isLowPressureRouteEvent(event) {
@@ -3825,19 +3927,23 @@ function isLowPressureRouteEvent(event) {
 
 function randomEventPassesProtection(event) {
   const pools = Array.isArray(event?.pool) ? event.pool : [];
-  if (state.resources.sanity <= 30) {
+  if (state.resources.sanity <= BALANCE.lowSanityProtectionLimit) {
     const safeLowSanityPool = Boolean(event?.rescueCandidate)
       || pools.some((pool) => ["rest", "supply", "clue"].includes(pool));
-    if (!safeLowSanityPool || getWorstSanityLoss(event) < -8) return false;
+    if (!safeLowSanityPool || getWorstSanityLoss(event) < BALANCE.lowSanityProtectionMaxLoss) return false;
   }
   return !(isHighPressureRouteEvent(getLastResolvedRouteEvent()) && isHighPressureRouteEvent(event));
 }
 
 function getRandomRouteEventChance(route) {
-  if (isBreatherRoute(route) && !getDangerResourceKeys(state).length && state.badLuckMeter < 55) return 0;
+  if (isBreatherRoute(route) && !getDangerResourceKeys(state).length && state.badLuckMeter < BALANCE.breatherBadLuckLimit) return 0;
   const dangerCount = getDangerResourceKeys(state).length;
-  const pressureBoost = state.badLuckMeter >= 65 ? 0.14 : state.badLuckMeter >= 35 ? 0.08 : 0;
-  const dangerBoost = dangerCount * 0.09;
+  const pressureBoost = state.badLuckMeter >= BALANCE.badLuckHighBoostThreshold
+    ? BALANCE.badLuckHighBoost
+    : state.badLuckMeter >= BALANCE.badLuckMidBoostThreshold
+      ? BALANCE.badLuckMidBoost
+      : 0;
+  const dangerBoost = dangerCount * BALANCE.dangerEventChanceBoost;
   return Math.min(
     RANDOM_ROUTE_EVENT_MAX_CHANCE,
     RANDOM_ROUTE_EVENT_BASE_CHANCE + pressureBoost + dangerBoost
@@ -3847,11 +3953,11 @@ function getRandomRouteEventChance(route) {
 function getRandomRouteEventWeight(event) {
   const pools = Array.isArray(event.pool) ? event.pool : [];
   let weight = Math.max(1, Number(event.weight) || 10);
-  if (state.resources.grain <= 45 && pools.includes("supply")) weight += 22;
-  if (state.resources.sanity <= 45 && pools.includes("rest")) weight += 18;
-  if (state.resources.axle <= 45 && pools.includes("item")) weight += 14;
-  if (state.badLuckMeter >= 55 && event.rescueCandidate) weight += 28;
-  if (pools.includes("sanity") && state.resources.sanity <= 28) weight -= 8;
+  if (state.resources.grain <= BALANCE.rescueWeightLowResourceLimit && pools.includes("supply")) weight += BALANCE.rescueWeightSupply;
+  if (state.resources.sanity <= BALANCE.rescueWeightLowResourceLimit && pools.includes("rest")) weight += BALANCE.rescueWeightRest;
+  if (state.resources.axle <= BALANCE.rescueWeightLowResourceLimit && pools.includes("item")) weight += BALANCE.rescueWeightItem;
+  if (state.badLuckMeter >= BALANCE.rescueWeightBadLuckThreshold && event.rescueCandidate) weight += BALANCE.rescueWeightBadLuck;
+  if (pools.includes("sanity") && state.resources.sanity <= BALANCE.sanityEventPenaltyLimit) weight += BALANCE.sanityEventPenalty;
   return Math.max(1, weight);
 }
 
@@ -3897,12 +4003,12 @@ function selectRandomRouteEventId(route) {
   if (isBreatherRoute(route)) {
     const breatherCandidates = candidates.filter((item) => isLowPressureRouteEvent(item.event));
     if (!breatherCandidates.length) return "";
-    const needsRescue = getDangerResourceKeys(state).length > 0 || state.badLuckMeter >= 55;
+    const needsRescue = getDangerResourceKeys(state).length > 0 || state.badLuckMeter >= BALANCE.breatherBadLuckLimit;
     return needsRescue ? pickWeightedRouteEvent(breatherCandidates, route, "random-route-event-breather") : "";
   }
   const dangerCount = getDangerResourceKeys(state).length;
-  const chance = (dangerCount >= 2 || state.badLuckMeter >= 72)
-    ? Math.max(0.58, getRandomRouteEventChance(route))
+  const chance = (dangerCount >= BALANCE.highChanceDangerCount || state.badLuckMeter >= BALANCE.highChanceBadLuckThreshold)
+    ? Math.max(BALANCE.highChanceFloor, getRandomRouteEventChance(route))
     : getRandomRouteEventChance(route);
   const roll = seededScore(
     state.runId || "run",
@@ -3911,9 +4017,9 @@ function selectRandomRouteEventId(route) {
     state.traveledRoutes.length,
     "random-route-event-roll"
   );
-  if (roll > chance && !(criticalRescue || (rescueCandidates.length && state.badLuckMeter >= 60))) return "";
+  if (roll > chance && !(criticalRescue || (rescueCandidates.length && state.badLuckMeter >= BALANCE.rescueForceBadLuckThreshold))) return "";
   return pickWeightedRouteEvent(
-    criticalRescue || (rescueCandidates.length && state.badLuckMeter >= 60) ? rescueCandidates : candidates,
+    criticalRescue || (rescueCandidates.length && state.badLuckMeter >= BALANCE.rescueForceBadLuckThreshold) ? rescueCandidates : candidates,
     route,
     "random-route-event-pick"
   );
@@ -5430,7 +5536,9 @@ async function useSupply(supplyId) {
   setActionBusy(true);
   setActionFeedback({ ...process, phase: "running", tone: "supply" });
   playElement("select");
+  const supplyRunToken = runToken;
   await waitForActionProcess(620);
+  if (supplyRunToken !== runToken) return;
   playSfx(audioHooks.supplyComplete || "supplyComplete", "resourceUp");
   applyDelta(supply.effect, "supply");
   state.usedSupplies[supplyKey] = true;
@@ -5502,6 +5610,7 @@ function confirmRoute(routeId) {
 
 async function move(routeId) {
   if (actionBusy || state.status !== "playing" || state.pendingRoute) return;
+  const moveRunToken = runToken;
   const route = routes.find((item) => item.id === routeId);
   if (!route) return;
   if (route.from !== state.currentLocation || !state.revealedRoutes.includes(route.id)) {
@@ -5543,6 +5652,7 @@ async function move(routeId) {
   setActionFeedback({ ...process, phase: "running", tone: "route" });
   playElement("select");
   await waitForActionProcess(520);
+  if (moveRunToken !== runToken) return;
   selectedRoute = route;
   playSfx(audioHooks.routeSelect || "routeSelect", "select");
   applyDelta(route.cost, "route");
@@ -5555,6 +5665,7 @@ async function move(routeId) {
 
   window.setTimeout(
     () => {
+      if (moveRunToken !== runToken) return;
       const routeEventId = selectRouteEventId(route);
       const routeEvent = getRouteEventById(routeEventId);
       if (routeEvent) {
@@ -5669,7 +5780,9 @@ async function choose(index) {
   setActionBusy(true);
   setActionFeedback({ ...process, phase: "running", tone: "event" });
   playElement("select");
+  const choiceRunToken = runToken;
   await waitForActionProcess(560);
+  if (choiceRunToken !== runToken) return;
   applyDelta(choice.effect, "event");
   state.eventResults[eventId] = choice.result;
   setStoryResultModal({
@@ -5718,7 +5831,9 @@ async function resolveFieldNote(index) {
   setActionBusy(true);
   setActionFeedback({ ...process, phase: "running", tone: "event" });
   playElement("select");
+  const fieldNoteRunToken = runToken;
   await waitForActionProcess(420);
+  if (fieldNoteRunToken !== runToken) return;
   applyDelta(choice.effect, "event");
   state.fieldNoteReports[getFieldNoteKey(loc.id)] = {
     style: choice.fieldNoteStyle,
@@ -5768,7 +5883,9 @@ async function resolveRouteEvent(index) {
   setActionBusy(true);
   setActionFeedback({ ...process, phase: "running", tone: "event" });
   playElement("select");
+  const routeChoiceRunToken = runToken;
   await waitForActionProcess(560);
+  if (routeChoiceRunToken !== runToken) return;
   applyDelta(choice.effect, "event");
   state.routeEventResults[getRouteEventKey(route, pending.eventId)] = choice.result;
   setStoryResultModal({
@@ -5854,7 +5971,7 @@ function shouldHardFail(crisisType) {
   const sameCrisisCount = meta?.statKey ? state.failureStats[meta.statKey] : 0;
   return (
     state.failureStats.rescues >= MAX_RESCUES_BEFORE_STRANDING
-    || sameCrisisCount >= 2
+    || sameCrisisCount >= BALANCE.sameCrisisHardFailCount
     || state.badLuckMeter >= HARD_BAD_LUCK_THRESHOLD
   );
 }
@@ -5863,7 +5980,7 @@ function enterCrisis(crisisType) {
   const meta = crisisMeta[crisisType];
   state.status = "crisis";
   state.crisisType = crisisType;
-  state.badLuckMeter = clamp(state.badLuckMeter + 12);
+  state.badLuckMeter = clamp(state.badLuckMeter + BALANCE.crisisBadLuckGain);
   if (meta?.statKey) state.failureStats[meta.statKey] += 1;
   const warningMap = { axle: "warnAxle", grain: "warnGrain", sanity: "warnSanity" };
   playElement(warningMap[crisisType]);
@@ -5895,7 +6012,9 @@ async function resolveCrisis(index) {
   setActionBusy(true);
   setActionFeedback({ ...process, phase: "running", tone: "warning" });
   playElement("select");
+  const crisisRunToken = runToken;
   await waitForActionProcess(620);
+  if (crisisRunToken !== runToken) return;
   applyDelta(choice.effect, "crisis");
   state.failureStats.rescues += 1;
   state.status = "playing";
@@ -6309,15 +6428,15 @@ function renderRoutes() {
       const routeArt = getLocationIllustrationSrc(route.to);
       const routeSignal = getRouteSignalForRoute(route);
       return `
-        <button class="route-card ${locked ? "locked" : ""} ${selected ? "selected" : ""}" type="button" data-route="${route.id}" data-event-tone="${escapeHtml(routeSignal.tone)}" data-event-threat="${escapeHtml(routeSignal.threat)}" aria-pressed="${selected}" title="${selected ? "已选中，再点启程" : "点选路线"}" ${actionBusy ? "disabled" : ""}>
+        <button class="route-card ${locked ? "locked" : ""} ${selected ? "selected" : ""}" type="button" data-route="${escapeHtml(route.id)}" data-event-tone="${escapeHtml(routeSignal.tone)}" data-event-threat="${escapeHtml(routeSignal.threat)}" aria-pressed="${selected}" title="${selected ? "已选中，再点启程" : "点选路线"}" ${actionBusy ? "disabled" : ""}>
           ${routeArt ? `<span class="route-art"><img src="${escapeHtml(routeArt)}" alt="" onerror="this.closest('.route-art').hidden = true;" /></span>` : ""}
           <span class="route-heading">
-            <strong>${getRouteDisplayName(route)}</strong>
+            <strong>${escapeHtml(getRouteDisplayName(route))}</strong>
             ${renderRouteSignalBadge(routeSignal)}
             ${selected ? '<span class="route-confirm-mark">再点启程</span>' : ""}
           </span>
-          <span class="route-destination"><b>至</b>${toName}</span>
-          <span class="route-path">${fromName} → ${toName}</span>
+          <span class="route-destination"><b>至</b>${escapeHtml(toName)}</span>
+          <span class="route-path">${escapeHtml(fromName)} → ${escapeHtml(toName)}</span>
           <span class="route-verse">${renderSceneVerseMarkupFromText(routeVerse)}</span>
           ${renderResourceDeltaChips(route.cost, { emptyLabel: "无耗", predict: true })}
           ${renderRouteIntelStrip(route, routeSignal)}
@@ -6326,8 +6445,8 @@ function renderRoutes() {
             <span class="route-event-short">${escapeHtml(formatRouteEventShort(route))}</span>
           </span>
           ${renderRouteOmenBadges(route)}
-          <span class="route-scan route-supply-preview">${getDestinationSupplyPreview(route.to)}</span>
-          <span class="route-hint">${selected ? "已预览路线，再点一次正式启程。" : unresolvedEventContext ? "先处理当前遭遇，再起行。" : locked ? getLockedHintText(route) : getRouteHintText(route)}</span>
+          <span class="route-scan route-supply-preview">${escapeHtml(getDestinationSupplyPreview(route.to))}</span>
+          <span class="route-hint">${selected ? "已预览路线，再点一次正式启程。" : unresolvedEventContext ? "先处理当前遭遇，再起行。" : locked ? escapeHtml(getLockedHintText(route)) : escapeHtml(getRouteHintText(route))}</span>
         </button>
       `;
     })
@@ -6569,9 +6688,9 @@ function renderMap() {
       const supplyScan = isFogged ? "雾中未显" : renderMapNodeSupplyStrip(location.id);
       return `
         <button class="map-node ${stateClass}" type="button" style="--x:${map.x}%; --y:${map.y}%" ${routeAttr} aria-pressed="${selected}" ${actionBusy ? "disabled" : ""}>
-          <strong>${title}</strong>
-          <span class="map-node-route-scan">${routeScan}</span>
-          ${isFogged ? `<small>${supplyScan}</small>` : supplyScan}
+          <strong>${escapeHtml(title)}</strong>
+          <span class="map-node-route-scan">${escapeHtml(routeScan)}</span>
+          ${isFogged ? `<small>${escapeHtml(supplyScan)}</small>` : supplyScan}
         </button>
       `;
     })
@@ -6592,6 +6711,7 @@ function renderLocationLore() {
     if (el.locationArt.getAttribute("src") !== artSrc) {
       el.locationArt.src = artSrc;
     }
+    el.locationArt.alt = `${loc.name}地点图`;
     el.locationArtFrame.hidden = false;
   } else if (el.locationArtFrame) {
     el.locationArtFrame.hidden = true;
@@ -6644,10 +6764,10 @@ function renderSupplies() {
           ? "本次抵达已补给"
           : "可搜集";
       return `
-      <button class="supply-card ${supply.used ? "used" : ""} ${supply.blockedThisArrival && !supply.used ? "blocked" : ""}" type="button" data-supply="${supply.id}" title="${supply.hint}" aria-label="${supply.label}：${supply.hint}，${ariaState}" ${disabled ? "disabled" : ""}>
-        <span class="supply-icon" data-supply-type="${badge.type}">${badge.icon}</span>
+      <button class="supply-card ${supply.used ? "used" : ""} ${supply.blockedThisArrival && !supply.used ? "blocked" : ""}" type="button" data-supply="${escapeHtml(supply.id)}" title="${escapeHtml(supply.hint)}" aria-label="${escapeHtml(`${supply.label}：${supply.hint}，${ariaState}`)}" ${disabled ? "disabled" : ""}>
+        <span class="supply-icon" data-supply-type="${escapeHtml(badge.type)}">${escapeHtml(badge.icon)}</span>
         <span class="supply-copy">
-          <strong>${badge.label}</strong>
+          <strong>${escapeHtml(badge.label)}</strong>
           <small>${renderResourceDeltaChips(supply.effect, { predict: true })}</small>
         </span>
         <span class="supply-state" data-short-state="${shortStateText}">${stateText}</span>
@@ -6942,7 +7062,13 @@ function render(isTraveling = false) {
   flushVisualFeedbackQueue();
   showOpeningHintIfNeeded();
   schedulePlaytestReminder();
-  if (activeView === "town" && storyModalActions.length && !actionBusy && !storyResultOverride) {
+  if (
+    activeView === "town"
+    && storyModalActions.length
+    && !actionBusy
+    && !storyResultOverride
+    && decisionModalDismissedKey !== getDecisionKey()
+  ) {
     textPanelState = { location: false, event: true };
     renderStoryModal("event");
   }

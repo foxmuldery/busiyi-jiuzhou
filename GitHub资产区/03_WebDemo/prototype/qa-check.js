@@ -763,7 +763,7 @@ function collectRoutePreviewContractProblems(app, css, html) {
     ["路线卡片使用目标地点插图", "getLocationIllustrationSrc(route.to)"],
     ["路线卡片展示出发与目标地点", "route-path"],
     ["路线卡片展示目标地点短标签", "route-destination"],
-    ["路线卡片目标地点短标签使用目的地名", "<b>至</b>${toName}"],
+    ["路线卡片目标地点短标签使用目的地名", "<b>至</b>${escapeHtml(toName)}"],
     ["路线卡片展示资源消耗预测", 'renderResourceDeltaChips(route.cost, { emptyLabel: "无耗", predict: true })'],
     ["路线卡片展示风险等级", "renderRouteRiskBadge(route)"],
     ["路线卡片展示路遇摘要", "formatRouteEventShort(route)"],
@@ -842,6 +842,7 @@ function run() {
   const readme = read(FILES.readme);
   const webdeployPackage = fs.existsSync(FILES.webdeployPackage) ? read(FILES.webdeployPackage) : "";
   const balanceSimSource = fs.existsSync(FILES.balanceSim) ? read(FILES.balanceSim) : "";
+  const dataSource = read(FILES.data);
   const data = loadGameData();
 
   check("game data loaded", Boolean(data.locations && data.routes && data.events));
@@ -1405,7 +1406,7 @@ function run() {
     app.includes("function getCriticalResourceKeys")
     && app.includes("criticalRescue")
     && app.includes("getCriticalResourceKeys(state).length > 0")
-    && balanceSimSource.includes("const CRITICAL_RESCUE_LIMIT = 15")
+    && balanceSimSource.includes("let CRITICAL_RESCUE_LIMIT = 15")
     && balanceSimSource.includes("function getCriticalResourceKeys")
     && balanceSimSource.includes("criticalRescue")
   ));
@@ -1823,6 +1824,45 @@ function run() {
     && css.includes(".map-route-panel .route-list")
     && app.includes('matchMedia("(max-height: 560px) and (orientation: landscape)")')
   ));
+  check("mobile safe-area contract", (
+    html.includes("viewport-fit=cover")
+    && html.includes('rel="preload" as="font"')
+    && html.includes('defer></script>')
+    && css.includes("env(safe-area-inset-top)")
+    && css.includes("env(safe-area-inset-left)")
+    && css.includes("calc(var(--game-gap) + env(safe-area-inset-top))")
+  ));
+  check("save migration contract", (
+    app.includes("const SAVE_MIGRATIONS = {")
+    && app.includes("function migrateSavedState(parsed)")
+    && app.includes("function loadLegacyPayload(keyPrefix)")
+    && app.includes('loadLegacyPayload(SAVE_KEY_PREFIX)')
+    && app.includes('loadLegacyPayload(META_KEY_PREFIX)')
+    && app.includes("旧存档已迁移至新版本，旅途继续。")
+    && app.includes("-discarded-v")
+  ));
+  check("content pack interface contract", (
+    dataSource.includes("const BSI_CORE_DATA = {")
+    && dataSource.includes('const BSI_P0_CONTENT_PACK = {')
+    && dataSource.includes('id: "p0"')
+    && dataSource.includes("window.BSI_CONTENT_PACKS = {")
+    && dataSource.includes("window.BSI_GAME_DATA = { ...BSI_CORE_DATA, ...BSI_CORE_AUDIO, ...BSI_P0_CONTENT_PACK }")
+    && app.includes("function resolveGameData()")
+    && app.includes('.get("pack")')
+    && app.includes("window.BSI_CONTENT_PACKS?.[packId]")
+  ));
+  check("balance config contract", (
+    dataSource.includes("balanceConfig: {")
+    && dataSource.includes("randomRouteEventBaseChance: 0.21")
+    && dataSource.includes("hardBadLuckThreshold: 96")
+    && dataSource.includes("resourceWarningLimits: { axle: 30, grain: 35, sanity: 45 }")
+    && app.includes("const BALANCE = { ...BALANCE_DEFAULTS, ...(gameData.balanceConfig || {}) };")
+    && app.includes("BALANCE.resourceCriticalLimit")
+    && app.includes("BALANCE.crisisBadLuckGain")
+    && app.includes("BALANCE.rescueForceBadLuckThreshold")
+    && balanceSimSource.includes("function applyBalanceConfig(config = {})")
+    && balanceSimSource.includes("applyBalanceConfig(data.balanceConfig)")
+  ));
   check("first minute next-step hud contract", (
     html.includes('id="nextStepLabel"')
     && html.includes('class="next-step-label"')
@@ -1852,9 +1892,9 @@ function run() {
     && html.includes('id="playtestReminderDismiss"')
     && html.includes("已试玩 5 分钟")
     && html.includes("填写反馈")
-    && html.includes("styles.css?v=20260625-c168")
-    && html.includes("data.js?v=20260625-c168")
-    && html.includes("app.js?v=20260625-c168")
+    && html.includes("styles.css?v=20260720-c169")
+    && html.includes("data.js?v=20260720-c169")
+    && html.includes("app.js?v=20260720-c169")
     && app.includes("PLAYTEST_REMINDER_DEFAULT_MS = 5 * 60 * 1000")
     && app.includes("PLAYTEST_REMINDER_MS = getPlaytestReminderMs()")
     && app.includes('params.get("playtestReminderMs")')
@@ -2014,7 +2054,7 @@ function run() {
     && app.includes('dataset.action === "return-town"')
     && app.includes('action: "return-town"')
     && app.includes('if (actions.length && activeView === "town")')
-    && app.includes('if (activeView === "town" && storyModalActions.length && !actionBusy && !storyResultOverride)')
+    && app.includes('activeView === "town"\n    && storyModalActions.length\n    && !actionBusy\n    && !storyResultOverride\n    && decisionModalDismissedKey !== getDecisionKey()')
     && app.includes('setAttribute("tabindex", "0")')
     && app.includes('setAttribute("aria-disabled", "false")')
     && app.includes('setAttribute("aria-disabled", "true")')
