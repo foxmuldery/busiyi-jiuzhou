@@ -1,5 +1,5 @@
 window.BSI_AUDIO_HEALTH_STATUS = {
-  "generatedAt": "2026-07-18T23:16:36.596Z",
+  "generatedAt": "2026-07-19T23:55:09.665Z",
   "title": "音频技术体检通过，待主观听感",
   "summary": {
     "totalAssets": 20,
